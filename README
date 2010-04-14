@@ -34,6 +34,7 @@ If I'm recovering this then i need to make sure i copy the following section to 
 !.ssh/id_rsa.pub
 *hst
 .subversion/
+.Trash/
 .viminfo
 Applications/
 Desktop/
@@ -45,4 +46,3 @@ Music/
 Pictures/
 Public/
 Sites/
-#end ~/.git/info/exclude
