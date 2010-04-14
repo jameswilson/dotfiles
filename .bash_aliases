@@ -1,5 +1,5 @@
 #!/bin/bash
-# Aliases
+# Aliases for Mac OS X
 # #######
 
 #echo "~/.bash_aliases"
@@ -12,7 +12,7 @@
 
 # handy shortcuts
   alias untar='tar zxvf'
-  alias ubbz2='tar jxvf'
+  alias unbz='tar jxvf'
   alias ff='find . -name $*'
   alias fff='sudo find / -name $*'
   alias wget='curl -O'
@@ -62,11 +62,11 @@
   alias vdir='ls'
   alias list='l'
 # Webdev
-  alias h='sudo vim /etc/hosts'
+  alias h='sudo $EDITOR  /etc/hosts'
   alias hosts='sudo $EDITOR /etc/hosts'
 
 # Apache 
-  alias vh='sudo vim /etc/apache2/extra/httpd-vhosts.conf && sudo apachectl restart'
+  alias vh='sudo $EDITOR /etc/apache2/extra/httpd-vhosts.conf && sudo apachectl restart'
   alias vhosts='sudo $EDITOR /etc/apache2/extra/httpd-vhosts.conf'
   alias astart='sudo arch -i386 /usr/local/php5/bin/apachectl start'
   alias astop='sudo apachectl stop'
@@ -80,7 +80,7 @@
   alias mload='sudo /usr/local/mysql/support-files/mysql.server reload'
 
 # subversion shortcuts
-  alias .c='svn ci -m'
+  alias .c='svn commit -m'
   alias .u='svn update'
   alias .s='svn status'
   alias .l='svn log'
