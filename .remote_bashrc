@@ -1,0 +1,118 @@
+#!/bin/bash
+# User dependent .bashrc file
+
+#echo "~/.bashrc"
+
+# Shell Options
+# #############
+
+# Make bash append rather than overwrite the history on disk
+ shopt -s histappend
+
+# When changing directory small typos can be ignored by bash
+# for example, cd /vr/lgo/apaache would find /var/log/apache
+ shopt -s cdspell
+
+
+# History Options
+# ###############
+
+# Don't put duplicate lines in the history.
+ export HISTCONTROL="ignoredups"
+
+# Ignore some controlling instructions
+ export HISTIGNORE="[   ]*:&:bg:fg:exit:ls:la:lla:l"
+
+# Whenever displaying the prompt, write the previous line to disk
+# export PROMPT_COMMAND="history -a"
+
+
+# Functions
+# #########
+
+# Some example functions
+ function settitle() { echo -ne "\e]2;$@\a\e]1;$@\a"; }
+
+
+# COMMAND PROMPT
+################
+# * \e[ - Indicates the beginning of color prompt
+# * x;ym - Indicates color code. Use the color code values mentioned below.
+# * \e[m - indicates the end of color prompt
+# Black 0;30
+# Blue 0;34
+# Green 0;32
+# Cyan 0;36
+# Red 0;31
+# Purple 0;35
+# Brown 0;33
+
+# * 0 - Black
+# * 1 - Red
+# * 2 - Green
+# * 3 - Yellow
+# * 4 - Blue
+# * 5 - Magenta
+# * 6 - Cyan
+# * 7 - White
+
+
+   # Foreground Colors
+   FG_BLACK='\e[0;30m'
+    FG_BLUE='\e[0;34m'
+   FG_GREEN='\e[0;32m'
+    FG_CYAN='\e[0;36m'
+     FG_RED='\e[0;31m'
+  FG_PURPLE='\e[0;35m'
+   FG_BROWN='\e[0;33m'
+
+     # Color Shorthand
+     BLACK='\[\e[30m\]'
+       RED='\[\e[31m\]'
+     GREEN='\[\e[32m\]'
+    YELLOW='\[\e[33m\]'
+      BLUE='\[\e[34m\]'
+    PURPLE='\[\e[35m\]'
+      CYAN='\[\e[36m\]'
+     WHITE='\[\e[37m\]'
+      GRAY='\[\e[40m\]'     
+    LT_RED='\[\e[41m\]'
+  LT_GREEN='\[\e[42m\]'
+ LT_YELLOW='\[\e[43m\]'
+   LT_BLUE='\[\e[44m\]'
+ LT_PURPLE='\[\e[45m\]'
+   LT_CYAN='\[\e[46m\]'
+   LT_GRAY='\[\e[47m\]'
+
+
+   FGCOLOR='\e[0;34m'
+  ENDCOLOR='\e[m'
+   BGCOLOR='\e[0m'
+   # BGCOLOR='\e[41m'
+   # BGCOLOR='\e[42m'
+   # BGCOLOR='\e[43m'
+   # BGCOLOR='\e[44m'
+   # BGCOLOR='\e[45m'
+   # BGCOLOR='\e[46m'
+   # BGCOLOR='\e[47m'
+   
+   # Terminal window title (user@host ~/path)
+   #TITLE="\[\e]0;\u@\h \w\a\]"
+   
+# Use this version to restrict user@host and path to title only.
+#PS1="$TITLE\n\$"
+# Use this version for user@host and path in both title and prompt
+PS1="$TITLE\n$FG_BLUE# \u@\h $YELLOW\w\n$BLUE# $GREEN"
+#PS1="\e[0;34m#\e[m \u@\h[\W]\n\e[0;34m#\e[m >"
+function pathmunge () {
+if [ -d $1 ] && ! echo /usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games | /bin/egrep -q "(^|:)$1($|:)"
+then
+        if [ "$2" = "after" ]
+        then
+                PATH=/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:$1
+        else
+                PATH=$1:$PATH
+        fi
+fi
+}
+

@@ -1,0 +1,5 @@
+#!/bin/bash
+#echo "~/.bash_environment"
+
+export EDITOR="/usr/bin/vim"
+export VISUAL=$EDITOR

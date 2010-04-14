@@ -1,0 +1,93 @@
+#!/bin/bash
+# Aliases
+# #######
+
+#echo "~/.bash_aliases"
+
+# Interactive operation...
+  alias rm='rm -i'
+  alias cp='cp -i'
+  alias mv='mv -i'
+  alias md='mkdir -p'
+
+# handy shortcuts
+  alias untar='tar zxvf'
+  alias ubbz2='tar jxvf'
+  alias ff='find . -name $*'
+  alias fff='sudo find / -name $*'
+
+
+# General laziness
+  alias f='ff'
+  alias c='clear && pwd && ls'
+  alias s='source'
+  alias p='pwd'
+  alias j='jobs'
+  alias x='exit'
+  alias ..='cd ..'
+  alias ...='cd ../..'
+
+# Trash & Cleanup
+  alias rmds='find . -name *.DS_Store -type f -exec rm {} \;'
+
+
+# Default to human readable figures
+  alias df='df -h'
+  alias du='du -h'
+
+# Misc :)
+  alias less='less -r'                          # raw control characters
+  alias whence='type -a'                        # where, of a sort
+  alias grep='grep --color'                     # show differences in colour
+
+# Processes
+  alias tu='ps aux | sort -n +2 | tail -10'  # top 10 cpu processes
+  alias tm='ps aux | sort -n +3 | tail -10'  # top 10 memory processes
+  alias blocking='lsof +fg +D /Volumes/$1 | grep -v EVO' #whats blocking a volume from being ejected?
+
+# Some shortcuts for different directory listings
+  alias ls='ls -Fh --color=auto'      # classify files in colour
+  alias l='ls -Fh1 --color=auto'       #
+  alias ll='ls -lFh --color=auto'       # long list
+  alias lll='ls -AlF --color=auto'     # long list including hidden files
+  alias la='lll'      # all but . and ..
+  alias lla='lll'     #
+  alias dir='lll'
+  alias vdir='ls'
+  alias list='l'
+# Webdev
+  alias hosts='sudo $EDITOR /etc/hosts'
+
+# Apache 
+  alias vhosts='sudo $EDITOR /etc/apache2/extra/httpd-vhosts.conf'
+  alias astart='sudo apachectl start'
+  alias astop='sudo apachectl stop'
+  alias ares='sudo apachectl restart'
+
+# MySQL
+  alias mstart='sudo /usr/local/mysql/support-files/mysql.server start'
+  alias mstop='sudo /usr/local/mysql/support-files/mysql.server stop'
+  alias mres='sudo /usr/local/mysql/support-files/mysql.server restart'
+  alias mstat='sudo /usr/local/mysql/support-files/mysql.server status'
+  alias mload='sudo /usr/local/mysql/support-files/mysql.server reload'
+
+# subversion shortcuts
+  alias .c='svn ci -m'
+  alias .u='svn update'
+  alias .s='svn status'
+  alias .l='svn log'
+  alias .all='svn status | grep "^\?" | awk "{print \$2}" | xargs svn add'
+
+# Text Editor shortcuts
+  alias e='vim'
+  alias et='vim'
+  alias vi='vim'
+
+# Ruby on Rails
+  alias ss='./script/server'
+  alias sc='./script/console'
+  alias mr='rake db:migrate'
+
+# Drupal
+#  alias drush='/home/mediasol/soft/drush/drush.php'
+
