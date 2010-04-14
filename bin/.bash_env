@@ -1,5 +1,0 @@
-export PATH="/Developer/Tools:/usr/local/mysql/bin:$PATH:/opt/local/bin:/opt/local/sbin"
-export LSCOLORS="gxfxcxdxBxegedabagacad"
-export EDITOR="mate"
-export SVN_EDITOR="mate"
-export MANPATH="$MANPATH:/opt/local/share/man"
