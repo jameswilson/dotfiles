@@ -26,8 +26,6 @@
 # Whenever displaying the prompt, write the previous line to disk
 # export PROMPT_COMMAND="history -a"
 
-# prevent Mac OSX dot-underscore in tarfiles.
-export COPYFILE_DISABLE=true
 
 # Functions
 # #########
@@ -103,6 +101,7 @@ export COPYFILE_DISABLE=true
    
 # Use this version to restrict user@host and path to title only.
 #PS1="$TITLE\n\$"
+
 # Use this version for user@host and path in both title and prompt
 PS1="$TITLE\n$FG_BLUE# \u@\h $YELLOW\w\n$BLUE# $GREEN"
 #PS1="\e[0;34m#\e[m \u@\h[\W]\n\e[0;34m#\e[m >"
