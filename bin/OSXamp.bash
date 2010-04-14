@@ -1,0 +1,185 @@
+##
+##  This will setup a fresh install of Mac OS X up for AUTOMATICALLY serving
+##  custom top level domains (such as .dev or .test) for your development 
+##  environment on a MacBook Pro laptop.  You no longer have to muck with adding
+##  VirtualHosts  or editing /etc/hosts files, and you definitely dont need 
+##  to download MAMP.
+##
+##  I recommend executing commands below by hand. 
+##
+##  After completion of all the commands, add  ""127.0.0.1""  (without quotes)
+##  to the top of the list of DNS servers in:
+##    
+##     System Preferences > Network > Advanced... > DNS tab > DNS Servers
+##
+##  The directory structure of your ~/Sites folder should be the following: 
+##   ~/Sites
+##     |- dev
+##     |  |- project1
+##     |  |  |- public
+##     |  |  |  |- index.html
+##     |  |  |  |- otherpage.html
+##     |  |- subdomainswork.project2
+##     |  |  |- public
+##     |  |  |  |- index.html
+##
+##  The BIND / Apache configurations explained below combined with the above 
+##  example folder structure would enable the following:
+##
+##   http://localhost/                
+##          <--- /Users/username/Sites/ 
+##   http://project1.dev/             
+##          <--- /Users/username/Sites/dev/project1/public/
+##   http://subdomainswork.project2.dev/
+##          <--- /Users/username/Sites/dev/SubDomainsWork.Project2/public/
+##
+##  The code here is a summarized version of the instructions and comments in a 
+##  blog entry by Jason Johnoson of postpostmodern.com, originally posted here:
+##
+##     http://postpostmodern.com/instructional/a-smarter-mamp/ 
+##
+
+
+E_BADARGS=85
+if [ -z "$1" ]
+then
+  echo "Usage: `basename $0` tld"
+  exit $E_BADARGS
+fi
+
+# edit the following as desired, if running this by hand
+USERNAME=`whoami`
+TLD=$1
+
+# The file needs to be ran as your regular Mac OS X user, not root.
+if [[ `whoami` = "root" ]] 
+then
+ echo "Please execute this script as an admin user, do not use the sudo command."
+ echo "Usage: `basename $0` tld"
+ exit 0
+fi
+
+
+
+############################
+##   BIND Configurations  ##
+############################
+
+# Create a custom launch key for BIND
+if [ ! -e /etc/rndc.conf ]
+then 
+  echo "Creating RNDC"
+  sudo rndc-confgen > /etc/rndc.conf
+  sudo head -n 6 /etc/rndc.conf > /etc/rndc.key
+fi
+
+
+if [ ! -e /var/named/$TLD.zone ]
+then
+  # Add the top level domain to BIND.
+  echo "Adding TLD '$TLD' to BIND"
+  sudo chmod 777 /etc/named.conf
+  cat >> /etc/named.conf <<END
+zone "$TLD" IN {
+  type master;
+  file "$TLD.zone";
+};
+END
+  # Create the Zone file for BIND
+  echo "Creating zone file for $TLD (/var/named/$TLD.zone)"
+  sudo chmod 644 /etc/named.conf
+  sudo touch /var/named/$TLD.zone
+  sudo chmod 777 /var/named/$TLD.zone
+  cat > /var/named/$TLD.zone <<END
+;
+; BIND data file for $TLD sites
+;
+\$TTL    604800
+@       IN      SOA     $TLD. root.$TLD. (
+                     2008101920         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      $TLD.
+@       IN      A       127.0.0.1
+*.$TLD.  14400   IN      A       127.0.0.1
+END
+fi
+  sudo chmod 644 /var/named/$TLD.zone
+
+# Allow named daemon to be launched on boot. 
+if [[ `sudo defaults read /System/Library/LaunchDaemons/org.isc.named Disabled` = 1 ]]
+then 
+  echo "Configuring BIND LaunchDaemon"
+  # Unfortunately this will convert the plist from XML to binary format! 
+  sudo defaults write /System/Library/LaunchDaemons/org.isc.named Disabled -boolean true
+  # here's an alternate  that maintains the file in human-readable text format.
+  # sed -n 5,6s/<true/<false/  /System/Library/LaunchDaemons/org.isc.named.plist
+fi
+# Load/Reload BIND
+sudo launchctl load /System/Library/LaunchDaemons/org.isc.named.plist
+
+
+###############################
+##  Bonjour Configurations   ##
+###############################
+
+
+if [ ! -e /etc/resolver/$TLD ]
+then
+  echo "Creating top level domain entry in Bonjour for '$TLD'"
+  if [ ! -d /etc/resolver ] ; then sudo mkdir /etc/resolver ; fi
+  # Enable Bonjour to serve your top level domain when you aren't connected to the internet
+  sudo chmod 777 /etc/resolver
+  cat > /etc/resolver/$TLD <<END
+domain $TLD
+nameserver 127.0.0.1
+END
+fi
+  sudo chmod 755 /etc/resolver
+  
+###############################
+##  TLD VirtualHost Folder   ##
+###############################
+
+if [ ! -e "/Users/$USERNAME/Sites/$TLD" ]
+then
+   echo "Creating ~/Sites/$TLD folder for user $USERNAME"
+   mkdir -p "/Users/$USERNAME/Sites/$TLD"
+else
+   echo "~/Sites/$TLD exists."
+fi
+
+###############################
+##  Apache Configurations    ##
+###############################
+
+# create a new apache configuration for your user.
+echo "Updating Apache config /etc/apache2/users/$USERNAME.conf for NameVirtualHost mode."
+sudo mv /etc/apache2/users/$USERNAME.conf /etc/apache2/users/$USERNAME.conf.`date "+%Y%m%d%H%M%S"`
+sudo chmod 777 /etc/apache2/users
+cat > /etc/apache2/users/$USERNAME.conf <<END
+DocumentRoot /Users/$USERNAME/Sites
+<Directory "/Users/$USERNAME/Sites/">
+    Options Indexes MultiViews FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+</Directory>
+NameVirtualHost 127.0.0.1
+<VirtualHost 127.0.0.1>
+    VirtualDocumentRoot /Users/$USERNAME/Sites/%-1/%-2+/public
+</VirtualHost>
+END
+sudo chmod 755 /etc/apache2/users
+
+# restart apache, You may wan to check in the Console.app for any apache errors.
+echo "Restarting Apache."
+sudo apachectl restart
+
+
+# Dont forget to add 127.0.0.1 to the list of DNS servers in System Preferences  (see above).
+# You'll also need to add probably some other DNS entries as well. I recommend OpenDNS.
+

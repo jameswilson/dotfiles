@@ -1,0 +1,14 @@
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set autoindent
+set smartindent
+set number
+set filetype=php
+set foldmethod=indent
+set foldnestmax=1
+
+" Highlight redundant whitespaces and tabs.
+highlight RedundantSpaces ctermbg=red guibg=red
+match RedundantSpaces /\s\+$\| \+\ze\t\|\t/
+
