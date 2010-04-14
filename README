@@ -1,0 +1,45 @@
+this is the contents of my personal ~/  folder on my development machine
+
+It is completley customized for my development preferences:
+
+1) Mac OS X
+2) preferred editor: vim
+3) Macports is installed
+4) Optionally Homebrew is installed (doesnt work on PPC:(
+
+If I'm recovering this then i need to make sure i copy the following section to .git/info/exclude
+
+#start ~/.git/info/exclude
+.AB64CF89
+.CFUserTextEncoding
+.Xauthority
+.DS_Store
+.config
+.cups/
+.drush/
+.dvdcss
+.fontconfig
+.gem
+.gitconfig
+*_history
+.inkscape*
+.mc
+~.mc/ini
+.rnd
+.recently-used*
+.ssh/*
+!.ssh/id_rsa.pub
+*hst
+.subversion/
+.viminfo
+Applications/
+Desktop/
+Documents/
+Downloads/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
+Sites/
+#end ~/.git/info/exclude
