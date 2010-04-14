@@ -1,0 +1,57 @@
+[user]
+	name = First Last
+	email = username@example.com
+	editor = vim
+
+[github]
+	user = github user 
+	token = github API token 
+
+[alias]
+	ci    = commit
+	co    = checkout
+	#st    = status 
+	stat  = status
+	praise = blame
+	lg    = log
+	pom   = push origin master
+	st    = "!f() { git ls-files --exclude-standard -t -u -s -m -d $@ | sed -e 's/C.*\t/C /' ; } ; f"
+	sto   = st -o
+	ds    = diff --stat
+	cds   = !git ds --cached
+	fp    = format-patch
+	s     = "!git diff --name-status | sed -e 's/^/W /' ; git diff --cached --name-status | sed -e 's/^/C /'"
+  up    = !git remote update ; git gc
+
+[core]
+	pager = less -FRSX
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+[color]
+	ui = true
+	pager = true
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
