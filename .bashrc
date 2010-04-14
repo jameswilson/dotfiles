@@ -120,4 +120,10 @@ fi
 
 
 pathmunge ${RUN}/bin
+
+# Macports
+pathmunge /opt/local/bin
+pathmunge /opt/local/sbin
+
+# Local 
 pathmunge /usr/local/php5/bin
