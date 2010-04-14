@@ -7,6 +7,9 @@ It is completley customized for my development preferences:
 3) Macports is installed
 4) Optionally Homebrew is installed (doesnt work on PPC:(
 
+Check out this git cheat sheet...
+http://cheat.errtheblog.com/s/git 
+
 If I'm recovering this then i need to make sure i copy the following section to .git/info/exclude
 
 #start ~/.git/info/exclude
