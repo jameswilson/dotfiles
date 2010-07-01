@@ -16,6 +16,8 @@
   alias ff='find . -name $*'
   alias fff='sudo find / -name $*'
   alias wget='curl -O'
+  alias gfind='find . -path "*/.svn" -prune -o -type f -print0 | xargs -0 grep -I -n'
+  alias gf='gfind'
 
 # General laziness
   alias f='ff'
