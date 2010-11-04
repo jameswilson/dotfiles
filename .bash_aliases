@@ -13,11 +13,13 @@
 # handy shortcuts
   alias untar='tar zxvf'
   alias unbz='tar jxvf'
-  alias ff='find . -name $*'
+  alias ff='find . -not -path "*/.svn" -name $*'
   alias fff='sudo find / -name $*'
   alias wget='curl -O'
   alias gfind='find . -path "*/.svn" -prune -o -type f -print0 | xargs -0 grep -I -n'
   alias gf='gfind'
+
+# Conversions
 
 # General laziness
   alias f='ff'
@@ -80,14 +82,19 @@
   alias mres='sudo /usr/local/mysql/support-files/mysql.server restart'
   alias mstat='sudo /usr/local/mysql/support-files/mysql.server status'
   alias mload='sudo /usr/local/mysql/support-files/mysql.server reload'
+  
+  alias start_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM start"
+  alias stop_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM stop"
 
 # subversion shortcuts
   alias .c='svn commit -m'
-  alias .u='svn update'
-  alias .s='svn status'
+  alias .u='svn update --ignore-externals'
+  alias .s='svn status --ignore-externals'
   alias .l='svn log'
-  alias .a='svn status | grep "^\?" | awk "{print \$2}" | xargs svn add'
-  alias .d='svn status | grep "^\!" | awk "{print \$2}" | xargs svn delete'
+  alias .a='svn status --ignore-externals | grep "^\?" | cut -c8- | while read f; do svn add "$f"; done'
+  alias .r='svn status --ignore-externals | grep "^\!" | cut -c8- | while read f; do svn rm "$f"; done'
+  alias .d='svn diff --diff-cmd diff -x -up'
+  alias .dd='svn diff --diff-cmd diff -x -wup'
 
 # Text Editor shortcuts
   alias e='mate'
