@@ -72,9 +72,9 @@
 # Apache 
   alias vh='sudo $EDITOR /etc/apache2/extra/httpd-vhosts.conf && sudo apachectl restart'
   alias vhosts='sudo $EDITOR /etc/apache2/extra/httpd-vhosts.conf'
-  alias astart='sudo arch -i386 /usr/local/php5/bin/apachectl start'
+  alias astart='sudo arch -i386 /opt/local/apache2/bin/apachectl start'
   alias astop='sudo apachectl stop'
-  alias ares='sudo arch -i386 /usr/local/php5/bin/apachectl restart'
+  alias ares='sudo arch -i386 /opt/local/apache2/bin/apachectl restart'
 
 # MySQL
   alias mstart='sudo /usr/local/mysql/support-files/mysql.server start'
