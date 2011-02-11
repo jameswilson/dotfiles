@@ -31,7 +31,7 @@
 # #########
 
 # Some example functions
- function settitle() { echo -ne "\e]2;$@\a\e]1;$@\a"; }
+# function settitle() { echo -ne "\e]2;$@\a\e]1;$@\a"; }
 
 
 # COMMAND PROMPT
@@ -103,7 +103,7 @@
 #PS1="$TITLE\n\$"
 
 # Use this version for user@host and path in both title and prompt
-PS1="$TITLE\n$FG_BLUE# \u@\h $YELLOW\w\n$BLUE# $GREEN"
+PS1="\n$FG_BLUE# \u@\h $YELLOW\w\n$BLUE# $GREEN"
 #PS1="\e[0;34m#\e[m \u@\h[\W]\n\e[0;34m#\e[m >"
 
 function pathmunge () {
