@@ -1,7 +1,7 @@
 #!/bin/bash
-# $Id: virtualhost.sh 13 2008-04-23 17:19:55Z patrickg.com $
+# $Id: virtualhost.sh 27 2009-03-04 17:41:00Z patrickg.com $
 #================================================================================
-# virtualhost.sh                                                $Revision: 1.17 $
+# virtualhost.sh                                                $Revision: 1.19 $
 #
 # A fancy little script to setup a new virtualhost in Mac OS X.
 #
@@ -10,6 +10,24 @@
 # sudo ./virtualhost.sh --delete <site>
 #
 # where <site> is the site name you used when you first created the host.
+#
+# CHANGES SINCE v1.18
+# - [Issue #1] On Leopard, the first request to the new virtual host would fail.
+#   Have remedied this by making the first request in the script, in addition to
+#   the sleep 1 command.
+# - [Issue #4] Some users reported an error originating from a missing group. 
+#   Looks like Leopard doesn't create a group with the same name as the user like
+#   previous versions (and most other Unix-variants!) do. It was never a problem
+#   for me because my user account was created on Mac OS X 10.0, and has been
+#   migrated from machine to machine and with every upgrade, and my "patrick"
+#   group has remained. (Thanks to Matt Sephton for reporting and providing a
+#   patch!)
+#
+# CHANGES SINCE v1.17
+# - [Issue #2] Add a new option $OPEN_COMMAND to specify which app should be
+#   used when launching the virtual host. See below for examples.
+# - [Issue #3] Make sure sudo is used to run the command so that we know the
+#   actual user's user name.
 #
 # CHANGES SINCE v1.16
 # - You can now store any configuration values in ~/.virtualhost.sh.conf.
@@ -65,8 +83,17 @@ if [ `whoami` != 'root' ]; then
 
 	echo "You must be running with root privileges to run this script."
 	echo "Rerun using: sudo $0 $*"
-	exit
+	exit 1
+fi
 
+if [ -z "$SUDO_USER" ]; then
+	echo "You must start this under your regular user account using sudo."
+	echo "Rerun using: sudo $0 $*"
+	exit 1
+elif [ $SUDO_USER = "root" ]; then
+	echo "You must start this under your regular user account (not root) using sudo."
+	echo "Rerun using: sudo $0 $*"
+	exit 1
 fi
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -87,8 +114,11 @@ IP_ADDRESS="127.0.0.1"
 APACHE_CONFIG="/private/etc/apache2"
 APACHECTL="/usr/sbin/apachectl"
 
-# By default, use the site folders that get created will be 0wn3d by this group
-OWNER_GROUP="$SUDO_USER"
+# If you wish to change the default application that gets launched after the
+# virtual host is created, define it here:
+#OPEN_COMMAND="/usr/bin/open -a /Applications/Firefox.app"
+#OPEN_COMMAND="/usr/bin/open -a /Applications/WebKit.app"
+OPEN_COMMAND="/usr/bin/open"
 
 # If defined, a ServerAlias os $1.$WILDCARD_ZONE will be added to the virtual
 # host file. This is useful if you, for example, have setup a wildcard domain
@@ -481,11 +511,11 @@ if [ ! -d $DOC_ROOT_PREFIX/$FOLDER ]; then
 		# in the future for me.
 		dir=$FOLDER
 		while [ $dir != "." ]; do
-			chown $USER:$OWNER_GROUP $DOC_ROOT_PREFIX/$dir
+			chown $USER $DOC_ROOT_PREFIX/$dir
 			dir=`dirname $dir`
 		done
 	else
-		chown $USER:$OWNER_GROUP $DOC_ROOT_PREFIX/$FOLDER
+		chown $USER $DOC_ROOT_PREFIX/$FOLDER
 	fi
 	
 	echo "done"
@@ -552,7 +582,7 @@ if [ ! -e $DOC_ROOT_PREFIX/$FOLDER/index.html -a ! -e $DOC_ROOT_PREFIX/$FOLDER/i
 </body>
 </html>
 __EOF
-	chown $USER:$OWNER_GROUP $DOC_ROOT_PREFIX/$FOLDER/index.html
+	chown $USER $DOC_ROOT_PREFIX/$FOLDER/index.html
 
 fi	
 
@@ -571,6 +601,7 @@ echo "done"
 echo -n "+ Flushing cache... "
 dscacheutil -flushcache
 sleep 1
+curl --silent http://$VIRTUALHOST/ 2>&1 >/dev/null
 echo "done"
 
 dscacheutil -q host | grep -q $VIRTUALHOST
@@ -590,6 +621,6 @@ __EOF
 # Launch the new URL in the browser
 #
 echo -n "Launching virtualhost... "
-open http://$VIRTUALHOST/
+$OPEN_COMMAND http://$VIRTUALHOST/
 echo "done"
 
