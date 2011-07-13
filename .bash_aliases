@@ -17,7 +17,9 @@
   alias fff='sudo find / -name $*'
   alias wget='curl -O'
   alias gfind='find . -path "*/.svn" -prune -o -type f -print0 | xargs -0 grep -I -n'
+  alias egfind='find . -path "*/.svn" -prune -o -type f -print0 | xargs -0 egrep -I -n --color'
   alias gf='gfind'
+  alias ef='egfind'
 
 # Conversions
 
