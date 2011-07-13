@@ -1,17 +1,22 @@
+" File:   ~/.vimrc
+" Info:   My configurations and Settings for VIM, a command line editor.
+" Author: James Wilson <james@elementalidad.com>
+
 
 " ---------------------------------------------------------------------------
 " first the disabled features due to security concerns
 set modelines=0         " no modelines [http://www.guninski.com/vim1.html]
 "let g:secure_modelines_verbose=1 " securemodelines vimscript
+
 " ---------------------------------------------------------------------------
 " configure other scripts
+call pathogen#runtime_append_all_bundles() 
 
 let c_no_curly_error = 1
 
 " ---------------------------------------------------------------------------
 " operational settings
 set nocompatible                " vim defaults, not vi!
-syntax on                       " syntax on
 set hidden                      " allow editing multiple unsaved buffers
 set more                        " the 'more' prompt
 filetype on                     " automatic file type detection
@@ -27,6 +32,11 @@ set scrolloff=5                 " keep at least 5 lines above/below cursor
 set sidescrolloff=5             " keep at least 5 columns left/right of cursor
 set history=200                 " remember the last 200 commands
 
+" ---------------------------------------------------------------------------
+" syntax highlighting
+syntax enable
+" set background=dark
+" colorscheme solarized
 
 " ---------------------------------------------------------------------------
 " meta
