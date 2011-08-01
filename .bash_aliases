@@ -17,7 +17,9 @@
   alias fff='sudo find / -name $*'
   alias wget='curl -O'
   alias gfind='find . -path "*/.svn" -prune -o -type f -print0 | xargs -0 grep -I -n'
+  alias egfind='find . -path "*/.svn" -prune -o -type f -print0 | xargs -0 egrep -I -n --color'
   alias gf='gfind'
+  alias ef='egfind'
 
 # Conversions
 
@@ -95,6 +97,10 @@
   alias .r='svn status --ignore-externals | grep "^\!" | cut -c8- | while read f; do svn rm "$f"; done'
   alias .d='svn diff --diff-cmd diff -x -up'
   alias .dd='svn diff --diff-cmd diff -x -wup'
+
+# git shortcuts
+  alias .ga='git status -s | grep "^??" | cut -c4- | while read f; do git add "$f"; done'
+  alias .gr='git status -s | grep "^!!" | cut -c4- | while read f; do git delete "$f"; done'
 
 # Text Editor shortcuts
   alias e='mate'
