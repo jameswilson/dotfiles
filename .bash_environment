@@ -3,7 +3,7 @@
 # #####################
 
 #echo "~/.bash_environment"
-export PHP_VERSION="5.3"
+export PHP_VERSION="5.3.6"
 
 # HOME folders
 #export SVN_HOME="/opt/subversion"
@@ -11,7 +11,7 @@ export PHP_VERSION="5.3"
 #export MACPORT_HOME="/opt/local"
 export DEVEL_HOME="/Developer"
 export MAMP_HOME="/Applications/MAMP"
-export PHP_HOME="$MAMP_HOME/bin/php$PHP_VERSION"
+export PHP_HOME="$MAMP_HOME/bin/php/php$PHP_VERSION"
 
 # NODEJS
 export NODE_PATH="/usr/local/lib/node"
