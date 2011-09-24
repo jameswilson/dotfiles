@@ -8,25 +8,31 @@
 	token = github API token 
 
 [alias]
-	ci    = commit
+	ci    = commit -a
 	co    = checkout
-	#st    = status 
-	stat  = status
 	praise = blame
 	lg    = log
 	pom   = push origin master
+	stat  = status
 	st    = "!f() { git ls-files --exclude-standard -t -u -s -m -d $@ | sed -e 's/C.*\t/C /' ; } ; f"
 	sto   = st -o
 	ds    = diff --stat
 	cds   = !git ds --cached
 	fp    = format-patch
 	s     = "!git diff --name-status | sed -e 's/^/W /' ; git diff --cached --name-status | sed -e 's/^/C /'"
-  up    = !git remote update ; git gc
+	up    = !git remote update ; git gc
+	tree  = log --graph --oneline --all --decorate
+
+	# Creating branch patches - By Dave Reid (http://bit.ly/oVysCd)
+	branch-name = "!git for-each-ref --format='%(refname:short)' $(git symbolic-ref HEAD)"
+	cd-root = rev-parse --show-cdup
+	branch-diff = !git format-patch --stdout "$1" > "$(git cd-root)$(git branch-name).patch"
 
 [core]
 	pager = less -FRSX
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-  excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore
+	quotepath = false
 
 [color]
 	ui = true
@@ -56,3 +62,5 @@
 	tool = vimdiff
 [merge]
 	tool = vimdiff
+[push]
+	default = tracking
