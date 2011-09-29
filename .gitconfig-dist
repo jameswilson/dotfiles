@@ -28,6 +28,10 @@
 	cd-root = rev-parse --show-cdup
 	branch-diff = !git format-patch --stdout "$1" > "$(git cd-root)$(git branch-name).patch"
 
+[branch]
+    # Always use rebase when pulling, to avoid evil merge commits. By Randy Fay (http://randyfay.com/node/103)
+	autosetuprebase = always
+
 [core]
 	pager = less -FRSX
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
@@ -60,7 +64,9 @@
 
 [diff]
 	tool = vimdiff
+
 [merge]
 	tool = vimdiff
+
 [push]
 	default = tracking
