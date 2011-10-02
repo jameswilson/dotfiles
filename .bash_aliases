@@ -118,3 +118,5 @@
   alias d6='cvs -z6 -d:pserver:anonymous:anonymous@cvs.drupal.org:/cvs/drupal co -r DRUPAL-6 drupal'
   alias d69='cvs -z6 -d:pserver:anonymous:anonymous@cvs.drupal.org:/cvs/drupal co -r DRUPAL-6-9 drupal'
 
+# Photoshop
+  alias ps='open -b com.adobe.Photoshop'
