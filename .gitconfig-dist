@@ -22,6 +22,7 @@
 	s     = "!git diff --name-status | sed -e 's/^/W /' ; git diff --cached --name-status | sed -e 's/^/C /'"
 	up    = !git remote update ; git gc
 	tree  = log --graph --oneline --all --decorate
+	odiff = difftool -t opendiff
 
 	# Creating branch patches - By Dave Reid (http://bit.ly/oVysCd)
 	branch-name = "!git for-each-ref --format='%(refname:short)' $(git symbolic-ref HEAD)"
