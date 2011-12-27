@@ -117,6 +117,8 @@
   alias dhead='cvs -z6 -d:pserver:anonymous:anonymous@cvs.drupal.org:/cvs/drupal checkout drupal'
   alias d6='cvs -z6 -d:pserver:anonymous:anonymous@cvs.drupal.org:/cvs/drupal co -r DRUPAL-6 drupal'
   alias d69='cvs -z6 -d:pserver:anonymous:anonymous@cvs.drupal.org:/cvs/drupal co -r DRUPAL-6-9 drupal'
+  alias dca='drush cache-clear all'
+  alias dcc='drush cache-clear css-js'
 
 # Photoshop
   alias psp='open -b com.adobe.Photoshop'
