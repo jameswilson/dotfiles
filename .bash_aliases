@@ -99,8 +99,8 @@
   alias .dd='svn diff --diff-cmd diff -x -wup'
 
 # git shortcuts
-  alias .ga='git status -s | grep "^??" | cut -c4- | while read f; do git add "$f"; done'
-  alias .gr='git status -s | grep "^!!" | cut -c4- | while read f; do git delete "$f"; done'
+  alias .ga='git status -s . | grep "^??" | cut -c4- | while read f; do git add "$f"; done'
+  alias .gr='git status -s . | grep "^!!" | cut -c4- | while read f; do git delete "$f"; done'
 
 # Text Editor shortcuts
   alias e='mate'
