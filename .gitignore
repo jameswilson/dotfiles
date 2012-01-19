@@ -1,13 +1,3 @@
-# Make all the patterns in this file apply to *all* projects using:
-*   `git config --global core.excludesfile ~/.gitignore`
-
-.DS_Store
-._*
-*~
-*.orig
-*.patch
-*.diff
-*#
 /.CFUserTextEncoding
 /.MacOSX
 /.gitconfig

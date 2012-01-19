@@ -1,0 +1,26 @@
+# Make all the patterns in this file apply to *all* projects using:
+#   `git config --global core.excludesfile ~/.gitignore_global`
+
+# Ignore operating system files.
+.DS_Store
+._*
+
+# Ignore temporary files
+*~
+*#
+*.bak
+
+# Ignore patch files.
+*.orig
+*.patch
+*.diff
+
+# Ignore project files created by various IDEs.
+*.sublime-*
+*.tmproj
+
+# Ignore tarballs and zipfiles; it's better to extract them as git has its own 
+# compression algorithm.
+*.tar.gz
+*.gz
+*.zip
