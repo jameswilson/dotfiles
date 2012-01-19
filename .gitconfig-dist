@@ -36,7 +36,7 @@
 [core]
 	pager = less -FRSX
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore_global
 	quotepath = false
 
 [color]
