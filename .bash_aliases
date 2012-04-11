@@ -125,3 +125,7 @@
 
 # Sublime Text 2
   alias slt='open -b com.sublimetext.2'
+
+# ImageOptim
+  alias opt='open -a ImageOptim'
+
