@@ -5,8 +5,9 @@
 .DS_Store
 ._*
 
-# Ignore temporary files
+# Ignore temporary and swap files
 *~
+*.swp
 *#
 *.bak
 
@@ -24,3 +25,6 @@
 *.tar.gz
 *.gz
 *.zip
+
+# Ignore SASS cache files.
+.sass-cache
