@@ -46,6 +46,7 @@
 # Default to human readable figures
   alias df='df -h'
   alias du='du -h'
+  alias biggest="du -k * | sort -nr | cut -f2 | xargs du -sh"
 
 # Misc :)
   alias less='less -r'                          # raw control characters
