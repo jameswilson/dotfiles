@@ -1,0 +1,7 @@
+syntax: glob
+
+*~
+.DS_Store
+/www/files/css/*.css
+FirePHPCore
+devel_themer
