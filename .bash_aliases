@@ -120,6 +120,7 @@
   alias d69='cvs -z6 -d:pserver:anonymous:anonymous@cvs.drupal.org:/cvs/drupal co -r DRUPAL-6-9 drupal'
   alias dca='drush cache-clear all'
   alias dcc='drush cache-clear css-js'
+  alias dg='drush dl --package-handler=git_drupalorg'
 
 # Photoshop
   alias psp='open -b com.adobe.Photoshop'
