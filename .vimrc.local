@@ -1,0 +1,5 @@
+
+colorscheme ir_black
+
+" Required for the CSApprox plugin to work from Mac Terminal.app
+set t_Co=256
