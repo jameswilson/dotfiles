@@ -1,5 +1,8 @@
 
-colorscheme ir_black
+colorscheme molokai
 
 " Required for the CSApprox plugin to work from Mac Terminal.app
 set t_Co=256
+
+" Use F2 to paste without auto-indentation.
+set pastetoggle=<F2>
