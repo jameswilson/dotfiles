@@ -82,4 +82,4 @@ export COPYFILE_DISABLE=true
 
 export EDITOR="vim"
 export SVN_EDITOR="vim"
-export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib"
+#export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib"
