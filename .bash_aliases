@@ -132,3 +132,5 @@
   alias opt='open -a ImageOptim'
   alias mangle='open -a "Name Mangler"'
 
+# Vim
+  alias vim='mvim -v'
