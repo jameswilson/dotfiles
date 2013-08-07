@@ -105,7 +105,7 @@ GIT_PS1_SHOWDIRTYSTATE=1
 # > means you are ahead of remote
 # <> means you have diverged
 # = means there is no difference
-GIT_PS1_SHOWUPSTREAM=verbose
+GIT_PS1_SHOWUPSTREAM=1
 
 # Terminal window title (user@host ~/path)
 TITLE="\[\e]0;\u@\h \w\a\]"
