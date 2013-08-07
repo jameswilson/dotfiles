@@ -75,7 +75,7 @@
     PURPLE='\[\e[35m\]'
       CYAN='\[\e[36m\]'
      WHITE='\[\e[37m\]'
-      GRAY='\[\e[40m\]'     
+      GRAY='\[\e[40m\]'
     LT_RED='\[\e[41m\]'
   LT_GREEN='\[\e[42m\]'
  LT_YELLOW='\[\e[43m\]'
@@ -95,16 +95,23 @@
    # BGCOLOR='\e[45m'
    # BGCOLOR='\e[46m'
    # BGCOLOR='\e[47m'
-   
-   # Terminal window title (user@host ~/path)
-   TITLE="\[\e]0;\u@\h \w\a\]"
-   
-# Use this version to restrict user@host and path to title only.
-#PS1="$TITLE\n\$"
 
-# Use this version for user@host and path in both title and prompt
-PS1="\n$FG_BLUE# \u@\h $YELLOW\w\n$BLUE# $GREEN"
-#PS1="\e[0;34m#\e[m \u@\h[\W]\n\e[0;34m#\e[m >"
+
+# Show git unstaged items with a star and staged items with a plus in the prompt
+GIT_PS1_SHOWDIRTYSTATE=1
+
+# Show git upstream changes in the prompt; 'verbose' shows the number of commits.
+# < means you are behind remote
+# > means you are ahead of remote
+# <> means you have diverged
+# = means there is no difference
+GIT_PS1_SHOWUPSTREAM=verbose
+
+# Terminal window title (user@host ~/path)
+TITLE="\[\e]0;\u@\h \w\a\]"
+
+# Custom command prompt (based on Cygwin)
+PS1="\n$FG_BLUE# \u@\h $YELLOW\w $FG_CYAN$(__git_ps1 "[%s]")\n$BLUE# $ENDCOLOR"
 
 function pathmunge () {
 if [ -d $1 ] && ! echo $PATH | /usr/bin/egrep -q "(^|:)$1($|:)"

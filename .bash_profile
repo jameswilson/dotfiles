@@ -3,6 +3,10 @@
 
 #echo "~/.bash_profile"
 
+# Git bash completion
+source ~/.git-completion.sh
+source ~/.git-prompt.sh
+
 [ -r "${HOME}/.bashrc" ]            && . "${HOME}/.bashrc";
 [ -r "${HOME}/.bash_aliases" ]      && . "${HOME}/.bash_aliases";
 [ -r "${HOME}/.bash_environment" ]  && . "${HOME}/.bash_environment";
