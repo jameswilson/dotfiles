@@ -7,6 +7,7 @@
 /.ssh/known_hosts
 /.ssh/id_rsa
 /.neocon
+/.rvm
 /.spf13-vim-3
 /.viminfo
 /.vimundo
