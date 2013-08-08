@@ -96,6 +96,9 @@
    # BGCOLOR='\e[46m'
    # BGCOLOR='\e[47m'
 
+# Git bash completion
+source ~/.git-completion.sh
+source ~/.git-prompt.sh
 
 # Show git unstaged items with a star and staged items with a plus in the prompt
 GIT_PS1_SHOWDIRTYSTATE=1
@@ -111,7 +114,7 @@ GIT_PS1_SHOWUPSTREAM=1
 TITLE="\[\e]0;\u@\h \w\a\]"
 
 # Custom command prompt (based on Cygwin)
-PS1="\n$FG_BLUE# \u@\h $YELLOW\w $FG_CYAN$(__git_ps1 "[%s]")\n$BLUE# $ENDCOLOR"
+PS1="\n$FG_BLUE# \u@\h $YELLOW\w $FG_CYAN\$(__git_ps1 '(%s)')\n$BLUE# $ENDCOLOR"
 
 function pathmunge () {
 if [ -d $1 ] && ! echo $PATH | /usr/bin/egrep -q "(^|:)$1($|:)"
