@@ -100,8 +100,14 @@
   alias .dd='svn diff --diff-cmd diff -x -wup'
 
 # git shortcuts
+  # Add all unstaged files in the current directory and below.
   alias .ga='git status -s . | grep "^??" | cut -c4- | while read f; do git add "$f"; done'
-  alias .gr='git status -s . | grep "^!!" | cut -c4- | while read f; do git delete "$f"; done'
+  # Delete any missing files from git.
+  alias .gd='git status -s . | grep "^!!" | cut -c4- | while read f; do git delete "$f"; done'
+  # Remove all unstaged files in the current directory and below (the inverse of .ga)
+  alias .gr='git status -s . | grep "^??" | cut -c4- | while read f; do rm -f "$f"; done'
+  # Undo mode changes (755 <-> 644).
+  alias .gm="git diff --summary | grep --color 'mode change 100755 => 100644' | cut -d' ' -f7- | xargs chmod +x &&  git diff --summary | grep --color 'mode change 100644 => 100755' | cut -d' ' -f7- | xargs chmod -x"
 
 # Text Editor shortcuts
   alias e='mate'
