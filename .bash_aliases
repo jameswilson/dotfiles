@@ -14,12 +14,12 @@
   alias untar='tar zxvf'
   alias unbz='tar jxvf'
   alias ff='find . -not -path "*/.svn" -name $*'
-  alias fff='sudo find / -name $*'
+  alias fff='sudo -i find / -name $*'
+  alias gf='find . -path "*/.svn" -o -path "*/.git" -o -name "*.sql" -o -name "*.mysql" -o -name "*.sublime-*" -prune -o -type f -print0 | xargs -0 grep -I -n'
+  alias ef='find . -path "*/.svn" -prune -o -type f -print0 | xargs -0 egrep -I -n --color'
+
+# When wget is not installed...
   alias wget='curl -O'
-  alias gfind='find . -path "*/.svn" -o -path "*/.git" -o -name "*.sql" -o -name "*.mysql" -o -name "*.sublime-*" -prune -o -type f -print0 | xargs -0 grep -I -n'
-  alias egfind='find . -path "*/.svn" -prune -o -type f -print0 | xargs -0 egrep -I -n --color'
-  alias gf='gfind'
-  alias ef='egfind'
 
 # Conversions
 
@@ -40,13 +40,16 @@
   alias rmds='find . -name *.DS_Store -type f -exec rm {} \;'
 
 # Hide files from Finder
-  alias hide="/Developer/Tools/SetFile -a V"
-  alias show="/Developer/Tools/SetFile -a v"
+  alias hide="SetFile -a V"
+  alias show="SetFile -a v"
 
-# Default to human readable figures
+# Default to human readable file system stats
   alias df='df -h'
   alias du='du -h'
-  alias biggest="du -k * | sort -nr | cut -f2 | xargs du -sh"
+
+# Find big files
+  alias b="du -k -d 1 | sort -nr | cut -f2 | xargs du -sh"
+  alias bb="du -k * | sort -nr | cut -f2 | xargs du -sh"
 
 # Misc :)
   alias less='less -r'                          # raw control characters
@@ -68,26 +71,12 @@
   alias dir='lll'
   alias vdir='ls'
   alias list='l'
-# Webdev
-  alias h='sudo $EDITOR  /etc/hosts'
-  alias hosts='sudo $EDITOR /etc/hosts'
 
-# Apache 
-  alias vh='sudo $EDITOR /etc/apache2/extra/httpd-vhosts.conf && sudo apachectl restart'
-  alias vhosts='sudo $EDITOR /etc/apache2/extra/httpd-vhosts.conf'
-  alias astart='sudo arch -i386 /opt/local/apache2/bin/apachectl start'
-  alias astop='sudo apachectl stop'
-  alias ares='sudo arch -i386 /opt/local/apache2/bin/apachectl restart'
-
-# MySQL
-  alias mstart='sudo /usr/local/mysql/support-files/mysql.server start'
-  alias mstop='sudo /usr/local/mysql/support-files/mysql.server stop'
-  alias mres='sudo /usr/local/mysql/support-files/mysql.server restart'
-  alias mstat='sudo /usr/local/mysql/support-files/mysql.server status'
-  alias mload='sudo /usr/local/mysql/support-files/mysql.server reload'
   
-  alias start_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM start"
-  alias stop_mysql="/Library/StartupItems/MySQLCOM/MySQLCOM stop"
+# Web Developer shortcuts
+  alias h='sudo -i $EDITOR  /etc/hosts'
+  alias hosts='sudo -i $EDITOR /etc/hosts'
+  alias myip='curl ifconfig.me'
 
 # subversion shortcuts
   alias .c='svn commit -m'
@@ -100,6 +89,7 @@
   alias .dd='svn diff --diff-cmd diff -x -wup'
 
 # git shortcuts
+  alias g='git status'
   # Add all unstaged files in the current directory and below.
   alias .ga='git status -s . | grep "^??" | cut -c4- | while read f; do git add "$f"; done'
   # Delete any missing files from git.
