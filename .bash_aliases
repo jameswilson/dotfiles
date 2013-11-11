@@ -48,7 +48,7 @@
   alias du='du -h'
 
 # Find big files
-  alias b="du -k -d 1 | sort -nr | cut -f2 | xargs du -sh"
+  alias b="du -k -d 1 * | sort -nr | cut -f2 | xargs du -sh"
   alias bb="du -k * | sort -nr | cut -f2 | xargs du -sh"
 
 # Misc :)
