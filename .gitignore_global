@@ -26,6 +26,9 @@
 *.gz
 *.zip
 
+# Ignore Photoshop PSD binary files.
+*.psd
+
 # Ignore SASS cache files.
 .sass-cache
 FirePHPCore
