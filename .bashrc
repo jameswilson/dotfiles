@@ -114,7 +114,7 @@ GIT_PS1_SHOWUPSTREAM=1
 TITLE="\[\e]0;\u@\h \w\a\]"
 
 # Custom command prompt (based on Cygwin)
-PS1="\n\[$FG_BLUE\]# \u@\h\[$ENDCOLOR\] \[$YELLOW\]\w\[$ENDCOLOR\] \[$FG_CYAN\]\$(__git_ps1 '(%s)')\[$ENDCOLOR\] \n\[$FG_BLUE\]#\[$ENDCOLOR\] "
+PS1="\n\[$FG_BLUE\]\u@\h\[$ENDCOLOR\] \[$YELLOW\]\w\[$ENDCOLOR\] \[$FG_CYAN\]\$(__git_ps1 '(%s)')\[$ENDCOLOR\] \n\[$FG_BLUE\]$\[$ENDCOLOR\] "
 
 function pathmunge () {
 if [ -d $1 ] && ! echo $PATH | /usr/bin/egrep -q "(^|:)$1($|:)"
