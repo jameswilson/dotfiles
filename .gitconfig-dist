@@ -1,73 +1,112 @@
 [user]
-	name = First Last
-	email = username@example.com
-	editor = vim
+  name = James Wilson
+  email = jrwilson3@gmail.com
+  editor = vim
 
 [github]
-	user = github user 
-	token = github API token 
+  user = jameswilson
+  token = github_api_token
 
 [alias]
-	ci    = commit -a
-	co    = checkout
-	praise = blame
-	lg    = log
-	pom   = push origin master
-	stat  = status
-	st    = "!f() { git ls-files --exclude-standard -t -u -s -m -d $@ | sed -e 's/C.*\t/C /' ; } ; f"
-	sto   = st -o
-	ds    = diff --stat
-	cds   = !git ds --cached
-	fp    = format-patch
-	s     = "!git diff --name-status | sed -e 's/^/W /' ; git diff --cached --name-status | sed -e 's/^/C /'"
-	up    = !git remote update ; git gc
-	tree  = log --graph --oneline --all --decorate
-	odiff = difftool -t opendiff
 
-	# Creating branch patches - By Dave Reid (http://bit.ly/oVysCd)
-	branch-name = "!git for-each-ref --format='%(refname:short)' $(git symbolic-ref HEAD)"
-	cd-root = rev-parse --show-cdup
-	branch-diff = !git format-patch --stdout "$1" > "$(git cd-root)$(git branch-name).patch"
+  # Some shortcuts.
+  ci    = commit -a
+  co    = checkout
+  up    = !git remote update ; git gc
+
+  # Change directory to repo root
+  cdr   = "!cd $(git rev-parse --show-cdup)"
+
+
+  dp    = diff --patience
+  odiff = difftool -t opendiff
+
+  stat  = status
+  st    = "!f() { git ls-files --exclude-standard -t -u -s -m -d $@ | sed -e 's/C.*\t/C /' ; } ; f"
+  sto   = st -o
+  ds    = diff --stat
+  cds   = !git ds --cached
+  fp    = format-patch
+  s     = "!git diff --name-status | sed -e 's/^/W /' ; git diff --cached --name-status | sed -e 's/^/C /'"
+
+  # Display the commit history in a tree format, with color.
+  tree  = log --graph --oneline --all --decorate
+  recent = "!git log --color --format='format:%C(auto)%h %Cred%<(8,trunc)%aN  %Cblue%<(12)%ar %Creset%s'"
+
+  # List all ignored files in a working tree.
+  lso   = ls-files --others --exclude-standard
+
+  # Stage new/renamed/copied/deleted files when applying a patch.
+  apply = apply --index
+
+  # Legit workflow shortcuts (www.git-legit.org).
+  switch = !legit switch \"$@\"
+  branches = !legit branches
+  sprout = !legit sprout \"$@\"
+  unpublish = !legit unpublish \"$@\"
+  harvest = !legit harvest \"$@\"
+  sync = !legit sync \"$@\"
+  publish = !legit publish \"$@\"
+  graft = !legit graft \"$@\"
 
 [branch]
-    # Always use rebase when pulling, to avoid evil merge commits. By Randy Fay (http://randyfay.com/node/103)
-	autosetuprebase = always
+  # Rebase when pulling avoids merge commits.
+  autosetuprebase = always
 
 [core]
-	pager = less -FRSX
-	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = ~/.gitignore_global
-	quotepath = false
+
+  # A global gitignore file I cant use ~/.gitignore because my ~/ is a repo :o
+  excludesfile = ~/.gitignore_global
+  pager = less -FRSX
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  quotepath = false
 
 [color]
-	ui = true
-	pager = true
-	diff = auto
-	status = auto
-	branch = auto
-	interactive = auto
+  ui = true
+  pager = true
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
 
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+  current = yellow reverse
+  local = yellow
+  remote = green
 
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
 
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+  added = yellow
+  changed = green
+  untracked = cyan
 
 [diff]
-	tool = vimdiff
+  tool = vimdiff
+  algorithm = patience
+  renames = copies
+
+[format]
+  pretty = oneline
 
 [merge]
-	tool = vimdiff
+  tool = vimdiff
 
 [push]
-	default = tracking
+  default = tracking
+
+[dude]
+  interval = 300
+  icon = ~/.git-dude/git_icon32.png
+
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
