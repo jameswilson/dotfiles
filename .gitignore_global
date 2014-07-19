@@ -12,9 +12,11 @@
 *.bak
 
 # Ignore patch files.
-*.orig
 *.patch
 *.diff
+*.orig
+*.rej
+interdiff*.txt
 
 # Ignore project files created by various IDEs.
 *.sublime-*
