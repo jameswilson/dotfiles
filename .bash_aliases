@@ -135,3 +135,8 @@
 
 # Composer
   alias composer='php ~/bin/composer.phar'
+
+# Jilla (JIRA CLI)
+  alias j="jilla"
+  alias js="jilla ls"
+  alias jp="jilla ls | grep $1"
