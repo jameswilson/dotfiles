@@ -39,7 +39,6 @@ export PATH="$MAMP_HOME/Library/bin:$PATH"
 # export PATH="$AMPPS_HOME/perl/bin:$PATH"
 # export PATH="$AMPPS_HOME/python/bin:$PATH"
 export PATH="$PHP_HOME/bin:$PATH"
-export PATH="$NPM_HOME/bin:$PATH"
 
 # MANPATH
 #export MANPATH="$MANPATH:$MACPORT_HOME/share/man"
