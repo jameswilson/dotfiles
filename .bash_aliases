@@ -136,6 +136,8 @@
 # Vim
   alias vim='mvim -v'
 
+# Platform.sh
+  alias p='platform'
 
 # Jilla (JIRA CLI)
   alias j="jilla"
