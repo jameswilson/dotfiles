@@ -136,8 +136,6 @@
 # Vim
   alias vim='mvim -v'
 
-# Composer
-  alias composer='php ~/bin/composer.phar'
 
 # Jilla (JIRA CLI)
   alias j="jilla"

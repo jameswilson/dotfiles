@@ -39,6 +39,7 @@ export PATH="$MAMP_HOME/Library/bin:$PATH"
 # export PATH="$AMPPS_HOME/perl/bin:$PATH"
 # export PATH="$AMPPS_HOME/python/bin:$PATH"
 export PATH="$PHP_HOME/bin:$PATH"
+export PATH="$PATH:~/.composer/vendor/bin"
 
 # MANPATH
 #export MANPATH="$MANPATH:$MACPORT_HOME/share/man"
