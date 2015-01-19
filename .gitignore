@@ -5,6 +5,10 @@
 /.gitk
 /.cache
 /.bash_history
+/.jilla
+/.platform
+/.jiraclirc.json
+/.node-gyp/
 /.ssh/known_hosts
 /.ssh/id_rsa
 /.neocon
@@ -19,6 +23,7 @@
 /.dropbox
 /.local
 /Backups/
+/bin/FDK/
 /Desktop/
 /Documents/
 /Downloads/
