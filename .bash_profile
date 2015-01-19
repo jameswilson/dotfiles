@@ -15,3 +15,8 @@ fortune -s
 
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Initialization for FDK command line tools.Fri Jan  2 10:02:53 2015
+FDK_EXE="/Users/jameswilson/bin/FDK/Tools/osx"
+PATH=${PATH}:"/Users/jameswilson/bin/FDK/Tools/osx"
+export PATH
+export FDK_EXE
