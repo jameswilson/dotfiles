@@ -1,3 +1,10 @@
+#
+# File: Global git configurations
+#
+# Check out this git cheat sheet...
+# http://cheat.errtheblog.com/s/git
+#
+
 [user]
   name = James Wilson
   email = jrwilson3@gmail.com
@@ -7,31 +14,38 @@
   user = jameswilson
   token = github_api_token
 
+[credential]
+  helper = osxkeychain
+
 [alias]
+
+  # Change directory to repo root
+  repo-root = "!cd $(git rev-parse --show-cdup)"
+
+  # Display the commit history in a tree format, with color.
+  tree  = log --graph --oneline --all --decorate
+  recent = "!git log --color --format='format:%C(auto)%h %Cred%<(8,trunc)%aN  %Cblue%<(12)%ar %Creset%s'"
+
+  # Sometimes the only change in a file is from 0755 to 0644 or
+  # vice versa; the following command resets all file permissions
+  # changes to their original values.
+  permission-reset = "!git diff -p | grep -E \"^(diff|old mode|new mode)\" | sed -e \"s/^old/NEW/;s/^new/old/;s/^NEW/new/\" | git apply"
 
   # Some shortcuts.
   ci    = commit -a
   co    = checkout
   up    = !git remote update ; git gc
 
-  # Change directory to repo root
-  cdr   = "!cd $(git rev-parse --show-cdup)"
-
-
-  dp    = diff --patience
-  odiff = difftool -t opendiff
-
-  stat  = status
+  s     = "!git diff --name-status | sed -e 's/^/W /' ; git diff --cached --name-status | sed -e 's/^/C /'"
   st    = "!f() { git ls-files --exclude-standard -t -u -s -m -d $@ | sed -e 's/C.*\t/C /' ; } ; f"
   sto   = st -o
+  stat  = status
+
+  dp    = diff --patience
   ds    = diff --stat
+  odiff = difftool -t opendiff
   cds   = !git ds --cached
   fp    = format-patch
-  s     = "!git diff --name-status | sed -e 's/^/W /' ; git diff --cached --name-status | sed -e 's/^/C /'"
-
-  # Display the commit history in a tree format, with color.
-  tree  = log --graph --oneline --all --decorate
-  recent = "!git log --color --format='format:%C(auto)%h %Cred%<(8,trunc)%aN  %Cblue%<(12)%ar %Creset%s'"
 
   # List all ignored files in a working tree.
   lso   = ls-files --others --exclude-standard
@@ -40,14 +54,14 @@
   apply = apply --index
 
   # Legit workflow shortcuts (www.git-legit.org).
-  switch = !legit switch \"$@\"
-  branches = !legit branches
-  sprout = !legit sprout \"$@\"
+  switch    = !legit switch \"$@\"
+  branches  = !legit branches
+  sprout    = !legit sprout \"$@\"
   unpublish = !legit unpublish \"$@\"
-  harvest = !legit harvest \"$@\"
-  sync = !legit sync \"$@\"
-  publish = !legit publish \"$@\"
-  graft = !legit graft \"$@\"
+  harvest   = !legit harvest \"$@\"
+  sync      = !legit sync \"$@\"
+  publish   = !legit publish \"$@\"
+  graft     = !legit graft \"$@\"
 
 [branch]
   # Rebase when pulling avoids merge commits.
@@ -105,7 +119,7 @@
 
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path =
+  path = /usr/bin/opendiff
 
 [mergetool "sourcetree"]
   cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
