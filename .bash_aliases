@@ -140,6 +140,6 @@
   alias p='platform'
 
 # Jilla (JIRA CLI)
-  alias j="jilla"
+  alias j="jilla describe"
   alias js="jilla ls"
-  alias jp="jilla ls | grep $1"
+  alias jpi="jilla ls | grep $1"
