@@ -4,9 +4,7 @@ It is completley customized for my development preferences:
 
 * Mac OS X
 * preferred editor: vim
-* Macports is installed
-* Optionally Homebrew is installed (doesnt work on PPC:(
-
+* Homebrew is installed
 
 If I'm recovering this then do the following:
 
@@ -47,3 +45,14 @@ Music/
 Pictures/
 Public/
 Sites/
+
+4.  Install homebrew.
+
+5.  Install Cask:
+
+        brew install caskroom/cask/brew-cask
+
+6.  Install quicklook plugins:
+
+        brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+
