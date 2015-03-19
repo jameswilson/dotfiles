@@ -6,121 +6,121 @@
 #
 
 [user]
-  name = James Wilson
-  email = jrwilson3@gmail.com
-  editor = vim
+	name = James Wilson
+	email = jrwilson3@gmail.com
+	editor = vim
 
 [github]
-  user = jameswilson
-  token = github_api_token
+	user = jameswilson
+	token = github_api_token
 
 [credential]
-  helper = osxkeychain
+	helper = osxkeychain
 
 [alias]
 
-  # Change directory to repo root
-  repo-root = "!cd $(git rev-parse --show-cdup)"
+	# Change directory to repo root
+	repo-root = "!cd $(git rev-parse --show-cdup)"
 
-  # Display the commit history in a tree format, with color.
-  tree  = log --graph --oneline --all --decorate
-  recent = "!git log --color --format='format:%C(auto)%h %Cred%<(8,trunc)%aN  %Cblue%<(12)%ar %Creset%s'"
+	# Display the commit history in a tree format, with color.
+	tree  = log --graph --oneline --all --decorate
+	recent = "!git log --color --format='format:%C(auto)%h %Cred%<(8,trunc)%aN  %Cblue%<(12)%ar %Creset%s'"
 
-  # Sometimes the only change in a file is from 0755 to 0644 or
-  # vice versa; the following command resets all file permissions
-  # changes to their original values.
-  permission-reset = "!git diff -p | grep -E \"^(diff|old mode|new mode)\" | sed -e \"s/^old/NEW/;s/^new/old/;s/^NEW/new/\" | git apply"
+	# Sometimes the only change in a file is from 0755 to 0644 or
+	# vice versa; the following command resets all file permissions
+	# changes to their original values.
+	permission-reset = "!git diff -p | grep -E \"^(diff|old mode|new mode)\" | sed -e \"s/^old/NEW/;s/^new/old/;s/^NEW/new/\" | git apply"
 
-  # Some shortcuts.
-  ci    = commit -a
-  co    = checkout
-  up    = !git remote update ; git gc
+	# Some shortcuts.
+	ci    = commit -a
+	co    = checkout
+	up    = !git remote update ; git gc
 
-  s     = "!git diff --name-status | sed -e 's/^/W /' ; git diff --cached --name-status | sed -e 's/^/C /'"
-  st    = "!f() { git ls-files --exclude-standard -t -u -s -m -d $@ | sed -e 's/C.*\t/C /' ; } ; f"
-  sto   = st -o
-  stat  = status
+	s     = "!git diff --name-status | sed -e 's/^/W /' ; git diff --cached --name-status | sed -e 's/^/C /'"
+	st    = "!f() { git ls-files --exclude-standard -t -u -s -m -d $@ | sed -e 's/C.*\t/C /' ; } ; f"
+	sto   = st -o
+	stat  = status
 
-  dp    = diff --patience
-  ds    = diff --stat
-  odiff = difftool -t opendiff
-  cds   = !git ds --cached
-  fp    = format-patch
+	dp    = diff --patience
+	ds    = diff --stat
+	odiff = difftool -t opendiff
+	cds   = !git ds --cached
+	fp    = format-patch
 
-  # List all ignored files in a working tree.
-  lso   = ls-files --others --exclude-standard
+	# List all ignored files in a working tree.
+	lso   = ls-files --others --exclude-standard
 
-  # Stage new/renamed/copied/deleted files when applying a patch.
-  apply = apply --index
+	# Stage new/renamed/copied/deleted files when applying a patch.
+	apply = apply --index
 
-  # Legit workflow shortcuts (www.git-legit.org).
-  switch    = !legit switch \"$@\"
-  branches  = !legit branches
-  sprout    = !legit sprout \"$@\"
-  unpublish = !legit unpublish \"$@\"
-  harvest   = !legit harvest \"$@\"
-  sync      = !legit sync \"$@\"
-  publish   = !legit publish \"$@\"
-  graft     = !legit graft \"$@\"
+	# Legit workflow shortcuts (www.git-legit.org).
+	switch = !legit switch \"$@\"
+	branches = !legit branches
+	sprout = !legit sprout \"$@\"
+	unpublish = !legit unpublish \"$@\"
+	harvest = !legit harvest \"$@\"
+	sync = !legit sync \"$@\"
+	publish = !legit publish \"$@\"
+	graft = !legit graft \"$@\"
 
 [branch]
-  # Rebase when pulling avoids merge commits.
-  autosetuprebase = always
+	# Rebase when pulling avoids merge commits.
+	autosetuprebase = always
 
 [core]
 
-  # A global gitignore file I cant use ~/.gitignore because my ~/ is a repo :o
-  excludesfile = ~/.gitignore_global
-  pager = less -FRSX
-  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-  quotepath = false
+	# A global excludesfile siimilar to .gitignore
+	excludesfile = ~/.gitexcludes
+	pager = less -FRSX
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	quotepath = false
 
 [color]
-  ui = true
-  pager = true
-  diff = auto
-  status = auto
-  branch = auto
-  interactive = auto
+	ui = true
+	pager = true
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
 
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+	current = yellow reverse
+	local = yellow
+	remote = green
 
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
 
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+	added = yellow
+	changed = green
+	untracked = cyan
 
 [diff]
-  tool = vimdiff
-  algorithm = patience
-  renames = copies
+	tool = vimdiff
+	algorithm = patience
+	renames = copies
 
 [format]
-  pretty = oneline
+	pretty = oneline
 
 [merge]
-  tool = vimdiff
+	tool = vimdiff
 
 [push]
-  default = tracking
+	default = tracking
 
 [dude]
-  interval = 300
-  icon = ~/.git-dude/git_icon32.png
+	interval = 300
+	icon = ~/.git-dude/git_icon32.png
 
 [difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = /usr/bin/opendiff
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
 
 [mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

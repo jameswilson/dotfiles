@@ -1,5 +1,5 @@
 # Make all the patterns in this file apply to *all* projects using:
-#   `git config --global core.excludesfile ~/.gitignore_global`
+#   `git config --global core.excludesfile ~/.gitexcludes`
 
 # Ignore operating system files.
 .DS_Store
