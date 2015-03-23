@@ -156,4 +156,6 @@ function gd(){
 
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#rvm completions
+[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 source $(brew --prefix nvm)/nvm.sh # Add NVM
