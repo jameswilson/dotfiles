@@ -123,8 +123,9 @@
   alias dcc='drush cache-clear css-js'
   alias dg='drush dl --package-handler=git_drupalorg'
 
-# Photoshop
+# Photoshop & Illustrator
   alias psp='open -b com.adobe.Photoshop'
+  alias ai='open -b com.adobe.Illustrator'
 
 # Sublime Text 2
   alias slt='open -b com.sublimetext.2'
@@ -132,7 +133,7 @@
 # ImageOptim
   alias opt='open -a ImageOptim'
   alias mangle='open -a "Name Mangler"'
-
+  alias alf='open -a ImageAlpha'
 # Vim
   alias vim='mvim -v'
 
