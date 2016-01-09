@@ -13,6 +13,8 @@
 
 fortune -s
 
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 # Initialization for FDK command line tools.Fri Jan  2 10:02:53 2015
