@@ -3,7 +3,7 @@
 # #####################
 
 #echo "~/.bash_environment"
-export PHP_VERSION="5.4.34"
+export PHP_VERSION="5.5.18"
 
 # HOME folders
 #export SVN_HOME="/opt/subversion"
