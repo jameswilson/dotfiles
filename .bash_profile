@@ -13,21 +13,24 @@
 
 fortune -s
 
+# NVM
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-# Initialization for FDK command line tools.Fri Jan  2 10:02:53 2015
-FDK_EXE="$HOME/bin/FDK/Tools/osx"
-PATH=${PATH}:"$HOME/bin/FDK/Tools/osx"
+# RVM configuration. Load RVM into a shell session as a function
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Adobe Font Developer Kit cli tools. Fri Jan 2 10:02:53 2015
+FDK_EXE="/usr/local/FDK/Tools/osx"
+PATH=${PATH}:"/usr/local/FDK/Tools/osx"
 export PATH
 export FDK_EXE
 
 # The next line updates PATH for the Google Cloud SDK.
-source "$HOME/google-cloud-sdk/path.bash.inc"
+source "$HOME/.google-cloud-sdk/path.bash.inc"
 
-# The next line enables bash completion for gcloud.
-source "$HOME/google-cloud-sdk/completion.bash.inc"
+# The next line enables bash completion for Google Cloud.
+source "$HOME/.google-cloud-sdk/completion.bash.inc"
 
-# The next line enables bash completion for Drupal console.
+# The next line enables bash completion for Drupal Console.
 source "$HOME/.console/console.rc" 2>/dev/null

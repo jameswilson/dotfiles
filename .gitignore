@@ -4,6 +4,7 @@
 /.gitconfig
 /.gitk
 /.cache
+/.google-cloud-sdk/
 /.bash_history
 /.jilla
 /.platform
