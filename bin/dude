@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# Git dude repo monitoring service
+# arg1: "stop" or "start"
+
+# DESCRIPTION:
+#
+#   Provides the content encoding the specified
+#   resources are served with.
+#
+# USAGE:
+#
+#   dude start
+#     - Starts the service.
+#   dude stop
+#     - Stops the service.
+#
+# USEFUL LINKS:
+#
+#   * Git Dude by Marcin Kulik (http://ku1ik.com/ | @sickill)
+#     https://github.com/sickill/git-dude
+#
+
+val="$1"
+
+if [[ $val == "start" ]]; then
+  git dude ~/.git-dude &>/dev/null &
+  printf "git-dude started\n"
+elif [[ $val == "stop" ]];    then
+  ps aux | grep 'git[ -]dude' | awk '{print $2}' | xargs sudo kill -9
+  printf "git-dude stopped\n"
+else
+  printf "$val not valid. Use start/stop\n"
+fi

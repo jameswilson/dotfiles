@@ -138,22 +138,6 @@ pathmunge /opt/local/sbin
 # Local 
 pathmunge /usr/local/php5/bin
 
-# Git dude repo monitoring service
-# arg1: "stop" or "start"
-function gd(){
-    val="$1"
-
-    if [ $val == "start" ]; then
-        git dude ~/.git-dude &>/dev/null &
-        printf "git-dude started\n"
-    elif [ $val == "stop" ];    then
-        ps aux | grep 'git[ -]dude' | awk '{print $2}' | xargs sudo kill -9
-        printf "git-dude stopped\n"
-    else
-        printf "$val not valid. Use start/stop\n"
-    fi
-}
-
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 #rvm completions
