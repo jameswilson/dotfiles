@@ -1,6 +1,19 @@
+/.android/
+/.acquia/
+/.adobe/
+/.ansible/
+/.cache/
 /.CFUserTextEncoding
 /.composer
+/.console/
+/.cordova/
+/.docker/
+/.ionic/
 /.MacOSX
+/.mapbox-studio/
+/.nvm/
+/.plugman/
+/.terminus/
 /.gitconfig
 /.gitk
 /.cache
@@ -24,8 +37,9 @@
 /.dropbox
 /.local
 /Backups/
-/bin/FDK/
 /Desktop/
+/Dropbox
+/Dropbox */
 /Documents/
 /Downloads/
 /Icon*
