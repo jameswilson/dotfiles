@@ -31,8 +31,9 @@ interdiff*.txt
 # Ignore Photoshop PSD binary files.
 *.psd
 
-# Ignore SASS cache files.
+# Miscelaneous folders produced by various webdev tools.
 .sass-cache
 FirePHPCore
 devel_themer
 simplehtmldom
+node_modules
