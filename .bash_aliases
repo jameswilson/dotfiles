@@ -52,6 +52,7 @@
   alias bb="du -k * | sort -nr | cut -f2 | xargs du -sh"
 
 # Misc :)
+  alias diff='diff -u'                          # default to unified diff format
   alias less='less -r'                          # raw control characters
   alias whence='type -a'                        # where, of a sort
   alias grep='grep --color'                     # show differences in colour
