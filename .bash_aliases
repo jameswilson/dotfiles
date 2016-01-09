@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Aliases for Mac OS X
 # #######
 
