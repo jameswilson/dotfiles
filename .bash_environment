@@ -2,7 +2,7 @@
 # ~/.bash_enviroment: custom bashrc hepler to initialize environment variables
 
 # Software Versions
-export PHP_VERSION="5.5.18"
+export PHP_VERSION="5.5.26"
 
 # Default Editor
 export EDITOR="vim"
