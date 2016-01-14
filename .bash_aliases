@@ -118,12 +118,12 @@
   alias sc='./script/console'
   alias mr='rake db:migrate'
 
-# Drupal 
-  alias dhead='cvs -z6 -d:pserver:anonymous:anonymous@cvs.drupal.org:/cvs/drupal checkout drupal'
-  alias d6='cvs -z6 -d:pserver:anonymous:anonymous@cvs.drupal.org:/cvs/drupal co -r DRUPAL-6 drupal'
-  alias d69='cvs -z6 -d:pserver:anonymous:anonymous@cvs.drupal.org:/cvs/drupal co -r DRUPAL-6-9 drupal'
-  alias dca='drush cache-clear all'
-  alias dcc='drush cache-clear css-js'
+# Drupal
+  alias drush='drush7'
+  alias drush8='/usr/local/drush/drush8/vendor/bin/drush'
+  alias drush7='/usr/local/drush/drush7/vendor/bin/drush'
+  alias drush6='/usr/local/drush/drush6/vendor/bin/drush'
+  alias drush5='/usr/local/drush/drush5/drush'
   alias dg='drush dl --package-handler=git_drupalorg'
 
 # Photoshop & Illustrator
