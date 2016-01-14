@@ -63,3 +63,6 @@ PATH=$PATH:$rvm_path/bin
 
 # SVN
 export SVN_EDITOR=$EDITOR
+
+# Docker
+eval "$(docker-machine env default)"
