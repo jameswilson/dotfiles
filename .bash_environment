@@ -15,6 +15,9 @@ alias php70='/Applications/MAMP/bin/php/php7.0.0/bin/php'
 # Default Editor
 export EDITOR="vim"
 
+# Home bin
+PATH=$PATH:$HOME/bin
+
 # AMPPS
 # export AMPPS_HOME="/Applications/AMPPS"
 # PATH=$AMPPS_HOME/apache/bin:$PATH
