@@ -81,5 +81,6 @@ export SVN_EDITOR=$EDITOR
 
 # Docker
 if [ "`docker-machine status dev1`" == "Running" ]
+then
   eval "$(docker-machine env dev1)"
 fi
