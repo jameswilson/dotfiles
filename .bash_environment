@@ -65,4 +65,6 @@ PATH=$PATH:$rvm_path/bin
 export SVN_EDITOR=$EDITOR
 
 # Docker
-eval "$(docker-machine env default)"
+if [ "`docker-machine status dev1`" == "Running" ]
+  eval "$(docker-machine env dev1)"
+fi
