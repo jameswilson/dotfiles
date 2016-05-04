@@ -48,6 +48,9 @@ PATH=$PHP_HOME/bin:$PATH
 # Composer
 PATH=$HOME/.composer/vendor/bin:$PATH
 
+# Homebrew
+PATH=/usr/local/bin:$PATH
+
 # Drush
 export DRUSH_PHP="$PHP_HOME/bin/php"
 
