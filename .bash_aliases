@@ -19,7 +19,7 @@
   alias ef='find . -path "*/.svn" -prune -o -type f -print0 | xargs -0 egrep -I -n --color'
 
 # When wget is not installed...
-  alias wget='curl -O'
+#  alias wget='curl -O'
 
 # Conversions
 
