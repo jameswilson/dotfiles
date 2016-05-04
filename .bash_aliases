@@ -15,7 +15,7 @@
   alias unbz='tar jxvf'
   alias ff='find . -not -path "*/.svn" -name $*'
   alias fff='sudo -i find / -name $*'
-  alias gf='find . -path "*/.svn" -o -path "*/.git" -o -name "*.sql" -o -name "*.mysql" -o -name "*.sublime-*" -prune -o -type f -print0 | xargs -0 grep -I -n'
+  alias gf='find . -path "*/.svn/*" -o -path "*/.git/*" -o -name "*.sql" -o -name "*.mysql" -o -name "*.sublime-*" -o -name "*.min.*" -prune -o -type f -print0 | xargs -0 grep -I -n'
   alias ef='find . -path "*/.svn" -prune -o -type f -print0 | xargs -0 egrep -I -n --color'
 
 # When wget is not installed...
