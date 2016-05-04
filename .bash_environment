@@ -60,6 +60,7 @@ PATH=$PHP_HOME/bin:$PATH
 PATH=$HOME/.composer/vendor/bin:$PATH
 
 # Homebrew
+export HOMEBREW_HOME=/usr/local/Cellar
 PATH=/usr/local/bin:$PATH
 
 # Drush
