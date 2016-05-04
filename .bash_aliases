@@ -119,7 +119,7 @@
   alias mr='rake db:migrate'
 
 # Drupal
-  alias drush='drush7'
+  #alias drush='drush7'
   alias drush8='/usr/local/drush/drush8/vendor/bin/drush'
   alias drush7='/usr/local/drush/drush7/vendor/bin/drush'
   alias drush6='/usr/local/drush/drush6/vendor/bin/drush'
