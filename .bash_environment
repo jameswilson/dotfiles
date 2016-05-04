@@ -85,3 +85,23 @@ if [ "`docker-machine status dev1`" == "Running" ]
 then
   eval "$(docker-machine env dev1)"
 fi
+
+# Function to swap php versions on cli.
+# Note: this swap is only relative to the current terminal session.
+function swphp() {
+  version=$1
+  if [[ ! $version ]]
+  then
+    echo "Which php version would you like to switch to?"
+    find $MAMP_HOME/bin/php $HOMEBREW_HOME/php* -mindepth 1 -maxdepth 1 -type d -print0 | xargs -0 printf "%s\n"
+    echo ""
+    echo "  (copy and paste one of the paths above then press ENTER; CTRL+C to cancel):"
+    echo ""
+
+    read version
+  fi
+
+  export PHP_HOME=$version
+  export DRUSH_PHP=$PHP_HOME/bin/php
+  export PATH=$PHP_HOME/bin:$PATH
+}
