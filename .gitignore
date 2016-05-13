@@ -54,7 +54,6 @@
 /.skel/
 /.spf13-vim-3/
 /.ssh/
-!/.ssh/id_rsa.pub
 /.subversion/
 /.terminus/
 /.Trash/
