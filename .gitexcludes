@@ -19,6 +19,7 @@
 interdiff*.txt
 
 # Ignore project files created by various IDEs.
+.idea
 *.sublime-*
 *.tmproj
 
