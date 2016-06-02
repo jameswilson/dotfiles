@@ -149,8 +149,12 @@
   alias opt='open -a ImageOptim'
   alias mangle='open -a "Name Mangler"'
   alias alf='open -a ImageAlpha'
+
 # Vim
-  alias vim='mvim -v'
+if [[ -r mvim ]]
+then
+   alias vim='mvim -v'
+fi
 
 # Platform.sh
   alias p='platform'
