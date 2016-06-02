@@ -41,3 +41,8 @@ shopt -s cdspell
 
 # Prevent Mac OSX dot-underscore in tarfiles.
 export COPYFILE_DISABLE=true
+
+# Directory-specific environment variables!
+# ENSURE THIS IS ALWAYS THE LAST TO EXECUTE IN THIS FILE
+# http://direnv.net/
+eval "$(direnv hook bash)"
