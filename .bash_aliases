@@ -105,6 +105,18 @@
   # Undo mode changes (755 <-> 644).
   alias .gm="git diff --summary | grep --color 'mode change 100755 => 100644' | cut -d' ' -f7- | xargs chmod +x &&  git diff --summary | grep --color 'mode change 100644 => 100755' | cut -d' ' -f7- | xargs chmod -x"
 
+# Docker
+  alias dp='docker ps'
+  alias dpa='docker ps -a'
+
+# Terra
+  alias t='terra'
+  alias ts='terra status'
+  alias taa='terra app:add'
+  alias tad='terra app:remove'
+  alias tea='terra environment:add'
+  alias ted='terra environment:remove'
+
 # Solr
   alias solr='cd /usr/local/Cellar/solr/3.6.1/libexec/drupal && java -jar start.jar'
 # Text Editor shortcuts
