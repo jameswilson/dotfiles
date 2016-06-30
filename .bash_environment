@@ -43,6 +43,10 @@ PATH=/Users/jameswilson/Projects/Bluespark/SO/vendor/bin:$PATH
 export HOMEBREW_HOME=/usr/local/Cellar
 PATH=/usr/local/bin:$PATH
 
+# brew install php-version ftw!
+source $(brew --prefix php-version)/php-version.sh && php-version 7.0.6
+export PHP_VERSIONS="$MAMP_HOME/bin/php/php7.0.0 $MAMP_HOME/bin/php/php5.4.42 $MAMP_HOME/bin/php/php5.6.10 $MAMP_HOME/bin/php/php5.5.26 /usr/local/Cellar/php70/7.0.6"
+
 # Drush
 export DRUSH_PHP="$PHP_HOME/bin/php"
 
@@ -65,22 +69,3 @@ then
   eval "$(docker-machine env dev1)"
 fi
 
-# Function to swap php versions on cli.
-# Note: this swap is only relative to the current terminal session.
-function swphp() {
-  version=$1
-  if [[ ! $version ]]
-  then
-    echo "Which php version would you like to switch to?"
-    find $MAMP_HOME/bin/php $HOMEBREW_HOME/php* -mindepth 1 -maxdepth 1 -type d -print0 | xargs -0 printf "%s\n"
-    echo ""
-    echo "  (copy and paste one of the paths above then press ENTER; CTRL+C to cancel):"
-    echo ""
-
-    read version
-  fi
-
-  export PHP_HOME=$version
-  export DRUSH_PHP=$PHP_HOME/bin/php
-  export PATH=$PHP_HOME/bin:$PATH
-}
