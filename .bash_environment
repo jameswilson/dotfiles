@@ -18,31 +18,10 @@ export EDITOR="vim"
 # Home bin
 PATH=$PATH:$HOME/bin
 
-# AMPPS
-# export AMPPS_HOME="/Applications/AMPPS"
-# PATH=$AMPPS_HOME/apache/bin:$PATH
-# PATH=$AMPPS_HOME/extra/bin:$PATH
-# PATH=$AMPPS_HOME/mongodb/bin:$PATH
-# PATH=$AMPPS_HOME/mysql/bin:$PATH
-# PATH=$AMPPS_HOME/perl/bin:$PATH
-# PATH=$AMPPS_HOME/python/bin:$PATH
-# MANPATH=$MANPATH:$AMPPS_HOME/apache/man
-# MANPATH=$MANPATH:$AMPPS_HOME/extra/etc/openssl/man
-# MANPATH=$MANPATH:$AMPPS_HOME/extra/man
-# MANPATH=$MANPATH:$AMPPS_HOME/extra/share/man
-# MANPATH=$MANPATH:$AMPPS_HOME/mysql/man
-# MANPATH=$MANPATH:$AMPPS_HOME/perl/man
-# MANPATH=$MANPATH:$AMPPS_HOME/php/php/man
-# MANPATH=$MANPATH:$AMPPS_HOME/python/share/man
-
 # Devel
 export DEVEL_HOME="/Developer"
 PATH="$DEVEL_HOME/Tools:$PATH"
 MANPATH="$MANPATH:$DEVEL_HOME/share/man"
-
-# Adobe Font Developer Kit cli tools.
-export FDK_EXE="/usr/local/FDK/Tools/osx"
-PATH=$PATH:$FDK_EXE
 
 # Mamp
 export MAMP_HOME="/Applications/MAMP"
