@@ -51,7 +51,6 @@ export PHP_VERSIONS="$MAMP_HOME/bin/php/php7.0.0 $MAMP_HOME/bin/php/php5.4.42 $M
 export set JAVA_HOME=/usr/local/java
 
 # Drush
-export DRUSH_PHP="$PHP_HOME/bin/php"
 
 # NodeJS
 export NODE_PATH="/usr/local/lib/node"
