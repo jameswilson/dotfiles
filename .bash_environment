@@ -52,6 +52,12 @@ export set JAVA_HOME=/usr/local/java
 
 # Drush
 
+# Drupal console
+PATH=$HOME/.console/vendor/bin:$PATH
+
+# Terra
+PATH=$HOME/.terra/vendor/bin:$PATH
+
 # NodeJS
 export NODE_PATH="/usr/local/lib/node"
 export NPM_HOME="/usr/local/lib/node_modules/npm"
