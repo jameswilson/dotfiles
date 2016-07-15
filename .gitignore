@@ -4,7 +4,10 @@
 /.adobe/
 /.android/
 /.ansible/
+/.atom/
 /.bash_history
+/.bash_sessions/
+/.bundle/
 /.cache/
 /.CF89AA64
 /.CFUserTextEncoding
@@ -38,7 +41,8 @@
 /.local/
 /.mapbox-studio/
 /.mc/
-~/.mc/ini
+/.mkshrc
+/.oracle_jre_usage/
 /.neocon/
 /.neocomplcache/
 /.neocon/
@@ -54,8 +58,10 @@
 /.skel/
 /.spf13-vim-3/
 /.ssh/
+/.s3cfg
 /.subversion/
 /.terminus/
+/.terra/
 /.Trash/
 /.vagrant.d/
 /.vimbackup/
@@ -64,7 +70,9 @@
 /.vimundo/
 /.vimviews/
 /.vimrc.20121011
+/.wget-hsts
 /.Xauthority
+/App/
 /Applications/
 /Backups/
 /Desktop/
