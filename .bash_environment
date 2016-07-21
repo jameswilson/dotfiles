@@ -31,8 +31,6 @@ MANPATH=$MANPATH:$MAMP_HOME/Library/share/man
 
 # PHP
 export PHP_HOME="$MAMP_HOME/bin/php/php$PHP_VERSION"
-#export PHP_HOME="/usr/local/php5"
-#export PHP_HOME="$AMPPS_HOME/php"
 PATH=$PHP_HOME/bin:$PATH
 
 # Composer
@@ -47,7 +45,7 @@ PATH=/usr/local/bin:$PATH
 source $(brew --prefix php-version)/php-version.sh && php-version 7.0.6
 export PHP_VERSIONS="$MAMP_HOME/bin/php/php7.0.0 $MAMP_HOME/bin/php/php5.4.42 $MAMP_HOME/bin/php/php5.6.10 $MAMP_HOME/bin/php/php5.5.26 /usr/local/Cellar/php70/7.0.6"
 
-# Java 
+# Java
 export set JAVA_HOME=/usr/local/java
 
 # Drush
@@ -74,4 +72,3 @@ PATH=$PATH:$rvm_path/bin
 
 # SVN
 export SVN_EDITOR=$EDITOR
-
