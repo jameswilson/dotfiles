@@ -118,7 +118,7 @@
   alias ted='terra environment:remove'
 
 # Solr
-  alias solr='cd /usr/local/solr && java -jar start.jar'
+  alias solr='cd /usr/local/solr && java -jar start.jar; cd -'
 # Text Editor shortcuts
   alias e='mate'
   alias et='mate . &'
