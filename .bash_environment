@@ -35,7 +35,6 @@ PATH=$PHP_HOME/bin:$PATH
 
 # Composer
 PATH=$HOME/.composer/vendor/bin:$PATH
-PATH=/Users/jameswilson/Projects/Bluespark/SO/vendor/bin:$PATH
 
 # Homebrew
 export HOMEBREW_HOME=/usr/local/Cellar
