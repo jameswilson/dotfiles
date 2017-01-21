@@ -8,6 +8,8 @@ src $HOME/.bash_completion
 src $HOME/.bash_aliases
 src $HOME/.bash_prompt
 
+src $(brew --prefix)/etc/bash_completion
+
 # Setup drush.
 src $HOME/.drush_bashrc
 
