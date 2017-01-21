@@ -56,10 +56,6 @@ PATH=$HOME/.console/vendor/bin:$PATH
 # Terra
 PATH=$HOME/.terra/vendor/bin:$PATH
 
-# RVM
-PATH=$PATH:$HOME/.rvm/bin
-
-
 # NodeJS
 export NODE_PATH="/usr/local/lib/node"
 export NPM_HOME="/usr/local/lib/node_modules/npm"
@@ -68,7 +64,7 @@ export NPM_HOME="/usr/local/lib/node_modules/npm"
 export NVM_DIR="~/.nvm"
 
 # RVM
-PATH=$PATH:$rvm_path/bin
+export PATH=$PATH:$HOME/.rvm/bin
 
 # SVN
 export SVN_EDITOR=$EDITOR

@@ -8,3 +8,6 @@ fi
 
 # Put everything else in .bashrc
 [ -r "${HOME}/.bashrc" ] && . "${HOME}/.bashrc";
+
+# Load RVM into the shell session as a function
+[ -r "${HOME}/.rvm/scripts/rvm" ] && . "${HOME}/.rvm/scripts/rvm"
