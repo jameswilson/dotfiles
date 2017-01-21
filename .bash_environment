@@ -51,7 +51,7 @@ export set JAVA_HOME=/usr/local/java
 # Drush
 
 # Drupal console
-PATH=$HOME/.console/vendor/bin:$PATH
+# Console is now installed via phar in /usr/local/bin/drupal
 
 # Terra
 PATH=$HOME/.terra/vendor/bin:$PATH
