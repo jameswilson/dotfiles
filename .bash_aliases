@@ -138,6 +138,9 @@
   alias drush5='/usr/local/drush/drush5/drush'
   alias dg='drush dl --package-handler=git_drupalorg'
 
+  # Drupal 8 cache clear css-js only
+  alias dcc='drush ev "\Drupal::service(\"asset.css.collection_optimizer\")->deleteAll(); \Drupal::service(\"asset.js.collection_optimizer\")->deleteAll(); _drupal_flush_css_js();"'
+
 # Photoshop & Illustrator
   alias psp='open -b com.adobe.Photoshop'
   alias ai='open -b com.adobe.Illustrator'
