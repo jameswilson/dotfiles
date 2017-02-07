@@ -16,7 +16,7 @@ src $HOME/.drush_bashrc
 # Register rvm function as a command for cli.
 src $HOME/.rvm/scripts/rvm
 
-# Register nvm function as a command for cli
+# Register nvm function as a command for cli.
 src $(brew --prefix nvm)/nvm.sh
 
 # Update PATH for the Google Cloud SDK.
