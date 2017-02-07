@@ -23,11 +23,13 @@ interdiff*.txt
 *.sublime-*
 *.tmproj
 
-# Ignore tarballs and zipfiles; it's better to extract them as git has its own 
-# compression algorithm.
+# Ignore tarballs and zipfiles; it's better to extract them as git has its
+# own compression algorithm. @todo  use LTS?
 *.tar.gz
 *.gz
 *.zip
+*.sql.gz
+*.mysql.gz
 
 # Ignore Photoshop PSD binary files.
 *.psd
