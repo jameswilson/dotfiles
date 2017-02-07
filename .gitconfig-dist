@@ -105,10 +105,6 @@
 [push]
 	default = tracking
 
-[dude]
-	interval = 300
-	icon = ~/.git-dude/git_icon32.png
-
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
