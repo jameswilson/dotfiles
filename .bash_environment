@@ -39,6 +39,7 @@ PATH=$HOME/.composer/vendor/bin:$PATH
 # Homebrew
 export HOMEBREW_HOME=/usr/local/Cellar
 PATH=/usr/local/bin:$PATH
+PATH=/usr/local/sbin:$PATH
 
 # brew install php-version ftw!
 source $(brew --prefix php-version)/php-version.sh && php-version 7.0.8
