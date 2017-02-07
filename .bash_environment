@@ -48,11 +48,6 @@ export PHP_VERSIONS="$MAMP_HOME/bin/php/php7.0.10 $MAMP_HOME/bin/php/php5.4.45 $
 # Java
 export set JAVA_HOME=/usr/local/java
 
-# Drush
-
-# Drupal console
-# Console is now installed via phar in /usr/local/bin/drupal
-
 # Terra
 PATH=$HOME/.terra/vendor/bin:$PATH
 
