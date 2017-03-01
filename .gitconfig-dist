@@ -23,11 +23,11 @@
 	repo-root = "!cd $(git rev-parse --show-cdup)"
 
 	# Display the commit history in a tree format, with color.
-    tree  =  "!git log --graph --decorate --pretty=format:'%C(yellow)%h %Cred%cr %Cblue(%an)%C(white)%d%Creset %s' --abbrev-commit --all"
+	tree  =  "!git log --graph --decorate --pretty=format:'%C(yellow)%h %Cred%cr %Cblue(%an)%C(cyan)%d%Creset %s' --abbrev-commit --all"
 	recent = "!git log --color --format='format:%C(auto)%h %Cred%<(8,trunc)%aN  %Cblue%<(12)%ar %Creset%s'"
 
-    # merge history
-    mh = "!git log --decorate=short --pretty=format:'%C(yellow) %h %C(blue) %s %C(reset)(%C(red)by %cN %C(green)on %cD%C(reset))' --merges"
+		# merge history
+	mh = "!git log --decorate=short --pretty=format:'%C(yellow) %h %C(blue) %s %C(reset)(%C(red)by %cN %C(green)on %cD%C(reset))' --merges"
 	# Sometimes the only change in a file is from 0755 to 0644 or
 	# vice versa; the following command resets all file permissions
 	# changes to their original values.
@@ -118,3 +118,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[init]
+	templatedir = ~/.git_template/template
