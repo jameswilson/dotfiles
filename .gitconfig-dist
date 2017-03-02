@@ -23,7 +23,7 @@
 	repo-root = "!cd $(git rev-parse --show-cdup)"
 
 	# Display the commit history in a tree format, with color.
-	tree  =  "!git log --graph --decorate --pretty=format:'%C(yellow)%h %Cred%cr %Cblue(%an)%C(cyan)%d%Creset %s' --abbrev-commit --all"
+	tree  =  "!git log --graph --decorate --pretty=format:'%C(yellow)%h %Cred%ad %Cblue(%an)%C(cyan)%d%Creset %s' --date=format:'%F %k:%M:%S'  --abbrev-commit --all"
 	recent = "!git log --color --format='format:%C(auto)%h %Cred%<(8,trunc)%aN  %Cblue%<(12)%ar %Creset%s'"
 
 		# merge history
