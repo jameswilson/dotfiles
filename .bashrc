@@ -2,7 +2,7 @@
 # ~/.bashrc: executed by Interactive non-login shells.
 
 # Execute bash helper scripts.
-function src() { [ -r "$1" ] && . "$1"; }
+function src() { [ -r "$1" ] && . "$1" 2>/dev/null; }
 src $HOME/.bash_environment
 src $HOME/.bash_completion
 src $HOME/.bash_aliases
