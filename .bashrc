@@ -13,11 +13,14 @@ src $(brew --prefix)/etc/bash_completion
 # Setup drush.
 src $HOME/.drush_bashrc
 
+# Register nvm function as a command for cli.
+src $(brew --prefix nvm)/nvm.sh
+
 # Register rvm function as a command for cli.
 src $HOME/.rvm/scripts/rvm
 
-# Register nvm function as a command for cli.
-src $(brew --prefix nvm)/nvm.sh
+# RVM Bash Completions
+src $rvm_path/scripts/completion
 
 # Update PATH for the Google Cloud SDK.
 src $HOME/.google-cloud-sdk/path.bash.inc
@@ -31,8 +34,8 @@ src $HOME/.console/console.rc
 # Git bash completion
 src $HOME/.git-completion.sh
 
-# RVM Bash Completions
-src $rvm_path/scripts/completion
+# Platform.sh CLI config
+src $HOME/.platformsh/shell-config.rc
 
 # Make bash append rather than overwrite the history on disk
 shopt -s histappend
