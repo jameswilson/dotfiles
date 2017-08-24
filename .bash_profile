@@ -1,3 +1,4 @@
+source ~/.profile
 #!/usr/bin/env bash
 # ~/.bash_profile: executed by bash for interactive login shells.
 
