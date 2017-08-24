@@ -51,6 +51,7 @@
 /.npm/
 /.nvm/
 /.platform
+/.platformsh
 /.plugman/
 /.recently-used*
 /.rnd
