@@ -57,6 +57,7 @@ export NPM_HOME="/usr/local/lib/node_modules/npm"
 
 # NVM
 export NVM_DIR="~/.nvm"
+#export PATH=$PATH:/usr/local/Cellar/node/8.2.0/bin
 
 # RVM
 export PATH=$PATH:$HOME/.rvm/bin
