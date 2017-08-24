@@ -115,7 +115,13 @@ fi
 # Platform.sh
   alias p='platform'
 
+# Symfony console
+  alias sf="php app/console"
+
 # Jilla (JIRA CLI)
   alias j="jilla describe"
   alias js="jilla ls"
   alias jpi="jilla ls | grep $1"
+
+# Socks Proxy to Azure
+  alias socks="ssh -D 8123 -f -C -q -N azure"
