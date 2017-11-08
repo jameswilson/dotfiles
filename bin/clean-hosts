@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo rm -f /etc/hosts
+sudo ln -s /etc/hosts.clean /etc/hosts
+
+echo "/etc/hosts file cleaned; run 'adblock-hosts' to block malicious hosts"
