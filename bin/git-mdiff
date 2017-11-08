@@ -1,0 +1,18 @@
+#!/bin/bash
+
+function usage {
+  cat << EOF
+Usage: git mdiff -r <branch1> <branch2>
+
+Reveals a list of branches that are present on <branch2> but
+not on <branch1>.
+EOF
+  exit 1
+}
+
+[ "$#" -ne 2 ] && ( usage && exit 1 )
+
+comm -12 <(sort <(git branch $- --no-merged $1 )) <(sort <(git branch $- --merged $2))
+
+
+
