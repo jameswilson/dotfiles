@@ -114,6 +114,8 @@ fi
 
 # Platform.sh
   alias p='platform'
+  alias psh='p env:ssh'
+  alias prd='p var:set --no-wait redeploy "$(date)"'
 
 # Symfony console
   alias sf="php app/console"
