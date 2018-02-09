@@ -25,8 +25,7 @@ MANPATH="$MANPATH:$DEVEL_HOME/share/man"
 
 # Mamp
 export MAMP_HOME="/Applications/MAMP"
-PATH=$MAMP_HOME/bin:$PATH
-PATH=$MAMP_HOME/Library/bin:$PATH
+PATH=$PATH:$MAMP_HOME/Library/bin:$MAMP_HOME/bin
 MANPATH=$MANPATH:$MAMP_HOME/Library/share/man
 
 # PHP
