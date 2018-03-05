@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Based on 'donebeep' https://apple.stackexchange.com/a/22476/11491
+# Leverages https://github.com/julienXX/terminal-notifier
+if [ "$@" = 0 ]; then
+  terminal-notifier -ignoreDnD -title 'Terminal' -subtitle 'Finished' -message 'Process completed successfully.' -sound default
+else
+  terminal-notifier -ignoreDnD -title 'Terminal' -subtitle 'Finished' -message 'An error occurred.' -sound Sosumi
+fi
