@@ -20,6 +20,8 @@
   alias show="SetFile -a v"       # Unhide files from Finder (Mac only)
 
   alias alert='(savestatus=$?; ~/bin/alert $savestatus "$@"; exit $savestatus)'
+  alias notify='alert'
+  alias brb='alert'
 
 # Remove those crazy .DS_Store files recursively
   alias rmds='find . -name *.DS_Store -type f -exec rm {} \;'
