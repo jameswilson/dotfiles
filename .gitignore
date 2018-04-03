@@ -5,6 +5,8 @@
 /.android/
 /.ansible/
 /.atom/
+/.aws/
+/.babel*
 /.bash_history
 /.bash_sessions/
 /.bundle/
@@ -71,6 +73,7 @@
 /.vimundo/
 /.vimviews/
 /.vimrc.20121011
+/.v8flags*
 /.wget-hsts
 /.Xauthority
 /.yarnrc
@@ -93,6 +96,7 @@
 /Public/
 /Samsung/
 /Sites/
+/Screenshots/
 /Temp/
 /Testing/
 /VirtualBox VMs/
