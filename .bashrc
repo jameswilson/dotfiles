@@ -11,7 +11,9 @@ src $HOME/.bash_prompt
 src $(brew --prefix)/etc/bash_completion
 
 # Setup drush.
-src $HOME/.drush_bashrc
+src $HOME/.drush/drush.bashrc
+src $HOME/.drush/drush.complete.sh
+#src $HOME/.drush/drush.prompt.sh
 
 # Register nvm function as a command for cli.
 src $(brew --prefix nvm)/nvm.sh
