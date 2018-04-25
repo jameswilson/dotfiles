@@ -41,8 +41,10 @@ PATH=/usr/local/bin:$PATH
 PATH=/usr/local/sbin:$PATH
 
 # brew install php-version ftw!
-source $(brew --prefix php-version)/php-version.sh && php-version 7.0.8
-export PHP_VERSIONS="$MAMP_HOME/bin/php/php7.0.10 $MAMP_HOME/bin/php/php5.4.45 $MAMP_HOME/bin/php/php5.5.36 $MAMP_HOME/bin/php/php5.6.25 /usr/local/Cellar/php70/7.0.6"
+source $(brew --prefix php-version)/php-version.sh
+export PHP_VERSIONS="$PHP_VERSIONS $(echo $(find $(brew --cellar) -maxdepth 1 -type d | grep -E 'php[0-9]*$|php@[0-9\.]*$'))"
+export PHP_VERSIONS="$PHP_VERSIONS $(echo $(find $MAMP_HOME/bin/php -depth 1 -type d))"
+php-version 7.2
 
 # Java
 export set JAVA_HOME=/usr/local/java
