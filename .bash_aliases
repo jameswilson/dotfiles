@@ -72,6 +72,7 @@
   alias g='git status .'
   alias gg='git status'
   alias gt='git tree'
+  alias gta='git tree --all'
   alias gd='git diff'
   alias gl='git log --graph --oneline --all --decorate'
   alias gk='git log --color --format="format:%C(auto)%h %Cred%<(8,trunc)%aN  %Cblue%<(12)%ar %Creset%s"'
