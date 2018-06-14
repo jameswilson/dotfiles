@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cd ~/App/jira-worklog-import/
+php jira-worklog-import.php
+cd -
