@@ -126,6 +126,9 @@ fi
 # Symfony console
   alias sf="php app/console"
 
+# BrowserSync - serve the current directory
+  alias serve='browser-sync start -s -f . --no-notify'
+
 # Jilla (JIRA CLI)
   alias j="jilla describe"
   alias js="jilla ls"
