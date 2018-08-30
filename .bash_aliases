@@ -69,6 +69,7 @@
   alias myip='curl ifconfig.me'
 
 # git shortcuts
+  alias t='git tree --all'
   alias g='git status .'
   alias gg='git status'
   alias gt='git tree'
