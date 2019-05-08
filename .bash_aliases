@@ -46,7 +46,7 @@
   alias du='du -h'            #
 
 # Improved recursive find with grep, exclude common big nasty files.
-  alias gf='find . -path "*/.git/*" -o -name "*.sql" -o -name "*.mysql" -o -name "*.sublime-*" -o -name "*.min.*" -o -name "*.log" -prune -o -type f -print0 | xargs -0 grep -I -n'
+  alias gf='find . -path "*/.git/*" -o -path "*/node_modules/*" -o -name "*.sql" -o -name "*.mysql" -o -name "*.sublime-*" -o -name "*.min.*" -o -name "*.log" -prune -o -type f -print0 | xargs -0 grep -I -n'
 
 # Find big files
   alias b="du -k -d 1 * | sort -nr | cut -f2 | xargs du -sh"
