@@ -109,7 +109,7 @@
 
 # ImageOptim
   alias opt='open -a ImageOptim'
-  alias mangle='open -a "Name Mangler"'
+  alias mangle='open -a "Name Mangler 3"'
   alias alf='open -a ImageAlpha'
 
 # Use macvim, if installed.
