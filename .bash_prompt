@@ -92,6 +92,13 @@ export PS1="\n\[$FG_BLUE\]\u@\h\[$ENDCOLOR\] \[$YELLOW\]\w\[$ENDCOLOR\] \[$FG_CY
 # Set Terminal window title (user@host ~/path)
 export TITLE="\[\e]0;\u@\h \w\a\]"
 
+case "$TERM" in
+xterm*|rxvt*)
+    export PS1="\[\e]0;\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
 
 # FreeBSD / Mac OSX LS command color configuration
 #
