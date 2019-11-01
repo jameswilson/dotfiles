@@ -65,3 +65,8 @@ export PATH=$PATH:$HOME/.rvm/bin
 
 # SVN
 export SVN_EDITOR=$EDITOR
+
+# Go Lang
+export GOPATH="${HOME}/.go"
+export GOROOT="$(brew --prefix golang)/libexec"
+
