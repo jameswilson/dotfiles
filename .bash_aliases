@@ -74,7 +74,7 @@
   alias gg='git status'
   alias gt='git tree'
   alias gta='git tree --all'
-  alias gfa='git fetch --all --prune'
+  alias gfa='git fetch --all --prune --prune-tags'
   alias gpa='git pull --all --prune'
   alias gd='git diff'
   alias gl='git log --graph --oneline --all --decorate'
