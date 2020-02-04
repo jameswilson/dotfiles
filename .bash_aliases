@@ -125,6 +125,9 @@ fi
   alias psh='p env:ssh'
   alias prd='p var:set --no-wait redeploy "$(date)"'
 
+# Pantheon Terminus
+  alias terminus="$HOME/.terminus/vendor/bin/terminus"
+
 # Symfony console
   alias sf="php app/console"
 
