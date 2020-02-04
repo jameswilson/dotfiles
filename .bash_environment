@@ -2,14 +2,14 @@
 # ~/.bash_enviroment: custom bashrc hepler to initialize environment variables
 
 # Software Versions
-export PHP_VERSION="5.6.10"
-alias php51='/Applications/MAMP/bin/php/php5.1.6/bin/php'
-alias php52='/Applications/MAMP/bin/php/php5.2.17/bin/php'
-alias php53='/Applications/MAMP/bin/php/php5.3.29/bin/php'
-alias php54='/Applications/MAMP/bin/php/php5.4.42/bin/php'
-alias php55='/Applications/MAMP/bin/php/php5.5.26/bin/php'
-alias php56='/Applications/MAMP/bin/php/php5.6.10/bin/php'
-alias php70='/Applications/MAMP/bin/php/php7.0.0/bin/php'
+export PHP_VERSION="5.6.40"
+
+alias php54='/Applications/MAMP/bin/php/php5.4.45/bin/php'
+alias php56='/Applications/MAMP/bin/php/php5.6.40/bin/php'
+alias php70='/Applications/MAMP/bin/php/php7.0.33/bin/php'
+alias php71='/Applications/MAMP/bin/php/php7.1.30/bin/php'
+alias php72='/Applications/MAMP/bin/php/php7.2.20/bin/php'
+alias php73='/Applications/MAMP/bin/php/php7.3.7/bin/php'
 
 
 # Default Editor
