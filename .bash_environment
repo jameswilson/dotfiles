@@ -34,6 +34,7 @@ PATH=$PHP_HOME/bin:$PATH
 
 # Composer
 PATH=$HOME/.composer/vendor/bin:$PATH
+export COMPOSER_MEMORY_LIMIT=-1
 
 # Homebrew
 export HOMEBREW_HOME=/usr/local/Cellar
