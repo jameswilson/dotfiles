@@ -1,0 +1,15 @@
+#/bin/sh
+
+# Update hosts file using StevenBlack hosts.
+# Requires installation of Github repository ^ into folder ~/App/hosts
+
+set -e
+cd ~/App/hosts
+git checkout .
+git pull
+python3 updateHostsFile.py --auto --backup --extensions fakenews gambling --flush-dns-cache
+sudo mv /etc/hosts.adblock /etc/hosts.adblock.`date +%Y-%m-%d-%H-%M`
+sudo cp hosts /etc/hosts.adblock
+sudo rm -f /etc/hosts
+sudo ln -s /etc/hosts.adblock /etc/hosts
+git checkout .
