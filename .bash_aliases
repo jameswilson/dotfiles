@@ -120,13 +120,16 @@ then
    alias vim='mvim -v'
 fi
 
+# Ddev
+  alias ddr="ddev exec drush"
+
 # Platform.sh
   alias p='platform'
   alias psh='p env:ssh'
   alias prd='p var:set --no-wait redeploy "$(date)"'
 
 # Pantheon Terminus
-  alias terminus="$HOME/.terminus/vendor/bin/terminus"
+  alias terminus="$HOME/.terminus/terminus"
 
 # Symfony console
   alias sf="php app/console"

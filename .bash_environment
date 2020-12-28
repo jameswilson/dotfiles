@@ -45,7 +45,7 @@ PATH=/usr/local/sbin:$PATH
 source $(brew --prefix php-version)/php-version.sh
 export PHP_VERSIONS="$PHP_VERSIONS $(echo $(find $(brew --cellar) -maxdepth 1 -type d | grep -E 'php[0-9]*$|php@[0-9\.]*$'))"
 export PHP_VERSIONS="$PHP_VERSIONS $(echo $(find $MAMP_HOME/bin/php -depth 1 -type d))"
-php-version 7.2
+php-version 7.3
 
 # Java
 export set JAVA_HOME=/usr/local/java
