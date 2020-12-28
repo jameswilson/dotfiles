@@ -56,7 +56,7 @@ else
 	fi
 fi
 if [ "$network" = "1" ]; then
-	ext1=`curl -s http://checkip.dyndns.org/ | sed 's/[a-zA-Z<>/ :]//g'`
+	ext1=`curl -s ipecho.net/plain`
 	echo "External : $ext1";
 	isp $ext1
 	echo "ISP : $isp1";
