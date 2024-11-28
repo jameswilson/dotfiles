@@ -23,15 +23,6 @@ src $HOME/.rvm/scripts/rvm
 # RVM Bash Completions
 src $rvm_path/scripts/completion
 
-# Update PATH for the Google Cloud SDK.
-src $HOME/.google-cloud-sdk/path.bash.inc
-
-# Enable bash completion for Google Cloud.
-src $HOME/.google-cloud-sdk/completion.bash.inc
-
-# Enable bash completion for Drupal Console.
-src $HOME/.console/console.rc
-
 # Git bash completion
 src $HOME/.git-completion.sh
 
