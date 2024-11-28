@@ -95,24 +95,24 @@
    # BGCOLOR='\e[45m'
    # BGCOLOR='\e[46m'
    # BGCOLOR='\e[47m'
-   
+
    # Terminal window title (user@host ~/path)
    #TITLE="\[\e]0;\u@\h \w\a\]"
-   
+
 # Use this version to restrict user@host and path to title only.
 #PS1="$TITLE\n\$"
 # Use this version for user@host and path in both title and prompt
 PS1="$TITLE\n$FG_BLUE# \u@\h $YELLOW\w\n$BLUE# $GREEN"
 #PS1="\e[0;34m#\e[m \u@\h[\W]\n\e[0;34m#\e[m >"
-function pathmunge () {
-if [ -d $1 ] && ! echo /usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games | /bin/egrep -q "(^|:)$1($|:)"
-then
-        if [ "$2" = "after" ]
-        then
-                PATH=/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:$1
-        else
-                PATH=$1:$PATH
-        fi
-fi
+function pathmunge() {
+  case ":${PATH}:" in
+    *:"$1":*)
+      ;;
+    *)
+      if [ "$2" = "after" ] ; then
+        PATH=$PATH:$1
+      else
+        PATH=$1:$PATH
+      fi
+  esac
 }
-

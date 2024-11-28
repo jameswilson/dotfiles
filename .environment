@@ -1,29 +1,36 @@
 #!/usr/bin/env sh
-# CLI environment configuration (bash and zsh).
+# CLI environment variables configuration for bash and zsh
+# to be used instead of .bash_environment or .zshenv
 
 # Default Editor
 export EDITOR="vim"
 
-# Home bin
-export PATH=$HOME/bin:$PATH
+# Language, locale, and character encoding.
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
-# Composer
-export PATH=$HOME/.composer/vendor/bin:$PATH
+# Custom scripts.
+pathmunge $HOME/bin
+
+# PHP Composer.
+pathmunge $HOME/.composer/vendor/bin
 export COMPOSER_MEMORY_LIMIT=-1
 
 # Homebrew
 export HOMEBREW_HOME=$(brew --cellar)
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
-# Requires `brew install coreutils`.
-export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
-# Requires `brew install findutils`.
-export PATH=$(brew --prefix findutils)/libexec/gnubin:$PATH
+pathmunge /usr/local/bin
+pathmunge /usr/local/sbin
+
+# Replace some macOs utils with GNU utils.
+# Note: this requires `brew install coreutils findutils`.
+# @see brew.sh
+pathmunge $(brew --prefix coreutils)/libexec/gnubin
+pathmunge $(brew --prefix findutils)/libexec/gnubin
 
 # Platform.sh CLI
-export PATH=$HOME/.platformsh/bin:$PATH
+pathmunge $HOME/.platformsh/bin
 
-# NodeJS
+# Node JS
 export NODE_PATH="/usr/local/lib/node"
 export NPM_HOME="/usr/local/lib/node_modules/npm"
 export NVM_DIR="~/.nvm"
