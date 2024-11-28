@@ -3,8 +3,8 @@
 
 # Execute bash helper scripts.
 function src() { [ -r "$1" ] && . "$1" 2>/dev/null; }
-src $HOME/.bash_environment
-src $HOME/.bash_aliases
+src $HOME/.environment
+src $HOME/.aliases
 src $HOME/.bash_prompt
 
 src $(brew --prefix)/etc/bash_completion

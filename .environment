@@ -1,0 +1,34 @@
+#!/usr/bin/env sh
+# CLI environment configuration (bash and zsh).
+
+# Default Editor
+export EDITOR="vim"
+
+# Home bin
+export PATH=$HOME/bin:$PATH
+
+# Composer
+export PATH=$HOME/.composer/vendor/bin:$PATH
+export COMPOSER_MEMORY_LIMIT=-1
+
+# Homebrew
+export HOMEBREW_HOME=$(brew --cellar)
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+# Requires `brew install coreutils`.
+export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+# Requires `brew install findutils`.
+export PATH=$(brew --prefix findutils)/libexec/gnubin:$PATH
+
+# Platform.sh CLI
+export PATH=$HOME/.platformsh/bin:$PATH
+
+# NodeJS
+export NODE_PATH="/usr/local/lib/node"
+export NPM_HOME="/usr/local/lib/node_modules/npm"
+export NVM_DIR="~/.nvm"
+
+# Go Lang
+export GOPATH=$HOME/.go
+export GOROOT=$(brew --prefix golang)/libexec
+
