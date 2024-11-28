@@ -75,7 +75,7 @@
     PURPLE='\[\e[35m\]'
       CYAN='\[\e[36m\]'
      WHITE='\[\e[37m\]'
-      GRAY='\[\e[40m\]'     
+      GRAY='\[\e[40m\]'
     LT_RED='\[\e[41m\]'
   LT_GREEN='\[\e[42m\]'
  LT_YELLOW='\[\e[43m\]'
