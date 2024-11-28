@@ -32,7 +32,7 @@
 /.gem/
 /.git-dude/
 /.git/
-/.gitconfig
+/.gitconfig.local
 /.gitk
 /.google-cloud-sdk/
 /.inkscape*

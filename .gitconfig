@@ -6,13 +6,7 @@
 #
 
 [user]
-	name = James Wilson
-	email = jrwilson3@gmail.com
 	editor = vim
-
-[github]
-	user = jameswilson
-	token = github_api_token
 
 [credential]
 	helper = osxkeychain
@@ -60,8 +54,7 @@
 	autosetuprebase = always
 
 [core]
-
-	# A global excludesfile siimilar to .gitignore
+	# A global excludesfile similar to .gitignore
 	excludesfile = ~/.gitexcludes
 	pager = less -FRSX
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
@@ -105,19 +98,12 @@
 [push]
 	default = tracking
 
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
 
-[init]
-	templatedir = ~/.git_template/template
+# use separate file for username / github token / etc
+[include]
+	path = ~/.gitconfig.local
