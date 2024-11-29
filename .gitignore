@@ -19,7 +19,10 @@
 /.console/
 /.cordova/
 /.cups/
+/.ddev/
+/.ddev_mutagen_data_directory/
 /.docker/
+/.dotfiles/
 /.dropbox-two/
 /.dropbox/
 /.drush/
@@ -45,6 +48,7 @@
 /.mc/
 /.mkshrc
 /.oracle_jre_usage/
+/.oh-my-zsh/
 /.neocon/
 /.neocomplcache/
 /.neocon/
@@ -64,6 +68,7 @@
 /.subversion/
 /.terminus/
 /.terra/
+/.zcompdump*
 /.Trash/
 /.vagrant.d/
 /.vimbackup/
@@ -73,12 +78,14 @@
 /.vimviews/
 /.vimrc.20121011
 /.v8flags*
+/.vscode/
 /.wget-hsts
 /.Xauthority
 /.yarnrc
 /App/
 /Applications/
 /Backups/
+/Bluespark/
 /Desktop/
 /Documents/
 /Downloads/
@@ -86,14 +93,13 @@
 /drush-backups/
 /Google Drive/
 /Icon*
-/InVision/
+/Insync/
 /Library/
 /Movies/
 /Music/
 /Pictures/
 /Projects/
 /Public/
-/Samsung/
 /Sites/
 /Screenshots/
 /Temp/
