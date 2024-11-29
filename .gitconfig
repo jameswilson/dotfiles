@@ -1,12 +1,12 @@
 #
 # File: Global git configurations
 #
-# Check out this git cheat sheet...
-# http://cheat.errtheblog.com/s/git
-#
 
 [user]
 	editor = vim
+
+[github]
+	# see .gitconfig.local
 
 [credential]
 	helper = osxkeychain
