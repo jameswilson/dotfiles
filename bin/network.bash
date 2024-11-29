@@ -2,19 +2,19 @@
 
 # isp [ip.address] [whois.server.tld]
 isp() {
-	
+
 	whoisserver=$2;
 	if [ -z "$2" ]; then
 		whoisserver="whois.arin.net";
 	fi
 	lookup="whois -h $whoisserver $1";
 	referralserver=`$lookup | grep -e 'ReferralServer: whois://' | sed 's/ReferralServer: whois:\/\///g'`;#
-	
+
 	if [ -n "$referralserver" ]; then
 		isp $1 $referralserver;
 		return;
 	fi
-	
+
 	#else ...
 	isp1=`$lookup | grep -e "netname:"  | awk '{print $2}'`;
 	if [ -z "$isp1" ]; then
@@ -37,19 +37,19 @@ myvar2=`system_profiler SPAirPortDataType | grep -e "Wireless Channel:" | awk '{
 router=`netstat -rn | grep -e "default" | awk '{print $2}'`
 dns=`cat /etc/resolv.conf | grep -e "nameserver" | awk '{print $2}'`
 network=1;
-if [ -n "$myen0" ]; then 
-	if [ -n "$myen1" ]; then 
+if [ -n "$myen0" ]; then
+	if [ -n "$myen1" ]; then
 		echo "Connection : Ethernet | Airport [$myvar1 : $myvar2]";
 		echo "IP Address : $myen0 | $myen1" ;
-	else 
+	else
 		echo "Connection : Ethernet";
-		echo "IP Address : $myen0" ; 
+		echo "IP Address : $myen0" ;
 	fi
-else 
-	if [ -n "$myen1" ]; then 
+else
+	if [ -n "$myen1" ]; then
 		echo "Connection : Airport [$myvar1 : $myvar2]" ;
 		echo "IP Address : $myen1" ;
-	else 
+	else
 		echo "Connection : No Network" ;
 		echo "IP Address : No Network" ;
 		network=0;
@@ -62,10 +62,10 @@ if [ "$network" = "1" ]; then
 	echo "ISP : $isp1";
 fi
 echo "Router : $router"
-if [ "$router" != "$dns" ]; then 
+if [ "$router" != "$dns" ]; then
 	dns=`system_profiler SPNetworkDataType | grep -e "Server Addresses: " | awk '{print $3, $4}'` ;
 	echo "DNS Servers: $dns" ;
-else 
+else
 	echo "DNS Servers: No DNS Detected"
 fi
 

@@ -12,7 +12,7 @@ GetVersionFromFile()
 
 if [ "${OS}" = "SunOS" ] ; then
 	OS=Solaris
-	ARCH=`uname -p`	
+	ARCH=`uname -p`
 	OSSTR="${OS} ${REV}(${ARCH} `uname -v`)"
 elif [ "${OS}" = "AIX" ] ; then
 	OSSTR="${OS} `oslevel` (`oslevel -r`)"
@@ -37,7 +37,7 @@ elif [ "${OS}" = "Linux" ] ; then
 	if [ -f /etc/UnitedLinux-release ] ; then
 		DIST="${DIST}[`cat /etc/UnitedLinux-release | tr "\n" ' ' | sed s/VERSION.*//`]"
 	fi
-	
+
 	OSSTR="${OS} ${DIST} ${REV}(${PSUEDONAME} ${KERNEL} ${MACH})"
 
 fi
