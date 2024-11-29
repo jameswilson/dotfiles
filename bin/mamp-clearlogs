@@ -1,2 +1,0 @@
-#/bin/bash
-for i in /Applications/MAMP/logs/*; do cat /dev/null > $i; done;
