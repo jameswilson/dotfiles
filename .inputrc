@@ -32,6 +32,51 @@
 "\eOH": beginning-of-line
 "\eOF": end-of-line
 
+# These two lines set Ctrl-P/Ctrl-N to search backward/forward through the
+# history for the string of characters between the start of the current line
+# and the current cursor position.
+"\C-p":history-search-backward
+"\C-n":history-search-forward
+
+# This line sets readline to display possible completions using different
+# colors to indicate their file types. The colors are determined by the
+# environmental variable LS_COLORS, which can be nicely configured.
+set colored-stats On
+
+# This line sets auto completion to ignore cases.
+set completion-ignore-case On
+
+# This line sets 3 to be the maximum number of characters to be the common
+# prefix to display for completions. If the common prefix has more than 3
+# characters, they are replaced by ellipsis. For example, assume we are in a
+# directory with files Screenshot_20170730.png and Screenshot_20170731.png. If
+# using the default option, an auto completion prints Screenshot_20170730.png
+# Screenshot_20170731.png. If this option is set, then the auto completion
+# prints ...0.png ...1.png. However, if the common prefix is very short (fewer
+# or equal to 3 characters), the full file names are still printed. For
+# example, in a directory with files S10.png and S11.png, an auto completion
+# still prints S10.png S11.png. This can be very useful when auto completing in
+# a directory in which a lot of files have a long common prefix, such a camera
+# image directory.
+set completion-prefix-display-length 3
+
+# This line sets every completion which is a symbolic link to a directory to
+# have a slash appended.
+set mark-symlinked-directories On
+
+# This line sets the completions to be listed immediately instead of ringing
+# the bell, when the completing word has more than one possible completion.
+set show-all-if-ambiguous On
+
+# This line sets the completions to be listed immediately instead of ringing
+# the bell, when the completing word has more than one possible completion but
+# no partial completion can be made.
+set show-all-if-unmodified On
+
+# This lines sets completions to be appended by characters that indicate their
+# file types reported by the stat system call.
+set visible-stats On
+
 # Allow 8-bit input/output
 #set meta-flag on
 #set convert-meta off
