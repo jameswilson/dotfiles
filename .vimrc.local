@@ -1,10 +1,15 @@
 
 "let g:molokai_original = 1
-colorscheme molokai
+"colorscheme molokai
+"colorscheme solarized
+let g:monokai_term_italic = 1
+let g:monokai_gui_italic = 1
+colorscheme one-monokai
 
 " Required for the CSApprox plugin to work from Mac Terminal.app
 set t_Co=256
 let g:rehash256 = 1
+set termguicolors
 
 " Use F2 to paste without auto-indentation.
 set pastetoggle=<F2>
