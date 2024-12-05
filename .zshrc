@@ -154,3 +154,24 @@ then
   compinit
 fi
 
+# Customize the window title using directory and vcs info.
+source ~/.oh-my-zsh/custom/themes/powerlevel10k/gitstatus/gitstatus.prompt.zsh
+autoload -Uz add-zsh-hook
+function set-title {
+  local localgit=''
+  if gitstatus_query MY && [[ $VCS_STATUS_RESULT == ok-sync ]]; then
+    local localgit=${${VCS_STATUS_LOCAL_BRANCH:-@${VCS_STATUS_COMMIT}}//\%/%%}
+    # escape %
+    (( VCS_STATUS_NUM_STAGED    )) && localgit+='+'
+    (( VCS_STATUS_NUM_UNSTAGED  )) && localgit+='!'
+    (( VCS_STATUS_NUM_UNTRACKED )) && localgit+='?'
+  fi
+
+  # local statusline="$(git rev-parse --abbrev-ref HEAD)"
+  # print -Pn "\e]1;test\a"
+  print -Pn "\e]0;%~ $localgit\a";
+}
+add-zsh-hook precmd set-title
+ZSH_THEME_TERM_TAB_TITLE_IDLE="%~"
+ZSH_THEME_TERM_TITLE_IDLE="%~"
+
