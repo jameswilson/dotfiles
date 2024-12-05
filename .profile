@@ -27,4 +27,5 @@ function pathmunge() {
 
 source ~/.environment
 source ~/.aliases
+source ~/.git-safe-force-push.sh
 source ~/.git-prompt.sh
