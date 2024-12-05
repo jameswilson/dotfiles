@@ -39,6 +39,9 @@ brew install screen
 brew install vim
 brew install git
 
+# Install programming language packs.
+brew install python
+
 # Install other useful binaries.
 brew install imagemagick
 brew install wget

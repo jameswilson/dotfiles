@@ -40,3 +40,6 @@ export NVM_DIR="~/.nvm"
 export GOPATH=$HOME/.go
 export GOROOT=$(brew --prefix golang)/libexec
 
+# Python
+pathmunge $(brew --prefix python)/bin
+pathmunge $(brew --prefix python)/libexec/bin

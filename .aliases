@@ -106,6 +106,10 @@
   alias psp='open -b com.adobe.Photoshop'
   alias ai='open -b com.adobe.Illustrator'
 
+# Python
+  alias py='python3'
+  alias pip='pip3'
+
 # ImageOptim
   alias opt='open -a ImageOptim'
   alias mangle='open -a "Name Mangler 3"'
