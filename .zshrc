@@ -1,3 +1,5 @@
+# echo ~/.zshrc
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -82,9 +84,6 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-source $HOME/.environment
-source $HOME/.aliases
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

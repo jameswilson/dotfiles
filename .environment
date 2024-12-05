@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 # CLI environment variables configuration for bash and zsh
 # to be used instead of .bash_environment or .zshenv
+# echo ~/.environment
 
 # Default Editor
 export EDITOR="vim"

@@ -1,2 +1,2 @@
-#!/usr/bin/env sh
+# echo ~/.zprofile
 source $HOME/.profile
