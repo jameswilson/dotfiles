@@ -96,6 +96,11 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+source ~/.environment
+source ~/.aliases
+source ~/.git-safe-force-push.sh
+source ~/.git-prompt.sh
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
