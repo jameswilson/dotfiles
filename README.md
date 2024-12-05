@@ -26,4 +26,4 @@ Copy .gitconfig.local.dist to .gitconfig.local and customize accordingly.
 
 4.  Install Homebrew.
 
-        ~/bin/brew.sh
+        ~/.local/bin/brew.sh

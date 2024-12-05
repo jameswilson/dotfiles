@@ -89,7 +89,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#767676'
 # Run alias finder before each command
 ZSH_ALIAS_FINDER_AUTOMATIC=true
 
-# Requires `brew install nvm` and `brew install node` (see ~/bin/brew.sh)
+# Requires `brew install nvm` and `brew install node` (see ~/.local/bin/brew.sh)
 zstyle ':omz:plugins:nvm' autoload yes
 
 source $ZSH/oh-my-zsh.sh
@@ -139,10 +139,10 @@ zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
 ### Fixes slowness of pastes
 
-# Requires `brew install zsh-syntax-highlighting` (see ~/bin/brew.sh)
+# Requires `brew install zsh-syntax-highlighting` (see ~/.local/bin/brew.sh)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Requires `brew install direnv` (see ~/bin/brew.sh)
+# Requires `brew install direnv` (see ~/.local/bin/brew.sh)
 eval "$(direnv hook zsh)"
 
 # Homebrew
