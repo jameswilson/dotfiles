@@ -41,11 +41,16 @@ brew install git
 
 # Install programming language packs.
 brew install python
+brew install go
+brew install nvm
+brew install node
 
 # Install other useful binaries.
 brew install imagemagick
 brew install wget
 brew install tree
+brew install direnv
+brew install zsh-syntax-highlighting
 
 # Install macOs Quick Look plugins.
 # Try also `brew search --desc "Quick Look plugin"`

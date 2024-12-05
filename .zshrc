@@ -79,7 +79,18 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
+plugins=(git nvm zsh-autosuggestions zsh-syntax-highlighting web-search)
+
+
+# Customize the autocomplete suggestion color to use a different color gray
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=15'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#767676'
+
+# Run alias finder before each command
+ZSH_ALIAS_FINDER_AUTOMATIC=true
+
+# Requires `brew install nvm` and `brew install node` (see ~/bin/brew.sh)
+zstyle ':omz:plugins:nvm' autoload yes
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,3 +125,32 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+### Fixes slowness of pastes with zsh-syntax-highlighting.zsh
+pasteinit() {
+  OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
+  zle -N self-insert url-quote-magic # I wonder if you'd need `.url-quote-magic`?
+}
+
+pastefinish() {
+  zle -N self-insert $OLD_SELF_INSERT
+}
+zstyle :bracketed-paste-magic paste-init pasteinit
+zstyle :bracketed-paste-magic paste-finish pastefinish
+### Fixes slowness of pastes
+
+# Requires `brew install zsh-syntax-highlighting` (see ~/bin/brew.sh)
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Requires `brew install direnv` (see ~/bin/brew.sh)
+eval "$(direnv hook zsh)"
+
+# Homebrew
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
