@@ -9,9 +9,9 @@
 #
 
 [user]
-	name = Your Name
-	email = you@example.com
+    name = Your Name
+    email = you@example.com
 
 [github]
-	user = <your-github-username-here>
-	token = <your-github-api-token-here>
+    user = <your-github-username-here>
+    token = <your-github-api-token-here>

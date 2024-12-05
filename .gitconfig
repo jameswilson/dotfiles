@@ -3,153 +3,153 @@
 #
 
 [github]
-	# see .gitconfig.local
+    # see .gitconfig.local
 
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 
 [alias]
 
-	# Change directory to repo root
-	repo-root = "!cd $(git rev-parse --show-cdup)"
+    # Change directory to repo root
+    repo-root = "!cd $(git rev-parse --show-cdup)"
 
-	# Display the commit history in a tree format, with color.
-	tree  =  "!git log --graph --decorate --pretty=format:'%C(yellow)%h %Cred%ad %Cblue(%an)%C(cyan)%d%Creset %s' --abbrev-commit"
-	recent = "!git log --color --format='format:%C(auto)%h %Cred%<(8,trunc)%aN  %Cblue%<(12)%ar %Creset%s'"
+    # Display the commit history in a tree format, with color.
+    tree  =  "!git log --graph --decorate --pretty=format:'%C(yellow)%h %Cred%ad %Cblue(%an)%C(cyan)%d%Creset %s' --abbrev-commit"
+    recent = "!git log --color --format='format:%C(auto)%h %Cred%<(8,trunc)%aN  %Cblue%<(12)%ar %Creset%s'"
 
-	# merge history
-	mh = "!git log --decorate=short --pretty=format:'%C(yellow) %h %C(blue) %s %C(reset)(%C(red)by %cN %C(green)on %cD%C(reset))' --merges"
-	# Sometimes the only change in a file is from 0755 to 0644 or
-	# vice versa; the following command resets all file permissions
-	# changes to their original values.
-	permission-reset = "!git diff -p | grep -E \"^(diff|old mode|new mode)\" | sed -e \"s/^old/NEW/;s/^new/old/;s/^NEW/new/\" | git apply"
+    # merge history
+    mh = "!git log --decorate=short --pretty=format:'%C(yellow) %h %C(blue) %s %C(reset)(%C(red)by %cN %C(green)on %cD%C(reset))' --merges"
+    # Sometimes the only change in a file is from 0755 to 0644 or
+    # vice versa; the following command resets all file permissions
+    # changes to their original values.
+    permission-reset = "!git diff -p | grep -E \"^(diff|old mode|new mode)\" | sed -e \"s/^old/NEW/;s/^new/old/;s/^NEW/new/\" | git apply"
 
-	# Some shortcuts.
-	ci    = commit -a
-	co    = checkout
-	up    = !git remote update ; git fetch --prune; git gc
+    # Some shortcuts.
+    ci    = commit -a
+    co    = checkout
+    up    = !git remote update ; git fetch --prune; git gc
 
-	s     = "!git diff --name-status | sed -e 's/^/W /' ; git diff --cached --name-status | sed -e 's/^/C /'"
-	st    = "!f() { git ls-files --exclude-standard -t -u -s -m -d $@ | sed -e 's/C.*\t/C /' ; } ; f"
-	sto   = st -o
-	stat  = status
+    s     = "!git diff --name-status | sed -e 's/^/W /' ; git diff --cached --name-status | sed -e 's/^/C /'"
+    st    = "!f() { git ls-files --exclude-standard -t -u -s -m -d $@ | sed -e 's/C.*\t/C /' ; } ; f"
+    sto   = st -o
+    stat  = status
 
-	dp    = diff --patience
-	ds    = diff --stat
-	odiff = difftool -t opendiff
-	cds   = !git ds --cached
-	fp    = format-patch
+    dp    = diff --patience
+    ds    = diff --stat
+    odiff = difftool -t opendiff
+    cds   = !git ds --cached
+    fp    = format-patch
 
-	# List all ignored files in a working tree.
-	lso   = ls-files --others --exclude-standard
+    # List all ignored files in a working tree.
+    lso   = ls-files --others --exclude-standard
 
-	# Stage new/renamed/copied/deleted files when applying a patch.
-	apply = apply --index
+    # Stage new/renamed/copied/deleted files when applying a patch.
+    apply = apply --index
 
-	# Push to the same branch name on the remote, without explicitly using --set-upstream
-	pushup = "!git push --set-upstream origin $(git symbolic-ref --short HEAD)"
+    # Push to the same branch name on the remote, without explicitly using --set-upstream
+    pushup = "!git push --set-upstream origin $(git symbolic-ref --short HEAD)"
 
 [branch]
-	# Rebase when pulling avoids merge commits.
-	autosetuprebase = always
-	sort = -committerdate
+    # Rebase when pulling avoids merge commits.
+    autosetuprebase = always
+    sort = -committerdate
 
 [checkout]
-	defaultRemote = origin
+    defaultRemote = origin
 
 [core]
-	editor = vim
-	# A global excludesfile similar to .gitignore
-	excludesfile = ~/.gitexcludes
-	pager = less -FRSX
-	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	quotepath = false
-	autocrlf = input
+    editor = vim
+    # A global excludesfile similar to .gitignore
+    excludesfile = ~/.gitexcludes
+    pager = less -FRSX
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    quotepath = false
+    autocrlf = input
 
 [color]
-	ui = true
-	pager = true
-	diff = auto
-	status = auto
-	branch = auto
-	interactive = auto
+    ui = true
+    pager = true
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
 
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
 
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
 
 [column]
-	# put output from commands like git branch into multiple columns.
-	#ui = auto
+    # put output from commands like git branch into multiple columns.
+    #ui = auto
 
 [diff]
-	tool = vimdiff
-	algorithm = patience
-	renames = copies
+    tool = vimdiff
+    algorithm = patience
+    renames = copies
 
 [format]
-	pretty = oneline
+    pretty = oneline
 
 [push]
-	default = current
-	follow-tags = true
-	followTags = true
+    default = current
+    follow-tags = true
+    followTags = true
 
 [pull]
-	rebase = true
+    rebase = true
 
 [fetch]
-	prune = true
-	writeCommitGraph = true
+    prune = true
+    writeCommitGraph = true
 
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 
 [merge]
-	tool = smerge
+    tool = smerge
 
 [log]
-	date = format-local:%F %k:%M:%S
+    date = format-local:%F %k:%M:%S
 
 [rerere]
-	enabled = true
+    enabled = true
 
 [gpg]
-	format = ssh
+    format = ssh
 
 [gpg "ssh"]
-	# Requires:
-	# echo "$(git config --get user.email) namespaces=\"git\" $(cat ~/.ssh/id_rsa.pub)" >> ~/.ssh/allowed_signers
-	allowedSignersFile = ~/.ssh/allowed_signers
+    # Requires:
+    # echo "$(git config --get user.email) namespaces=\"git\" $(cat ~/.ssh/id_rsa.pub)" >> ~/.ssh/allowed_signers
+    allowedSignersFile = ~/.ssh/allowed_signers
 
 [commit]
-	gpgsign = true
+    gpgsign = true
 
 [tag]
-	gpgsign = true
+    gpgsign = true
 
 [user]
-	signingKey = ~/.ssh/id_rsa.pub
+    signingKey = ~/.ssh/id_rsa.pub
 
 [init]
-	#templatedir = ~/.git_template/template
-	defaultBranch = main
+    #templatedir = ~/.git_template/template
+    defaultBranch = main
 
 # use separate file for username / github token / etc
 [include]
-	path = ~/.gitconfig.local
+    path = ~/.gitconfig.local
