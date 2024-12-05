@@ -1,6 +1,7 @@
 *_history
 *hst
 /.acquia/
+/.acquia-php-sdk-v2/
 /.adobe/
 /.android/
 /.ansible/
@@ -83,6 +84,7 @@
 /.v8flags*
 /.vscode/
 /.wget-hsts
+/.wp-cli/
 /.Xauthority
 /.yarnrc
 /App/
