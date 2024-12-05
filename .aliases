@@ -92,6 +92,8 @@
   alias .gr='git status -s . | grep "^??" | cut -c4- | while read f; do rm -f "$f"; done'
   # Undo mode changes (755 <-> 644).
   alias .gm="git diff --summary | grep --color 'mode change 100755 => 100644' | cut -d' ' -f7- | xargs chmod +x &&  git diff --summary | grep --color 'mode change 100644 => 100755' | cut -d' ' -f7- | xargs chmod -x"
+  alias gpap='git pull --all --prune'
+  alias gfap='git fetch --all --prune'
 
 # Docker
   alias dp='docker ps'
