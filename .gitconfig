@@ -2,9 +2,6 @@
 # File: Global git configurations
 #
 
-[user]
-	editor = vim
-
 [github]
 	# see .gitconfig.local
 
@@ -17,10 +14,10 @@
 	repo-root = "!cd $(git rev-parse --show-cdup)"
 
 	# Display the commit history in a tree format, with color.
-	tree  =  "!git log --graph --decorate --pretty=format:'%C(yellow)%h %Cred%ad %Cblue(%an)%C(cyan)%d%Creset %s' --date=format:'%F %k:%M:%S'  --abbrev-commit --all"
+	tree  =  "!git log --graph --decorate --pretty=format:'%C(yellow)%h %Cred%ad %Cblue(%an)%C(cyan)%d%Creset %s' --abbrev-commit"
 	recent = "!git log --color --format='format:%C(auto)%h %Cred%<(8,trunc)%aN  %Cblue%<(12)%ar %Creset%s'"
 
-		# merge history
+	# merge history
 	mh = "!git log --decorate=short --pretty=format:'%C(yellow) %h %C(blue) %s %C(reset)(%C(red)by %cN %C(green)on %cD%C(reset))' --merges"
 	# Sometimes the only change in a file is from 0755 to 0644 or
 	# vice versa; the following command resets all file permissions
@@ -30,7 +27,7 @@
 	# Some shortcuts.
 	ci    = commit -a
 	co    = checkout
-	up    = !git remote update ; git gc
+	up    = !git remote update ; git fetch --prune; git gc
 
 	s     = "!git diff --name-status | sed -e 's/^/W /' ; git diff --cached --name-status | sed -e 's/^/C /'"
 	st    = "!f() { git ls-files --exclude-standard -t -u -s -m -d $@ | sed -e 's/C.*\t/C /' ; } ; f"
@@ -49,16 +46,25 @@
 	# Stage new/renamed/copied/deleted files when applying a patch.
 	apply = apply --index
 
+	# Push to the same branch name on the remote, without explicitly using --set-upstream
+	pushup = "!git push --set-upstream origin $(git symbolic-ref --short HEAD)"
+
 [branch]
 	# Rebase when pulling avoids merge commits.
 	autosetuprebase = always
+	sort = -committerdate
+
+[checkout]
+	defaultRemote = origin
 
 [core]
+	editor = vim
 	# A global excludesfile similar to .gitignore
 	excludesfile = ~/.gitexcludes
 	pager = less -FRSX
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	quotepath = false
+	autocrlf = input
 
 [color]
 	ui = true
@@ -84,6 +90,10 @@
 	changed = green
 	untracked = cyan
 
+[column]
+	# put output from commands like git branch into multiple columns.
+	#ui = auto
+
 [diff]
 	tool = vimdiff
 	algorithm = patience
@@ -92,17 +102,53 @@
 [format]
 	pretty = oneline
 
-[merge]
-	tool = vimdiff
-
 [push]
-	default = tracking
+	default = current
+	follow-tags = true
+	followTags = true
+
+[pull]
+	rebase = true
+
+[fetch]
+	prune = true
+	writeCommitGraph = true
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[merge]
+	tool = smerge
+
+[log]
+	date = format-local:%F %k:%M:%S
+
+[rerere]
+	enabled = true
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	# Requires:
+	# echo "$(git config --get user.email) namespaces=\"git\" $(cat ~/.ssh/id_rsa.pub)" >> ~/.ssh/allowed_signers
+	allowedSignersFile = ~/.ssh/allowed_signers
+
+[commit]
+	gpgsign = true
+
+[tag]
+	gpgsign = true
+
+[user]
+	signingKey = ~/.ssh/id_rsa.pub
+
+[init]
+	#templatedir = ~/.git_template/template
+	defaultBranch = main
 
 # use separate file for username / github token / etc
 [include]

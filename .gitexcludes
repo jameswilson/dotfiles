@@ -19,8 +19,10 @@
 interdiff*.txt
 
 # Ignore project files created by various IDEs.
+.vscode
 .idea
 *.sublime-*
+*.code-workspace
 *.tmproj
 
 # Ignore tarballs and zipfiles; it's better to extract them as git has its
@@ -36,9 +38,9 @@ interdiff*.txt
 
 # Miscelaneous folders produced by various webdev tools.
 .sass-cache
+_ignore/
 FirePHPCore
 devel_themer
 simplehtmldom
 node_modules
 dont_track
-_ignore
