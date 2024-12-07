@@ -1,1 +1,54 @@
-{"Key Mappings":{"0xf703-0x300000":{"Action":11,"Text":"0x5"},"0xf702-0x280000":{"Action":10,"Text":"b"},"0xf728-0x0":{"Action":11,"Text":"0x4"},"0xf702-0x300000":{"Action":11,"Text":"0x1"},"0xf703-0x380000-0x7c":{"Version":2,"Apply Mode":0,"Action":0,"Text":"","Escaping":2},"0xf703-0x280000":{"Action":10,"Text":"f"},"0xf702-0x380000-0x7b":{"Version":2,"Apply Mode":0,"Action":2,"Text":"","Escaping":2},"0xf728-0x80000":{"Action":10,"Text":"d"},"0x7f-0x80000":{"Version":2,"Apply Mode":0,"Action":11,"Text":"0x17","Escaping":1},"0x7f-0x100000":{"Action":11,"Text":"0x15"}},"Touch Bar Items":[]}
+{
+  "Key Mappings": {
+    "0xf703-0x300000": {
+      "Action": 11,
+      "Text": "0x5"
+    },
+    "0xf702-0x280000": {
+      "Action": 10,
+      "Text": "b"
+    },
+    "0xf728-0x0": {
+      "Action": 11,
+      "Text": "0x4"
+    },
+    "0xf702-0x300000": {
+      "Action": 11,
+      "Text": "0x1"
+    },
+    "0xf703-0x380000-0x7c": {
+      "Version": 2,
+      "Apply Mode": 0,
+      "Action": 0,
+      "Text": "",
+      "Escaping": 2
+    },
+    "0xf703-0x280000": {
+      "Action": 10,
+      "Text": "f"
+    },
+    "0xf702-0x380000-0x7b": {
+      "Version": 2,
+      "Apply Mode": 0,
+      "Action": 2,
+      "Text": "",
+      "Escaping": 2
+    },
+    "0xf728-0x80000": {
+      "Action": 10,
+      "Text": "d"
+    },
+    "0x7f-0x80000": {
+      "Version": 2,
+      "Apply Mode": 0,
+      "Action": 11,
+      "Text": "0x17",
+      "Escaping": 1
+    },
+    "0x7f-0x100000": {
+      "Action": 11,
+      "Text": "0x15"
+    }
+  },
+  "Touch Bar Items": []
+}
