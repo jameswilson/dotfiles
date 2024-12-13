@@ -716,6 +716,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.44370386004447937
   },
+  "Close Sessions On End" : true,
   "Ansi 0 Color" : {
     "Red Component" : 0.078431375324726105,
     "Color Space" : "sRGB",
