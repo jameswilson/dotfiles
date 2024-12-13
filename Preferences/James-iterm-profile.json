@@ -503,11 +503,11 @@
     "Green Component" : 0.78105825185775757
   },
   "Keyboard Map" : {
-    "0xf703-0x300000" : {
+    "0x7f-0x80000" : {
       "Version" : 2,
       "Apply Mode" : 0,
       "Action" : 11,
-      "Text" : "0x5",
+      "Text" : "0x17",
       "Escaping" : 1
     },
     "0xf702-0x280000" : {
@@ -517,11 +517,11 @@
       "Text" : "b",
       "Escaping" : 1
     },
-    "0xf728-0x0" : {
+    "0x7f-0x100000" : {
       "Version" : 2,
       "Apply Mode" : 0,
       "Action" : 11,
-      "Text" : "0x4",
+      "Text" : "0x15",
       "Escaping" : 1
     },
     "0xf702-0x300000" : {
@@ -552,25 +552,25 @@
       "Text" : "",
       "Escaping" : 2
     },
+    "0xf703-0x300000" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 11,
+      "Text" : "0x5",
+      "Escaping" : 1
+    },
+    "0xf728-0x0" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 11,
+      "Text" : "0x4",
+      "Escaping" : 1
+    },
     "0xf728-0x80000" : {
       "Version" : 2,
       "Apply Mode" : 0,
       "Action" : 10,
       "Text" : "d",
-      "Escaping" : 1
-    },
-    "0x7f-0x80000" : {
-      "Version" : 2,
-      "Apply Mode" : 0,
-      "Action" : 11,
-      "Text" : "0x17",
-      "Escaping" : 1
-    },
-    "0x7f-0x100000" : {
-      "Version" : 2,
-      "Apply Mode" : 0,
-      "Action" : 11,
-      "Text" : "0x15",
       "Escaping" : 1
     }
   },
