@@ -1,5 +1,5 @@
 {
-  "Close Sessions On End" : true,
+  "Non-ASCII Anti Aliased" : true,
   "Ansi 15 Color (Dark)" : {
     "Red Component" : 1,
     "Color Space" : "P3",
@@ -7,7 +7,13 @@
     "Alpha Component" : 1,
     "Green Component" : 1
   },
-  "Non-ASCII Anti Aliased" : true,
+  "Foreground Color (Dark)" : {
+    "Red Component" : 0.63466006517410278,
+    "Color Space" : "P3",
+    "Blue Component" : 0.65515130758285522,
+    "Alpha Component" : 1,
+    "Green Component" : 0.6814618706703186
+  },
   "Cursor Text Color" : {
     "Red Component" : 1,
     "Color Space" : "sRGB",
@@ -35,13 +41,13 @@
   "Disable Window Resizing" : true,
   "BM Growl" : true,
   "Background Color (Dark)" : {
-    "Red Component" : 0.058108814060688019,
+    "Red Component" : 0.05810881406068804,
     "Color Space" : "P3",
     "Blue Component" : 0.15315675735473633,
     "Alpha Component" : 1,
     "Green Component" : 0.09417753666639328
   },
-  "Guid" : "25537F12-587A-458B-87CD-2B73453B8F2A",
+  "Guid" : "E71D1D73-A13D-402A-848F-C11BBF659A6D",
   "Cursor Color (Dark)" : {
     "Red Component" : 0.78104287385940552,
     "Color Space" : "P3",
@@ -357,11 +363,11 @@
   "Normal Font" : "MesloLGS-NF-Regular 16",
   "Use Selected Text Color (Dark)" : true,
   "Foreground Color" : {
-    "Red Component" : 0.062745101749897003,
+    "Red Component" : 0.062745101749896975,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.062745101749897003,
+    "Blue Component" : 0.062745101749896975,
     "Alpha Component" : 1,
-    "Green Component" : 0.062745101749897003
+    "Green Component" : 0.062745101749896975
   },
   "Match Background Color (Light)" : {
     "Red Component" : 1,
@@ -474,11 +480,11 @@
   },
   "Use Bright Bold (Dark)" : true,
   "Bold Color" : {
-    "Red Component" : 0.062745101749897003,
+    "Red Component" : 0.062745101749896975,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.062745101749897003,
+    "Blue Component" : 0.062745101749896975,
     "Alpha Component" : 1,
-    "Green Component" : 0.062745101749897003
+    "Green Component" : 0.062745101749896975
   },
   "Selected Text Color (Light)" : {
     "Red Component" : 0.95939916372299194,
@@ -715,13 +721,6 @@
     "Color Space" : "sRGB",
     "Blue Component" : 0.11764705926179886,
     "Alpha Component" : 1,
-    "Green Component" : 0.098039217293262482
-  },
-  "Foreground Color (Dark)" : {
-    "Red Component" : 0.63466006517410278,
-    "Color Space" : "P3",
-    "Blue Component" : 0.65515130758285522,
-    "Alpha Component" : 1,
-    "Green Component" : 0.6814618706703186
+    "Green Component" : 0.098039217293262454
   }
 }
