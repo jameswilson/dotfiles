@@ -168,7 +168,7 @@
     "Green Component" : 1
   },
   "Description" : "James",
-  "Unlimited Scrollback" : false,
+  "Unlimited Scrollback" : true,
   "Use Italic Font" : true,
   "Working Directory" : "~\/",
   "Selected Text Color (Dark)" : {
