@@ -29,10 +29,10 @@
 #  alias wget='curl -O'
 
 # Some shortcuts for different directory listings
-  alias ls='ls -GFh'      # classify files in colour
-  alias l='ls -GFh1'       #
-  alias ll='ls -GlFh'       # long list
-  alias lll='ls -GAlF'     # long list including hidden files
+  alias ls='ls -GFh --color --group-directories-first'      # classify files in colour
+  alias l='ls -GFh1 --color --group-directories-first'       #
+  alias ll='ls -GlFh --color --group-directories-first'       # long list
+  alias lll='ls -GAlF --color --group-directories-first'     # long list including hidden files
   alias la='lll'      # all but . and ..
   alias lla='lll'     #
   alias dir='lll'
