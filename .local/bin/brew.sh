@@ -50,7 +50,9 @@ brew install imagemagick
 brew install wget
 brew install tree
 brew install direnv
+brew install svgo
 brew install zsh-syntax-highlighting
+
 
 # Install macOs Quick Look plugins.
 # Try also `brew search --desc "Quick Look plugin"`
