@@ -63,7 +63,7 @@
     "Green Component" : 0.21805188059806824
   },
   "Only The Default BG Color Uses Transparency" : true,
-  "Scrollback Lines" : 1000,
+  "Scrollback Lines" : 0,
   "Badge Color (Dark)" : {
     "Red Component" : 0.91916567087173462,
     "Color Space" : "P3",
@@ -224,6 +224,11 @@
     "Green Component" : 0.66553217172622681
   },
   "Title Components" : 576,
+  "Semantic History" : {
+    "text" : "",
+    "action" : "editor",
+    "editor" : "com.todesktop.230313mzl4w4u92"
+  },
   "Ansi 9 Color (Dark)" : {
     "Red Component" : 0.93950337171554565,
     "Color Space" : "P3",
