@@ -1,5 +1,11 @@
 {
-  "Non-ASCII Anti Aliased" : true,
+  "Ansi 0 Color" : {
+    "Red Component" : 0.078431375324726105,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.11764705926179886,
+    "Alpha Component" : 1,
+    "Green Component" : 0.098039217293262454
+  },
   "Ansi 15 Color (Dark)" : {
     "Red Component" : 1,
     "Color Space" : "P3",
@@ -227,9 +233,9 @@
   },
   "Title Components" : 576,
   "Semantic History" : {
+    "editor" : "com.todesktop.230313mzl4w4u92",
     "text" : "",
-    "action" : "editor",
-    "editor" : "com.todesktop.230313mzl4w4u92"
+    "action" : "editor"
   },
   "Ansi 9 Color (Dark)" : {
     "Red Component" : 0.93950337171554565,
@@ -512,11 +518,11 @@
   },
   "Plain Text Logging" : 1,
   "Keyboard Map" : {
-    "0x7f-0x80000" : {
+    "0xf728-0x0" : {
       "Version" : 2,
       "Apply Mode" : 0,
       "Action" : 11,
-      "Text" : "0x17",
+      "Text" : "0x4",
       "Escaping" : 1
     },
     "0xf702-0x280000" : {
@@ -568,11 +574,11 @@
       "Text" : "0x5",
       "Escaping" : 1
     },
-    "0xf728-0x0" : {
+    "0x7f-0x80000" : {
       "Version" : 2,
       "Apply Mode" : 0,
       "Action" : 11,
-      "Text" : "0x4",
+      "Text" : "0x17",
       "Escaping" : 1
     },
     "0xf728-0x80000" : {
@@ -718,19 +724,13 @@
     "Alpha Component" : 1,
     "Green Component" : 0
   },
+  "Non-ASCII Anti Aliased" : true,
+  "Close Sessions On End" : true,
   "Ansi 12 Color (Light)" : {
     "Red Component" : 0.41597196459770203,
     "Color Space" : "P3",
     "Blue Component" : 0.96742528676986694,
     "Alpha Component" : 1,
     "Green Component" : 0.44370386004447937
-  },
-  "Close Sessions On End" : true,
-  "Ansi 0 Color" : {
-    "Red Component" : 0.078431375324726105,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0.11764705926179886,
-    "Alpha Component" : 1,
-    "Green Component" : 0.098039217293262454
   }
 }
