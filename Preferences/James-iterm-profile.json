@@ -40,6 +40,7 @@
   "Use Underline Color (Light)" : false,
   "Disable Window Resizing" : true,
   "BM Growl" : true,
+  "Automatically Log" : true,
   "Background Color (Dark)" : {
     "Red Component" : 0.05810881406068804,
     "Color Space" : "P3",
@@ -97,6 +98,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.4927266538143158
   },
+  "Log Filename Format" : "\\(creationTimeString).\\(profileName).\\(termid).\\(iterm2.pid).\\(autoLogId).log",
   "Ansi 2 Color (Dark)" : {
     "Red Component" : 0.7419506311416626,
     "Color Space" : "P3",
@@ -461,6 +463,7 @@
     "Green Component" : 0.47524076700210571
   },
   "Use Bold Font" : true,
+  "Log Directory" : "\/Users\/jameswilson\/Library\/Logs\/iTerm",
   "Ansi 4 Color (Light)" : {
     "Red Component" : 0.78849416971206665,
     "Color Space" : "P3",
@@ -507,6 +510,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.78105825185775757
   },
+  "Plain Text Logging" : 1,
   "Keyboard Map" : {
     "0x7f-0x80000" : {
       "Version" : 2,
