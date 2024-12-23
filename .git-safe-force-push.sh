@@ -4,7 +4,7 @@
 git() {
   if [[ $@ == 'push -f'* || $@ == 'push --force'* ]]; then
     echo "--force has been replaced with safer --force-with-lease --force-if-includes"
-    echo "See ~/.gitforcepushwithlease"
+    echo "See ~/.git-safe-force-push.sh"
     command git push --force-with-lease --force-if-includes
   else
     command git "$@"
