@@ -52,6 +52,7 @@ brew install tree
 brew install direnv
 brew install svgo
 brew install zsh-syntax-highlighting
+brew install awscli
 
 
 # Install macOs Quick Look plugins.
