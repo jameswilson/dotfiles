@@ -127,7 +127,7 @@ fi
   alias ddr="ddev exec drush"
   alias ddra="ddev drall exec drush"
   alias ddc="ddev composer"
-  alias dds="ddev sequelpro"
+  alias dds="ddev sequelace"
   alias ddl="ddev launch" # website
   alias ddp="ddev launch -p" # phpmyadmin
   alias ddm="ddev launch -m" # mailhog
