@@ -44,4 +44,5 @@ export NVM_DIR="~/.nvm"
 export GOPATH=$HOME/.go
 export GOROOT=$(brew --prefix golang)/libexec
 
-
+# Jira
+export JIRA_URL="https://bluespark.atlassian.net"
