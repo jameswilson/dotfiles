@@ -22,7 +22,7 @@
   alias brb='alert'
 
 # Remove those crazy .DS_Store files recursively
-  alias rmds='find . -name *.DS_Store -type f -ls -delete'
+  alias rmds='find . -name .DS_Store -type f -ls -delete'
 
 # When `wget` is not installed...
 # It's better to just `brew install wget`.
