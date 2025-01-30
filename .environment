@@ -10,23 +10,27 @@ export EDITOR="vim"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# Custom scripts.
-pathmunge $HOME/.local/bin
-
-# PHP Composer.
-pathmunge $HOME/.composer/vendor/bin
-export COMPOSER_MEMORY_LIMIT=-1
-
 # Homebrew
 export HOMEBREW_HOME=$(brew --cellar)
 pathmunge /usr/local/bin
 pathmunge /usr/local/sbin
+
+# Python
+pathmunge $(brew --prefix python)/bin
+pathmunge $(brew --prefix python)/libexec/bin
 
 # Replace some macOs utils with GNU utils.
 # Note: this requires `brew install coreutils findutils`.
 # @see brew.sh
 pathmunge $(brew --prefix coreutils)/libexec/gnubin
 pathmunge $(brew --prefix findutils)/libexec/gnubin
+
+# Custom scripts.
+pathmunge $HOME/.local/bin
+
+# PHP Composer.
+pathmunge $HOME/.composer/vendor/bin
+export COMPOSER_MEMORY_LIMIT=-1
 
 # Platform.sh CLI
 pathmunge $HOME/.platformsh/bin
@@ -40,6 +44,4 @@ export NVM_DIR="~/.nvm"
 export GOPATH=$HOME/.go
 export GOROOT=$(brew --prefix golang)/libexec
 
-# Python
-pathmunge $(brew --prefix python)/bin
-pathmunge $(brew --prefix python)/libexec/bin
+
