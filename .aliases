@@ -141,3 +141,12 @@ fi
 # Pantheon Terminus
   alias terminus="$HOME/.terminus/terminus"
 
+# Jira
+  alias j='jira'
+  alias jt='jira tempo'
+  alias jm='jira mine'
+  alias jr='jira reported'
+  alias jd='jira dashboard'
+  alias jb='jira branch'
+  alias ja='jira assigned'
+  alias jc='jira new'

@@ -44,5 +44,7 @@ export NVM_DIR="~/.nvm"
 export GOPATH=$HOME/.go
 export GOROOT=$(brew --prefix golang)/libexec
 
-# Jira
+# Jira omz plugin config
 export JIRA_URL="https://bluespark.atlassian.net"
+export JIRA_TEMPO_PATH="/plugins/servlet/ac/io.tempo.jira/tempo-app#!/my-work/week?type=TIME"
+export JIRA_NAME="james@bluespark.com"
