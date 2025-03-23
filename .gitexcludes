@@ -24,6 +24,7 @@ interdiff*.txt
 *.sublime-*
 *.code-workspace
 *.tmproj
+.cursor
 
 # Ignore tarballs and zipfiles; it's better to extract them as git has its
 # own compression algorithm. @todo  use LTS?
