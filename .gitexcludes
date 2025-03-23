@@ -37,6 +37,10 @@ interdiff*.txt
 # Ignore Photoshop PSD binary files.
 *.psd
 
+# Ignore Jira OMZ plugin files in projects
+.jira-prefix
+
+
 # Miscelaneous folders produced by various webdev tools.
 .sass-cache
 _ignore/
