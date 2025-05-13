@@ -45,6 +45,16 @@ brew install go
 brew install nvm
 brew install node
 
+# Install Ruby for running Jekyll locally
+# Following https://jekyllrb.com/docs/installation/macos/
+# See also ~/.environment
+brew install chruby ruby-install
+source $(brew --prefix chruby)/share/chruby/chruby.sh
+source $(brew --prefix chruby)/share/chruby/auto.sh
+ruby-install ruby 3.4.1
+chruby ruby-3.4.1
+gem install jekyll
+
 # Install other useful binaries.
 brew install imagemagick
 brew install wget
