@@ -108,7 +108,6 @@
 
 [push]
     default = current
-    follow-tags = true
     followTags = true
 
 [pull]
