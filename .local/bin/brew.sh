@@ -64,7 +64,6 @@ brew install svgo
 brew install zsh-syntax-highlighting
 brew install awscli
 
-
 # Install macOs Quick Look plugins.
 # Try also `brew search --desc "Quick Look plugin"`
 brew install qlcolorcode
@@ -79,6 +78,8 @@ brew install syntax-highlight
 
 # Install developer tools.
 brew install ddev/ddev/ddev
+brew install tig
+brew install --cask sublime-merge
 
 # Remove outdated versions from the cellar.
 brew cleanup

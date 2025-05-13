@@ -48,6 +48,7 @@
 
     # Push to the same branch name on the remote, without explicitly using --set-upstream
     pushup = "!git push --set-upstream origin $(git symbolic-ref --short HEAD)"
+    ui = !tig status
 
 [branch]
     # Rebase when pulling avoids merge commits.
@@ -95,9 +96,12 @@
     #ui = auto
 
 [diff]
-    tool = vimdiff
+    tool = tig
     algorithm = patience
     renames = copies
+
+[diff "prettier"]
+    textconv = prettier --parser babel --print-width 80
 
 [format]
     pretty = oneline

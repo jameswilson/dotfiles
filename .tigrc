@@ -1,0 +1,3 @@
+# Enable word-diff by default in diffs
+set show-changes = yes
+

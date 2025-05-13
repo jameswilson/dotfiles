@@ -13,3 +13,9 @@ set termguicolors
 
 " Use F2 to paste without auto-indentation.
 set pastetoggle=<F2>
+
+if &diff
+  set wrap
+  set linebreak         " Wrap at word boundaries
+  set nolist            " Hide special characters that mess up wrapping
+endif
