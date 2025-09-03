@@ -63,6 +63,8 @@ brew install direnv
 brew install svgo
 brew install zsh-syntax-highlighting
 brew install awscli
+brew install gnupg
+brew install gh
 
 # Install macOs Quick Look plugins.
 # Try also `brew search --desc "Quick Look plugin"`
@@ -78,6 +80,7 @@ brew install syntax-highlight
 
 # Install developer tools.
 brew install ddev/ddev/ddev
+brew install jq
 brew install tig
 brew install --cask sublime-merge
 

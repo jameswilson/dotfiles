@@ -50,6 +50,7 @@ export NVM_DIR="$HOME/.nvm"
 # Go Lang
 export GOPATH=$HOME/.go
 export GOROOT=$(brew --prefix golang)/libexec
+pathmunge $GOPATH/bin
 
 # Jira omz plugin config
 export JIRA_URL="https://bluespark.atlassian.net"

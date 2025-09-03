@@ -39,6 +39,8 @@
 /.git/
 /.gitconfig.local
 /.gitk
+/.gnupg/
+/.go/
 /.google-cloud-sdk/
 /.inkscape*
 /.ionic/
