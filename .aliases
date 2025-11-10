@@ -29,10 +29,19 @@
 #  alias wget='curl -O'
 
 # Some shortcuts for different directory listings
-  alias ls='ls -GFh --color --group-directories-first'      # classify files in colour
-  alias l='ls -GFh1 --color --group-directories-first'       #
-  alias ll='ls -GlFh --color --group-directories-first'       # long list
-  alias lll='ls -GAlF --color --group-directories-first'     # long list including hidden files
+  if command -v gls >/dev/null 2>&1; then
+    # GNU coreutils available
+    alias ls='gls --color=auto --group-directories-first -GFh'
+    alias l='gls --color=auto --group-directories-first -GFh1'
+    alias ll='gls --color=auto --group-directories-first -GlFh'
+    alias lll='gls --color=auto --group-directories-first -GAlFh'
+  else
+    # BSD fallback (no --group-directories-first)
+    alias ls='ls -GFh'
+    alias l='ls -GFh1'
+    alias ll='ls -GlFh'
+    alias lll='ls -GAlFh'
+  fi
   alias la='lll'      # all but . and ..
   alias lla='lll'     #
   alias dir='lll'
