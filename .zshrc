@@ -132,6 +132,7 @@ source ~/.git-prompt.sh
 # See https://docs.cursor.com/en/agent/terminal#disable-heavy-prompts-for-agent-sessions
 if [[ -n "$CURSOR_AGENT" ]]; then
   # Skip theme initialization for better compatibility
+  POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 else
   # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
   [[ -r ~/.p10k.zsh ]] && source ~/.p10k.zsh
