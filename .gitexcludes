@@ -26,6 +26,9 @@ interdiff*.txt
 *.tmproj
 .cursor
 
+# Ignore local configuration files.
+settings.local.json
+
 # Ignore tarballs and zipfiles; it's better to extract them as git has its
 # own compression algorithm. @todo  use LTS?
 *.tar.gz
