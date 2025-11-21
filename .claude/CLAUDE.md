@@ -1,0 +1,3 @@
+- `gh` is availble for interacting with pull requests on github
+- when creating a commit message, check current branch name and/or previous commits to extract the appropriate Jira issue ID to use in the prefix of the commit message
+- if a `.ddev/` folder is present in the project root, then assume we're using ddev, so all `drush` commands should be run with `ddev drush` instead.
