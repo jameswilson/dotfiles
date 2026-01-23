@@ -52,3 +52,4 @@ devel_themer
 simplehtmldom
 node_modules
 dont_track
+__pycache__
