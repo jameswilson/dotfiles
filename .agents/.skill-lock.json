@@ -1,0 +1,338 @@
+{
+  "version": 3,
+  "skills": {
+    "drupal-at-your-fingertips": {
+      "source": "grasmash/drupal-claude-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/grasmash/drupal-claude-skills.git",
+      "skillPath": ".claude/skills/drupal-at-your-fingertips/SKILL.md",
+      "skillFolderHash": "b43fce384bb8b3f14030bc94977351bbb24c827e",
+      "installedAt": "2026-01-26T20:45:59.922Z",
+      "updatedAt": "2026-01-26T20:45:59.922Z"
+    },
+    "drupal-config-mgmt": {
+      "source": "grasmash/drupal-claude-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/grasmash/drupal-claude-skills.git",
+      "skillPath": ".claude/skills/drupal-config-mgmt/SKILL.md",
+      "skillFolderHash": "9e6c2b5989026b7e5023c718ce1ea7007349d9be",
+      "installedAt": "2026-01-26T20:46:00.021Z",
+      "updatedAt": "2026-01-26T20:46:00.021Z"
+    },
+    "drupal-contrib-mgmt": {
+      "source": "grasmash/drupal-claude-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/grasmash/drupal-claude-skills.git",
+      "skillPath": ".claude/skills/drupal-contrib-mgmt/SKILL.md",
+      "skillFolderHash": "c722ebfd6323e839e10bb91d9af9f463f7149c34",
+      "installedAt": "2026-01-26T20:46:00.122Z",
+      "updatedAt": "2026-01-26T20:46:00.122Z"
+    },
+    "drupal-ddev": {
+      "source": "grasmash/drupal-claude-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/grasmash/drupal-claude-skills.git",
+      "skillPath": ".claude/skills/drupal-ddev/SKILL.md",
+      "skillFolderHash": "ea12dd506e68759743969d9b57b520180b08b486",
+      "installedAt": "2026-01-26T20:46:00.222Z",
+      "updatedAt": "2026-01-26T20:46:00.222Z"
+    },
+    "ivangrynenko-cursorrules-drupal": {
+      "source": "grasmash/drupal-claude-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/grasmash/drupal-claude-skills.git",
+      "skillPath": ".claude/skills/ivangrynenko-cursorrules-drupal/SKILL.md",
+      "skillFolderHash": "8261d5fdd04d3e24243d29c4a62d644edd43ec36",
+      "installedAt": "2026-01-26T20:46:00.367Z",
+      "updatedAt": "2026-01-26T20:46:00.367Z"
+    },
+    "drupal-backend": {
+      "source": "Omedia/drupal-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/Omedia/drupal-skill.git",
+      "skillPath": "drupal-backend/SKILL.md",
+      "skillFolderHash": "5c50aa3a59c56628d887600d2cf29533c90a1970",
+      "installedAt": "2026-01-26T20:49:19.479Z",
+      "updatedAt": "2026-01-26T20:49:19.479Z"
+    },
+    "drupal-frontend": {
+      "source": "Omedia/drupal-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/Omedia/drupal-skill.git",
+      "skillPath": "drupal-frontend/SKILL.md",
+      "skillFolderHash": "f2b1a05bde38236abdaf48ba2fb06b58b66ccc28",
+      "installedAt": "2026-01-26T20:49:19.576Z",
+      "updatedAt": "2026-01-26T20:49:19.576Z"
+    },
+    "drupal-tooling": {
+      "source": "Omedia/drupal-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/Omedia/drupal-skill.git",
+      "skillPath": "drupal-tooling/SKILL.md",
+      "skillFolderHash": "cdd0c972f637e50b5bff96cbb5b3c65b1314a21d",
+      "installedAt": "2026-01-26T20:49:19.696Z",
+      "updatedAt": "2026-01-26T20:49:19.696Z"
+    },
+    "ddev-expert": {
+      "source": "madsnorgaard/agent-resources",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/madsnorgaard/agent-resources.git",
+      "skillPath": ".claude/skills/ddev-expert/SKILL.md",
+      "skillFolderHash": "7892c7b7c01cbbc582c9efe04120c8c3d1588b79",
+      "installedAt": "2026-01-26T20:50:33.228Z",
+      "updatedAt": "2026-01-26T20:50:33.228Z"
+    },
+    "drupal-expert": {
+      "source": "madsnorgaard/agent-resources",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/madsnorgaard/agent-resources.git",
+      "skillPath": ".claude/skills/drupal-expert/SKILL.md",
+      "skillFolderHash": "c52c46a8d362dd0fe2750ec668dbe8097862cf87",
+      "installedAt": "2026-01-26T20:50:33.326Z",
+      "updatedAt": "2026-01-26T20:50:33.326Z"
+    },
+    "drupal-migration": {
+      "source": "madsnorgaard/agent-resources",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/madsnorgaard/agent-resources.git",
+      "skillPath": ".claude/skills/drupal-migration/SKILL.md",
+      "skillFolderHash": "122bb8d1aafbc352550ccd0994bc04912992238b",
+      "installedAt": "2026-01-26T20:50:33.422Z",
+      "updatedAt": "2026-01-26T20:50:33.422Z"
+    },
+    "drupal-security": {
+      "source": "madsnorgaard/agent-resources",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/madsnorgaard/agent-resources.git",
+      "skillPath": ".claude/skills/drupal-security/SKILL.md",
+      "skillFolderHash": "b1c3a2f5e676ebffdb7b1f19440fddf029a0c878",
+      "installedAt": "2026-01-26T20:50:33.518Z",
+      "updatedAt": "2026-01-26T20:50:33.518Z"
+    },
+    "drupal-cache-contexts": {
+      "source": "sparkfabrik/sf-awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
+      "skillPath": "skills/drupal/cache/drupal-cache-contexts/SKILL.md",
+      "skillFolderHash": "d5b838c773acfcee33d3bb05e227347acaf959ef",
+      "installedAt": "2026-01-26T20:52:30.392Z",
+      "updatedAt": "2026-01-26T20:52:30.392Z"
+    },
+    "drupal-cache-debugging": {
+      "source": "sparkfabrik/sf-awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
+      "skillPath": "skills/drupal/cache/drupal-cache-debugging/SKILL.md",
+      "skillFolderHash": "b75edea394a2735d46811fd9d235c30b10a589a0",
+      "installedAt": "2026-01-26T20:52:30.492Z",
+      "updatedAt": "2026-01-26T20:52:30.492Z"
+    },
+    "drupal-cache-maxage": {
+      "source": "sparkfabrik/sf-awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
+      "skillPath": "skills/drupal/cache/drupal-cache-maxage/SKILL.md",
+      "skillFolderHash": "33a5fd4af098eedffef4da7cd4dcc341c03199cc",
+      "installedAt": "2026-01-26T20:52:30.585Z",
+      "updatedAt": "2026-01-26T20:52:30.585Z"
+    },
+    "drupal-cache-tags": {
+      "source": "sparkfabrik/sf-awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
+      "skillPath": "skills/drupal/cache/drupal-cache-tags/SKILL.md",
+      "skillFolderHash": "2147ac1c66439a3218e72c7dac8e4bdea72da9cd",
+      "installedAt": "2026-01-26T20:52:30.678Z",
+      "updatedAt": "2026-01-26T20:52:30.678Z"
+    },
+    "drupal-dynamic-cache": {
+      "source": "sparkfabrik/sf-awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
+      "skillPath": "skills/drupal/cache/drupal-dynamic-cache/SKILL.md",
+      "skillFolderHash": "c3423cf4e602cef396a7e7fbfb413976a2c6984e",
+      "installedAt": "2026-01-26T20:52:30.776Z",
+      "updatedAt": "2026-01-26T20:52:30.776Z"
+    },
+    "drupal-lazy-builders": {
+      "source": "sparkfabrik/sf-awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
+      "skillPath": "skills/drupal/cache/drupal-lazy-builders/SKILL.md",
+      "skillFolderHash": "86f8a4eacd402134c32ee74f4226faaf12f2d1af",
+      "installedAt": "2026-01-26T20:52:30.868Z",
+      "updatedAt": "2026-01-26T20:52:30.868Z"
+    },
+    "http-cache-tools": {
+      "source": "sparkfabrik/sf-awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
+      "skillPath": "skills/drupal/cache/http-cache-tools/SKILL.md",
+      "skillFolderHash": "6d5c43f57128cbfe073fa7696792ad70dc10e1be",
+      "installedAt": "2026-01-26T20:52:30.964Z",
+      "updatedAt": "2026-01-26T20:52:30.964Z"
+    },
+    "accessibility-checker": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/accessibility-checker/SKILL.md",
+      "skillFolderHash": "5d2d2497ca4de29971fd9b6549ece93d44a97f9e",
+      "installedAt": "2026-01-26T20:56:19.507Z",
+      "updatedAt": "2026-01-26T20:56:19.507Z"
+    },
+    "code-standards-checker": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/code-standards-checker/SKILL.md",
+      "skillFolderHash": "0f4e81ae1ad99b7f2940517e7564f837284b3c33",
+      "installedAt": "2026-01-26T20:56:19.607Z",
+      "updatedAt": "2026-01-26T20:56:19.607Z"
+    },
+    "commit-message-generator": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/commit-message-generator/SKILL.md",
+      "skillFolderHash": "cf6b89c3f67e2f493b8a9d73e2941d3efd22f39f",
+      "installedAt": "2026-01-26T20:56:19.701Z",
+      "updatedAt": "2026-01-26T20:56:19.701Z"
+    },
+    "coverage-analyzer": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/coverage-analyzer/SKILL.md",
+      "skillFolderHash": "952273729286bfaaa28814f4a4f17f33500343dd",
+      "installedAt": "2026-01-26T20:56:19.840Z",
+      "updatedAt": "2026-01-26T20:56:19.840Z"
+    },
+    "design-analyzer": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/design-analyzer/SKILL.md",
+      "skillFolderHash": "08715d53f9432070e9a34ba810b7bad11a50c089",
+      "installedAt": "2026-01-26T20:56:19.938Z",
+      "updatedAt": "2026-01-26T20:56:19.938Z"
+    },
+    "documentation-generator": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/documentation-generator/SKILL.md",
+      "skillFolderHash": "c527ea77aae6f494ea193811fa1d0e6099a84186",
+      "installedAt": "2026-01-26T20:56:20.029Z",
+      "updatedAt": "2026-01-26T20:56:20.029Z"
+    },
+    "drupalorg-contribution-helper": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/drupalorg-contribution-helper/SKILL.md",
+      "skillFolderHash": "b34c4bcc6aa0b016ecd711ace2a80365800c107a",
+      "installedAt": "2026-01-26T20:56:20.120Z",
+      "updatedAt": "2026-01-26T20:56:20.120Z"
+    },
+    "drupalorg-issue-helper": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/drupalorg-issue-helper/SKILL.md",
+      "skillFolderHash": "eb44a01b4b20b211abc3a268765547da70efdfc8",
+      "installedAt": "2026-01-26T20:56:20.212Z",
+      "updatedAt": "2026-01-26T20:56:20.212Z"
+    },
+    "performance-analyzer": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/performance-analyzer/SKILL.md",
+      "skillFolderHash": "22270154bea7c94be0570236f102a8dd8950975e",
+      "installedAt": "2026-01-26T20:56:20.328Z",
+      "updatedAt": "2026-01-26T20:56:20.328Z"
+    },
+    "responsive-styling": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/responsive-styling/SKILL.md",
+      "skillFolderHash": "2982d16124cf09425f5a1518ef40355ed08400b5",
+      "installedAt": "2026-01-26T20:56:20.420Z",
+      "updatedAt": "2026-01-26T20:56:20.420Z"
+    },
+    "security-scanner": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/security-scanner/SKILL.md",
+      "skillFolderHash": "f773d5fbe644817528bea26cc126325fca063de7",
+      "installedAt": "2026-01-26T20:56:20.520Z",
+      "updatedAt": "2026-01-26T20:56:20.520Z"
+    },
+    "test-plan-generator": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/test-plan-generator/SKILL.md",
+      "skillFolderHash": "aa1deabeb327038cb698cd2d66a9b8a291402d92",
+      "installedAt": "2026-01-26T20:56:20.618Z",
+      "updatedAt": "2026-01-26T20:56:20.618Z"
+    },
+    "test-scaffolding": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/test-scaffolding/SKILL.md",
+      "skillFolderHash": "0b27d58fabd974bd08fdd5f5cd3dd6139d86ca44",
+      "installedAt": "2026-01-26T20:56:20.724Z",
+      "updatedAt": "2026-01-26T20:56:20.724Z"
+    },
+    "drupal-development": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/Mindrally/skills.git",
+      "skillPath": "drupal-development/SKILL.md",
+      "skillFolderHash": "6de06b6accbe7dc0f5da57c8141f7e746db2a140",
+      "installedAt": "2026-01-26T21:02:48.779Z",
+      "updatedAt": "2026-01-26T21:02:48.779Z"
+    },
+    "figma-integration": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/Mindrally/skills.git",
+      "skillPath": "figma-integration/SKILL.md",
+      "skillFolderHash": "0b294b7b60a91aa7132eb0f64afd3c7a528f7fa2",
+      "installedAt": "2026-01-26T21:02:48.884Z",
+      "updatedAt": "2026-01-26T21:02:48.884Z"
+    },
+    "htmx": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/Mindrally/skills.git",
+      "skillPath": "htmx/SKILL.md",
+      "skillFolderHash": "c2e40b71da494a1b59e4bcaa30a3d599e651423b",
+      "installedAt": "2026-01-26T21:02:48.980Z",
+      "updatedAt": "2026-01-26T21:02:48.980Z"
+    },
+    "html": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/Mindrally/skills.git",
+      "skillPath": "html/SKILL.md",
+      "skillFolderHash": "20bbc5de4e2fe0ffb30616f0c49baec6e31b557d",
+      "installedAt": "2026-01-26T21:02:49.078Z",
+      "updatedAt": "2026-01-26T21:02:49.078Z"
+    },
+    "sass-best-practices": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/Mindrally/skills.git",
+      "skillPath": "sass-best-practices/SKILL.md",
+      "skillFolderHash": "8945a0227cc10d9d59a95518de767bc5738d7403",
+      "installedAt": "2026-01-26T21:02:49.211Z",
+      "updatedAt": "2026-01-26T21:02:49.211Z"
+    }
+  }
+}
