@@ -61,7 +61,7 @@
 [core]
     editor = vim
     # A global excludesfile similar to .gitignore
-    excludesfile = ~/.gitexcludes
+    excludesfile = ~/.config/git/ignore
     pager = less -FRSX
     whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
     quotepath = false

@@ -1,5 +1,5 @@
-# Make all the patterns in this file apply to *all* projects using:
-#   `git config --global core.excludesfile ~/.gitexcludes`
+# Global gitignore: patterns apply to all projects.
+#   git config --global core.excludesfile ~/.config/git/ignore
 
 # Ignore operating system files.
 .DS_Store
@@ -28,6 +28,7 @@ interdiff*.txt
 
 # Ignore local configuration files.
 settings.local.json
+**/.claude/settings.local.json
 
 # Ignore tarballs and zipfiles; it's better to extract them as git has its
 # own compression algorithm. @todo  use LTS?
