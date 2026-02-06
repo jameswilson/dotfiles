@@ -46,6 +46,7 @@ settings.local.json
 
 
 # Miscelaneous folders produced by various webdev tools.
+.playwright-mcp/
 .sass-cache
 _ignore/
 FirePHPCore
