@@ -342,6 +342,42 @@
       "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
       "installedAt": "2026-01-26T23:06:01.293Z",
       "updatedAt": "2026-01-26T23:16:50.431Z"
+    },
+    "drupal-contribute-fix": {
+      "source": "scottfalconer/drupal-contribute-fix",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/scottfalconer/drupal-contribute-fix.git",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "801cee9b6ebe2e6c9ab5740cdc3085de5ea3009a",
+      "installedAt": "2026-01-28T03:18:34.184Z",
+      "updatedAt": "2026-02-06T04:56:23.427Z"
+    },
+    "drupal-intent-testing": {
+      "source": "scottfalconer/drupal-intent-testing",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/scottfalconer/drupal-intent-testing.git",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "f5f3cb1662689f17fd0d9b855b7653b9b95401d6",
+      "installedAt": "2026-02-03T12:50:46.245Z",
+      "updatedAt": "2026-02-03T12:50:46.245Z"
+    },
+    "drupal-issue-queue": {
+      "source": "scottfalconer/drupal-issue-queue",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/scottfalconer/drupal-issue-queue.git",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "7be7938d85ca71a1581d913d19cba0aa67c7f2c0",
+      "installedAt": "2026-02-03T12:51:10.727Z",
+      "updatedAt": "2026-02-06T04:57:10.857Z"
+    },
+    "playwright-cli": {
+      "source": "microsoft/playwright-cli",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/microsoft/playwright-cli.git",
+      "skillPath": "skills/playwright-cli/SKILL.md",
+      "skillFolderHash": "a078ad3cf6f97ab53bf1462d85e3a7d85c3b3140",
+      "installedAt": "2026-02-05T20:48:11.900Z",
+      "updatedAt": "2026-02-05T20:48:11.900Z"
     }
   },
   "dismissed": {
