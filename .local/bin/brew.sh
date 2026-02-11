@@ -65,6 +65,7 @@ brew install zsh-syntax-highlighting
 brew install awscli
 brew install gnupg
 brew install gh
+brew install glab
 
 # Install macOs Quick Look plugins.
 # Try also `brew search --desc "Quick Look plugin"`
