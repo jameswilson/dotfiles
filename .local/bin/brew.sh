@@ -40,6 +40,7 @@ brew install vim
 brew install git
 
 # Install programming language packs.
+brew install php
 brew install python
 brew install go
 brew install nvm

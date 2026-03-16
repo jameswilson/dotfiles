@@ -8,6 +8,9 @@ export XDG_DATA_DIRS="${XDG_DATA_DIRS:-/usr/local/share/:/usr/share/}"
 export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
 export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-$(getconf DARWIN_USER_TEMP_DIR)}"
 
+# Move Composer home to XDG Base Directory Specification.
+export COMPOSER_HOME="${COMPOSER_HOME:-$XDG_CONFIG_HOME/composer}"
+
 # Helper function allows safely modifying $PATH environment variable.
 function pathmunge() {
   case ":${PATH}:" in

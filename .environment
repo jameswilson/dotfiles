@@ -36,7 +36,7 @@ pathmunge $(brew --prefix findutils)/libexec/gnubin
 pathmunge $HOME/.local/bin
 
 # PHP Composer.
-pathmunge $HOME/.composer/vendor/bin
+pathmunge $COMPOSER_HOME/vendor/bin
 export COMPOSER_MEMORY_LIMIT=-1
 
 # Platform.sh CLI
