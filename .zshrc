@@ -166,6 +166,13 @@ then
   compinit
 fi
 
+# Custom CLI completions
+if [ -d ~/.zsh/completions ]; then
+  fpath=(~/.zsh/completions $fpath)
+  autoload -Uz compinit
+  compinit
+fi
+
 # Customize the window title using directory and vcs info.
 source ~/.oh-my-zsh/custom/themes/powerlevel10k/gitstatus/gitstatus.prompt.zsh
 autoload -Uz add-zsh-hook
