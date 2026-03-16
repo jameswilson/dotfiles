@@ -86,5 +86,8 @@ brew install jq
 brew install tig
 brew install --cask sublime-merge
 
+# Install API integrations
+brew install ankitpokhrel/jira-cli/jira-cli
+
 # Remove outdated versions from the cellar.
 brew cleanup
