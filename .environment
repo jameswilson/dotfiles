@@ -52,6 +52,9 @@ export GOPATH=$HOME/.go
 export GOROOT=$(brew --prefix golang)/libexec
 pathmunge $GOPATH/bin
 
+# Obsidian CLI
+pathmunge /Applications/Obsidian.app/Contents/MacOS
+
 if [ -f $HOME/.env ]; then
   source $HOME/.env
 fi
