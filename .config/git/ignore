@@ -55,3 +55,6 @@ simplehtmldom
 node_modules
 dont_track
 __pycache__
+
+# Ignore drupal-contribute-fix skill's dotfolder
+.drupal-contribute-fix/
