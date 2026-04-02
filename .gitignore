@@ -71,6 +71,7 @@
 /.node-gyp/
 /.npm/
 /.nvm/
+/.phpls/
 /.platform
 /.platformsh
 /.plugman/
