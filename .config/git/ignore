@@ -25,6 +25,9 @@ interdiff*.txt
 *.code-workspace
 *.tmproj
 .cursor
+.cursorignore
+.cursorindexingignore
+
 
 # Ignore local configuration files.
 settings.local.json
