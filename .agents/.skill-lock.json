@@ -774,6 +774,15 @@
       "skillFolderHash": "5caf5d9e7de204f3904216857545f2aa36bcfcac",
       "installedAt": "2026-05-22T20:12:16.690Z",
       "updatedAt": "2026-05-22T20:12:16.690Z"
+    },
+    "last30days": {
+      "source": "mvanhorn/last30days-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mvanhorn/last30days-skill.git",
+      "skillPath": "skills/last30days/SKILL.md",
+      "skillFolderHash": "63ee58e42ad33abd1e5b114f8f28f367681cb8ff",
+      "installedAt": "2026-06-15T23:39:54.241Z",
+      "updatedAt": "2026-06-15T23:39:54.241Z"
     }
   },
   "dismissed": {
