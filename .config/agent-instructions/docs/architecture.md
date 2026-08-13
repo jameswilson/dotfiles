@@ -46,10 +46,17 @@ The portable unit is an artifact or protocol, not a shared vendor directory. Can
 ## Storage boundaries
 
 - `~/.config/agent-instructions/`: authored configuration and generated projections.
-- `~/.agents/skills/`: installed Agent Skills runtime.
-- `~/.agents/.skill-lock.json`: tool-generated skill installation state.
+- `~/.agents/skills/`: installed Agent Skills runtime, including links to canonical authored checkouts.
+- Dedicated skill repositories: canonical personally authored cross-agent workflows; link or install their packages into `~/.agents/skills/`.
+- `$XDG_STATE_HOME/skills/.skill-lock.json`: tool-generated skill installation state when `XDG_STATE_HOME` is set; otherwise `~/.agents/.skill-lock.json`.
 - `~/.codex/`, `~/.cursor/`, and similar directories: vendor-owned configuration, runtime state, and native deployment targets.
 - Platform-hosted memory and personalization: remote state mirrored only through explicit dated imports.
+
+## Skills and commands
+
+- Agent Skills are the canonical portable workflow format and may package progressively loaded instructions, scripts, references, and assets.
+- Built-in slash commands are harness controls, not shared artifacts.
+- Do not maintain user-authored command copies of migrated skills. Add a thin alias only when a harness cannot invoke the skill natively.
 
 ## Cursor adapter
 
