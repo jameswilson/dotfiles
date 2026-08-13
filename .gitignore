@@ -23,6 +23,9 @@
 /.codex/
 /.composer/
 /.config/
+!/.config/
+/.config/*
+!/.config/agent-instructions/
 /.console/
 /.cordova/
 /.cups/
