@@ -1,0 +1,48 @@
+---
+description: Shell and git gotchas for agent command execution on James's Mac
+alwaysApply: true
+---
+
+# Shell environment (agent execution)
+
+James's login shell sources `~/.aliases`, `~/.environment`, and `~/.git-safe-force-push.sh`. Agent terminals are often read-only to the user while a command runs.
+
+## Interactive aliases (will hang)
+
+`rm`, `cp`, and `mv` are aliased to `*-i` in `~/.aliases`. In non-interactive or agent shells:
+
+- Use `command rm`, `rm -f`, `git mv`, or `/bin/cp` — not bare `rm` after `cp`.
+- Never chain `cp … && rm …` without `rm -f` (macOS `rm -i` blocks on confirmation).
+
+## Git
+
+- Use `git --no-pager` (or `GIT_PAGER=cat`) when parsing output in scripts.
+- Do not use `git ci` — global alias is `commit -a` (commits all tracked changes).
+- `git push --force` / `git push -f` is rewritten to `--force-with-lease --force-if-includes` via `~/.git-safe-force-push.sh`.
+- Avoid `git ui` (opens `tig`). Avoid repo git aliases `.gr` (mass-deletes untracked) and `.gd` (`git delete`).
+
+For automated commits, use `GIT_EDITOR=true` or `git commit --no-edit` so `EDITOR=vim` does not open.
+
+## Never run in agent shells
+
+- `sudo` (e.g. `hosts` / `h` aliases)
+- Interactive pagers or TUIs (`tig`, `less` on long git output without `--no-pager`)
+- `brew_update` unless explicitly requested
+
+## Drupal / DDEV
+
+Use `ddev drush` and `ddev composer`, not host `drush` or `composer`.
+
+## PATH / utilities
+
+GNU coreutils are prepended in `~/.environment` (`gls`, etc.). `ls` is aliased to `gls` when available — do not assume BSD `ls` flags in portable scripts.
+
+`direnv` is hooked in `~/.zshrc`; some project dirs may require `.envrc` — if direnv errors, note it rather than prompting.
+
+## Stuck agent terminal
+
+If a command waits for `[y/n]` or password input, the user cannot answer in a read-only agent terminal. Kill the stuck process (e.g. `rm -i`) from a separate shell instead of expecting Ctrl+C from the user.
+
+## Cursor agent sessions
+
+When `CURSOR_AGENT` is set, Powerlevel10k heavy prompt init is skipped (`~/.zshrc`) — normal for agent terminals.

@@ -1,0 +1,97 @@
+#!/usr/bin/env python3
+"""Emit safe Cursor-native prompts for exporting or deploying User Rules."""
+
+from __future__ import annotations
+
+import argparse
+import datetime as dt
+import json
+import tomllib
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parent.parent
+MANIFEST = ROOT / "targets.toml"
+TARGET_NAME = "cursor_user_rules"
+
+
+def target() -> dict[str, object]:
+    with MANIFEST.open("rb") as stream:
+        manifest = tomllib.load(stream)
+    return manifest["targets"][TARGET_NAME]
+
+
+def export_prompt(snapshot_date: str) -> str:
+    destination = ROOT / "imports" / "cursor" / snapshot_date / "user-rules.json"
+    return f"""You are running in the Cursor Agents Window with /Users/jameswilson as the workspace root.
+
+Export only; do not mutate Cursor rules.
+
+1. Call cursor-app-control.cursor_dialog with:
+   {{"item":"rule","scope":"user","action":"list"}}
+2. Preserve the complete returned rule data without summarizing, normalizing, or omitting ids, titles, or content.
+3. Write that data as valid, pretty-printed JSON to:
+   {destination}
+4. Read the saved file back and verify it contains every rule returned by the list operation.
+5. Report the path and rule count. Do not add, update, or remove any rule.
+"""
+
+
+def deploy_prompt(snapshot_date: str) -> str:
+    config = target()
+    source = ROOT / str(config["output"])
+    before = ROOT / "imports" / "cursor" / snapshot_date / "user-rules.json"
+    destination = ROOT / "imports" / "cursor" / snapshot_date / "user-rules-after-deploy.json"
+    if not source.is_file():
+        raise SystemExit(f"Missing generated target: {source}. Run bin/render first.")
+    if not before.is_file():
+        raise SystemExit(
+            f"Missing pre-deploy export: {before}. Run the export prompt in Cursor first."
+        )
+    with source.open(encoding="utf-8") as stream:
+        bundle = json.load(stream)
+    titles = [rule["title"] for rule in bundle["rules"]]
+    title_list = "\n".join(f"   - {title}" for title in titles)
+    return f"""You are running in the Cursor Agents Window with /Users/jameswilson as the workspace root.
+
+Deploy the control-plane-managed Cursor User Rules and preserve every unmanaged rule.
+
+1. Read and validate the complete generated JSON bundle at:
+   {source}
+2. Confirm the pre-deploy export exists at:
+   {before}
+3. Call cursor-app-control.cursor_dialog with:
+   {{"item":"rule","scope":"user","action":"list"}}
+4. Preflight all managed titles before mutating anything:
+{title_list}
+5. If any managed title occurs more than once remotely, stop without mutation and report every duplicate id.
+6. For each bundled rule: add it when absent, update it by returned id when content differs, and leave it unchanged when title and content already match.
+7. Do not add, update, merge, or remove any rule whose title is not in the generated bundle.
+8. List all User Rules again, verify every managed title and content byte-for-byte, and save the complete post-deploy list as valid, pretty-printed JSON to:
+   {destination}
+9. Report the added, updated, unchanged, and preserved-unmanaged titles. Never delete a rule in this workflow.
+"""
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("action", choices=("export-prompt", "deploy-prompt"))
+    parser.add_argument(
+        "--date",
+        default=dt.date.today().isoformat(),
+        help="Snapshot date in YYYY-MM-DD form (default: today).",
+    )
+    return parser.parse_args()
+
+
+def main() -> int:
+    args = parse_args()
+    if args.action == "export-prompt":
+        print(export_prompt(args.date), end="")
+    else:
+        print(deploy_prompt(args.date), end="")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
