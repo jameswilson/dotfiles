@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "extracted_at": "2026-08-13T12:31:18-05:00",
+  "source_database": "/Users/jameswilson/Library/Application Support/Cursor/User/globalStorage/state.vscdb",
+  "source_record_key": "agentKv:blob:500dcb34a944df180c25bd854105eeb529c10f2988e2d869f6402b7e0f652268",
+  "source_prompt_date": "2026-08-03",
+  "content_sha256": "5fbdebb0e6da84f7f005c0cf90fd58359fc78540d383678849cc01e2845cd538",
+  "cache_limitations": [
+    "Prompt snapshots are secondary cache evidence, not the live cloud rule store.",
+    "Cloud rule ids are not present.",
+    "The cache may remain stale until a new Cursor agent prompt loads current rules."
+  ],
+  "expected_titles_present": [
+    "Agent thread naming",
+    "Browser tests",
+    "Commit messages",
+    "DDEV",
+    "Formatting",
+    "Git",
+    "Jira",
+    "Karpathy behavioral guidelines",
+    "Responses",
+    "Shell agents",
+    "Socket",
+    "User context"
+  ],
+  "rules": [
+    {
+      "title": "Agent thread naming",
+      "content": "# Agent thread naming\n\nWhen creating or suggesting an agent/chat/thread/session name, always prefix it with the active Jira issue ID.\n\nFormat:\n\n`ABC-123: Short task name`\n\nRules:\n- Extract the Jira ID from the branch name, commit prompt, ticket URL, task text, or user message.\n- Jira IDs match `[A-Z][A-Z0-9]+-[0-9]+`.\n- If multiple IDs are present, use the most specific/current one.\n- If no Jira ID is available, use `NO-JIRA: Short task name`.\n- Do not generate bare thread names without this prefix.\n"
+    },
+    {
+      "title": "Karpathy behavioral guidelines",
+      "content": "# Karpathy behavioral guidelines\n\nPrefer caution over speed. Before coding, state assumptions, surface ambiguity, push back on overcomplicated or underspecified requests, and say plainly when instructions reduce response quality. Tell it straight while staying constructive and forward-looking. Implement the smallest solution that satisfies the task: no speculative features, premature abstractions, or unnecessary configurability. Make surgical changes only; preserve existing style, avoid unrelated cleanup, and ensure every changed line traces to the request. For non-trivial work, define verifiable success criteria, use a brief plan, and loop until tests or equivalent checks pass. Clarify before implementation when requirements are ambiguous.\n"
+    },
+    {
+      "title": "Shell agents",
+      "content": "# Shell agents\n\nAssume agent shells may run with user aliases, hooks, pagers, read-only terminals, and noninteractive constraints; avoid bare destructive/interactively aliased commands, use explicit binaries or noninteractive flags, disable pagers/editors, avoid TUIs/sudo, prefer project-local tooling, note environment hook errors, and kill stuck prompts from another shell rather than waiting for user input.\n"
+    },
+    {
+      "title": "Browser tests",
+      "content": "# Browser tests\n\nCheck with curl before opening a browser; for responsive, mobile, or visual site review, use Playwright MCP instead of Cursor webview for accurate viewport sizing and real browser behavior.\n"
+    },
+    {
+      "title": "Jira",
+      "content": "# Jira\n\nAssume ticket/issue references a Jira issue unless stated otherwise; fetch the description and full comment history via Atlassian MCP or `jira` CLI, and treat newer comments as authoritative over older comments or the original description.\n"
+    },
+    {
+      "title": "User context",
+      "content": "# User context\n\nJames Wilson is a Cuenca-based full-stack Drupal developer from North Carolina, focused on open source tooling, Drupal 10/11 sites, themes, and contrib modules, using PHP, Twig, SCSS/CSS, JavaScript, Drush, DDEV, MySQL, VS Code/Vim, Zsh, macOS, and Docker Desktop.\n"
+    },
+    {
+      "title": "Responses",
+      "content": "# Responses\n\nTreat the user as an expert: answer immediately, stay terse but accurate, use casual direct language, avoid filler and moralizing, cite sources when relevant, flag speculation, suggest overlooked or contrarian options, preserve Drupal PHP coding standards, show only targeted code changes with surrounding context, and say plainly when instructions reduce response quality.\n"
+    },
+    {
+      "title": "Socket",
+      "content": "# Socket\n\nAlways check dependency scores with the depscore tool from the Socket MCP Server when you add a new dependency. If the score is low, consider using an alternative library or writing the code yourself. If you are unsure about the score, ask for a review from someone with more experience. When checking dependencies, make sure to also check the imports not just the pyproject.toml, package.json, or other dependency file.\n"
+    },
+    {
+      "title": "DDEV",
+      "content": "# DDEV\n\nIf a `.ddev/` folder is present in the project root, then assume we're using ddev for local development, so all `drush`, `composer`, `php` etc commands should be prefixed with `ddev`, eg `ddev drush`.\n\nIf asked to reindex Solr, or a reindex is required as a part of an agentic task need, the steps are:\n\n1) figure out what the solr server machine name is, typically this will be `solr` when using DDEV, but not always.\n\n2) clear server, clear index, rebuild, re-index\nddev drush sapi-sc solr\nddev drush sapi-c\nddev drush sapi-r\nddev drush sapi-rt\nddev drush sapi-i\n"
+    },
+    {
+      "title": "Git",
+      "content": "# Git\n\nNever use `git commit -A`; commit staged changes first, then unstaged changes, prompt before adding untracked files, omit AI-agent commit trailers, confirm before deleting untracked files, and push only to `origin` unless explicitly asked otherwise.\n"
+    },
+    {
+      "title": "Formatting",
+      "content": "# Formatting\n\nStrip trailing whitespace from all generated code, leave blank lines unindented, and end new files with a newline.\n"
+    },
+    {
+      "title": "Commit messages",
+      "content": "# Commit messages\n\nWhen creating a commit message, follow the lead of past commit message style. Derive the Jira issue ID from the feature branch name or recent commits and use it as the commit message prefix.\n"
+    }
+  ],
+  "observed_requestable_workspace_rules": [
+    {
+      "path": "/Users/jameswilson/.cursor/plugins/cache/cursor-public/gitlab/e89ebfc384db30e3d06c840853ad67d22f5f9c94/rules/gitlab-workflow.mdc",
+      "description": "GitLab development workflow conventions"
+    }
+  ]
+}

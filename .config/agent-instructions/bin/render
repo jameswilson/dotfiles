@@ -1,0 +1,330 @@
+#!/usr/bin/env python3
+"""Render agent-specific projections without modifying native agent files."""
+
+from __future__ import annotations
+
+import argparse
+import difflib
+import json
+import sys
+import tomllib
+from pathlib import Path
+from typing import Any
+
+
+ROOT = Path(__file__).resolve().parent.parent
+MANIFEST_PATH = ROOT / "targets.toml"
+PROFILE_PATH = ROOT / "source/facts/profile.toml"
+
+
+def load_toml(path: Path) -> dict[str, Any]:
+    with path.open("rb") as stream:
+        return tomllib.load(stream)
+
+
+def read_text(relative_path: str) -> str:
+    path = ROOT / relative_path
+    if not path.is_file():
+        raise FileNotFoundError(f"Missing source: {path}")
+    return path.read_text(encoding="utf-8")
+
+
+def strip_h1(content: str) -> str:
+    """Remove one leading H1 so sources compose under a target heading."""
+    lines = content.splitlines()
+    first_content = next((index for index, line in enumerate(lines) if line.strip()), None)
+    if first_content is not None and lines[first_content].startswith("# "):
+        del lines[first_content]
+        while first_content < len(lines) and not lines[first_content].strip():
+            del lines[first_content]
+    return "\n".join(lines).strip()
+
+
+def demote_headings(content: str) -> str:
+    """Demote Markdown headings so a source nests under a target H1."""
+    lines = []
+    for line in content.splitlines():
+        if line.startswith("#"):
+            line = "#" + line
+        lines.append(line)
+    return "\n".join(lines).strip()
+
+
+def render_concat(target: dict[str, Any]) -> str:
+    sections = [demote_headings(read_text(path)) for path in target.get("sources", [])]
+    sections = [section for section in sections if section]
+    prefix = target.get("prefix", "").strip()
+    if prefix:
+        sections.insert(0, prefix)
+    return "\n\n".join(sections).rstrip() + "\n"
+
+
+def render_occupation(profile: dict[str, Any]) -> str:
+    return profile["professional"]["occupation"].rstrip() + "\n"
+
+
+def render_copy(target: dict[str, Any]) -> str:
+    return read_text(target["source"]).rstrip() + "\n"
+
+
+def render_more_about_you(profile: dict[str, Any]) -> str:
+    identity = profile["identity"]
+    professional = profile["professional"]
+    environment = profile["environment"]
+    technology = profile["technology"]
+    occupation = professional["occupation"]
+    occupation_in_sentence = occupation[0].lower() + occupation[1:]
+
+    lines = [
+        f"- My name is {identity['name']}.",
+        f"- I live in {identity['home_city']}, {identity['home_country']}.",
+        f"- I am originally from {identity['origin_region']}, {identity['origin_country']}.",
+        f"- My timezone is {identity['timezone']}.",
+        f"- I am an Enneagram type {identity['enneagram_type']}.",
+        f"- I work as a {occupation_in_sentence}.",
+        "- My professional specializations include:",
+    ]
+    lines.extend(f"  - {item}." for item in professional["specializations"])
+    lines.append("- My regular technologies and tools include:")
+    lines.extend(f"  - {item}." for item in technology["primary"])
+    lines.extend(
+        [
+            f"  - {editor}." for editor in environment["editors"]
+        ]
+    )
+    lines.extend(
+        [
+            f"  - {environment['shell']}.",
+            f"  - {environment['operating_system']} with {environment['container_runtime']}.",
+        ]
+    )
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def render_memory_summary(profile: dict[str, Any]) -> str:
+    identity = profile["identity"]
+    professional = profile["professional"]
+    technology = profile["technology"]
+    work_context = strip_h1(read_text("source/facts/work-context.md"))
+    current_state = strip_h1(read_text("source/state/current.md"))
+
+    primary = ", ".join(technology["primary"])
+    additional = ", ".join(technology["additional"])
+    occupation = professional["occupation"]
+    occupation_in_sentence = occupation[0].lower() + occupation[1:]
+    overview = (
+        "# Overview\n\n"
+        f"You are a {occupation_in_sentence}. You live in "
+        f"{identity['home_city']}, {identity['home_country']}, and work extensively "
+        "with open-source software and AI-assisted development. "
+        f"Your primary stack includes {primary}; additional recurring tools include {additional}."
+    )
+    communication = (
+        "## Communication style\n\n"
+        "- Prefer natural, direct wording that removes unnecessary complexity while preserving technical accuracy and nuance.\n"
+        "- Prefer concise answers by default and technically detailed analysis when the task requires it.\n"
+        "- Value concrete examples, actionable recommendations, careful terminology, candid uncertainty, and source-backed conclusions."
+    )
+    return (
+        f"{overview}\n\n{work_context}\n\n{communication}\n\n"
+        f"## Time-sensitive state\n\n{current_state}\n"
+    )
+
+
+def extract_h2_sections(content: str, requested: list[str]) -> str:
+    """Extract named level-two Markdown sections in requested order."""
+    sections: dict[str, list[str]] = {}
+    current: str | None = None
+    for line in content.splitlines():
+        if line.startswith("## "):
+            current = line[3:].strip()
+            sections[current] = [line]
+        elif current is not None:
+            sections[current].append(line)
+
+    missing = [name for name in requested if name not in sections]
+    if missing:
+        raise ValueError(f"Missing Markdown sections: {', '.join(missing)}")
+    return "\n\n".join(
+        "\n".join(sections[name]).strip() for name in requested
+    )
+
+
+def render_cursor_rule(rule: dict[str, Any], profile: dict[str, Any]) -> dict[str, str]:
+    title = rule["title"]
+    for canonical_path in rule.get("canonical", []):
+        read_text(canonical_path)
+    if rule.get("kind") == "more-about-you":
+        body = render_more_about_you(profile).strip()
+    else:
+        source_paths = rule.get("sources") or [rule["source"]]
+        sections = rule.get("sections")
+        if sections and len(source_paths) != 1:
+            raise ValueError(f"Cursor rule {title} uses sections with multiple sources")
+        parts = []
+        for source_path in source_paths:
+            content = read_text(source_path)
+            parts.append(
+                extract_h2_sections(content, sections)
+                if sections
+                else strip_h1(content)
+            )
+        body = "\n\n".join(part for part in parts if part).strip()
+
+    content = f"# {title}\n\n{body}".rstrip() + "\n"
+    max_chars = rule.get("max_chars", 20000)
+    if len(content.rstrip()) > max_chars:
+        raise ValueError(
+            f"Cursor rule {title} exceeds max_chars: "
+            f"{len(content.rstrip())} > {max_chars}"
+        )
+    return {"title": title, "content": content}
+
+
+def render_cursor_user_rules(target: dict[str, Any], profile: dict[str, Any]) -> str:
+    manifest = load_toml(ROOT / target["manifest"])
+    rules = [render_cursor_rule(rule, profile) for rule in manifest["rules"]]
+    titles = [rule["title"] for rule in rules]
+    if len(titles) != len(set(titles)):
+        raise ValueError("Cursor User Rule titles must be unique")
+    payload = {
+        "schema_version": 1,
+        "managed_by": "~/.config/agent-instructions",
+        "rules": rules,
+    }
+    return json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
+
+
+def render_target(target: dict[str, Any], profile: dict[str, Any]) -> str:
+    kind = target["kind"]
+    if kind == "concat":
+        return render_concat(target)
+    if kind == "copy":
+        return render_copy(target)
+    if kind == "occupation":
+        return render_occupation(profile)
+    if kind == "more-about-you":
+        return render_more_about_you(profile)
+    if kind == "memory-summary":
+        return render_memory_summary(profile)
+    if kind == "cursor-user-rules":
+        return render_cursor_user_rules(target, profile)
+    raise ValueError(f"Unsupported target kind: {kind}")
+
+
+def enforce_target_limits(name: str, target: dict[str, Any], content: str) -> None:
+    max_chars = target.get("max_chars")
+    if max_chars is not None and len(content.rstrip()) > max_chars:
+        raise ValueError(
+            f"Target {name} exceeds max_chars: {len(content.rstrip())} > {max_chars}"
+        )
+
+
+def target_output_path(target: dict[str, Any]) -> Path:
+    output = (ROOT / target["output"]).resolve()
+    if ROOT.resolve() not in output.parents:
+        raise ValueError(f"Target escapes control-plane root: {output}")
+    return output
+
+
+def render_all() -> dict[str, tuple[dict[str, Any], str]]:
+    manifest = load_toml(MANIFEST_PATH)
+    profile = load_toml(PROFILE_PATH)
+    rendered = {}
+    for name, target in manifest["targets"].items():
+        content = render_target(target, profile)
+        enforce_target_limits(name, target, content)
+        rendered[name] = (target, content)
+    return rendered
+
+
+def write_outputs(rendered: dict[str, tuple[dict[str, Any], str]]) -> int:
+    for name, (target, content) in rendered.items():
+        output = target_output_path(target)
+        output.parent.mkdir(parents=True, exist_ok=True)
+        previous = output.read_text(encoding="utf-8") if output.exists() else None
+        if previous == content:
+            print(f"unchanged {name}: {output}")
+            continue
+        output.write_text(content, encoding="utf-8")
+        print(f"wrote {name}: {output}")
+    return 0
+
+
+def check_outputs(rendered: dict[str, tuple[dict[str, Any], str]]) -> int:
+    stale = False
+    for name, (target, content) in rendered.items():
+        output = target_output_path(target)
+        if not output.exists():
+            print(f"missing {name}: {output}")
+            stale = True
+        elif output.read_text(encoding="utf-8") != content:
+            print(f"stale {name}: {output}")
+            stale = True
+        else:
+            print(f"current {name}: {output}")
+    return 1 if stale else 0
+
+
+def diff_native(
+    rendered: dict[str, tuple[dict[str, Any], str]],
+    target_name: str,
+) -> int:
+    if target_name not in rendered:
+        print(f"Unknown target: {target_name}", file=sys.stderr)
+        return 2
+
+    target, content = rendered[target_name]
+    native_value = target.get("native")
+    if not native_value:
+        print(f"Target has no native filesystem path: {target_name}", file=sys.stderr)
+        return 2
+
+    native = Path(native_value).expanduser()
+    if not native.exists():
+        print(f"Native target is missing: {native}")
+        return 1
+
+    native_content = native.read_text(encoding="utf-8")
+    if native_content == content:
+        print(f"Native target is current: {native}")
+        return 0
+
+    diff = difflib.unified_diff(
+        native_content.splitlines(keepends=True),
+        content.splitlines(keepends=True),
+        fromfile=str(native),
+        tofile=str(target_output_path(target)),
+    )
+    sys.stdout.writelines(diff)
+    return 1
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument(
+        "--check",
+        action="store_true",
+        help="Verify that dist files match their canonical sources.",
+    )
+    mode.add_argument(
+        "--diff-native",
+        metavar="TARGET",
+        help="Diff a generated projection against its configured native file.",
+    )
+    return parser.parse_args()
+
+
+def main() -> int:
+    args = parse_args()
+    rendered = render_all()
+    if args.check:
+        return check_outputs(rendered)
+    if args.diff_native:
+        return diff_native(rendered, args.diff_native)
+    return write_outputs(rendered)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
