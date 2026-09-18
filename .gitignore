@@ -51,6 +51,7 @@
 /.gnupg/
 /.go/
 /.google-cloud-sdk/
+/.gradle
 /.inkscape*
 /.ionic/
 /.jilla/
