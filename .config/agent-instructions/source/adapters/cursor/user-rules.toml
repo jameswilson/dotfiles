@@ -1,0 +1,69 @@
+version = 1
+
+[[rules]]
+title = "Agent thread naming"
+source = "source/adapters/cursor/rules/agent-thread-naming.md"
+canonical = ["source/preferences/thread-naming.md"]
+
+[[rules]]
+title = "Responses"
+source = "source/adapters/cursor/rules/responses.md"
+canonical = [
+  "source/preferences/response-style.md",
+  "source/preferences/reasoning.md",
+  "source/preferences/safety-and-policy.md",
+  "source/preferences/code-and-sources.md",
+]
+
+[[rules]]
+title = "Karpathy behavioral guidelines"
+source = "source/adapters/cursor/rules/karpathy-behavioral-guidelines.md"
+canonical = ["source/procedures/engineering.md"]
+
+[[rules]]
+title = "Commit messages"
+source = "source/adapters/cursor/rules/commit-messages.md"
+canonical = ["source/procedures/git.md"]
+
+[[rules]]
+title = "Git"
+source = "source/adapters/cursor/rules/git.md"
+canonical = ["source/procedures/git.md"]
+
+[[rules]]
+title = "Jira"
+source = "source/adapters/cursor/rules/jira.md"
+canonical = ["source/procedures/drupal-ddev-jira.md"]
+
+[[rules]]
+title = "DDEV"
+source = "source/adapters/cursor/rules/ddev.md"
+canonical = ["source/procedures/drupal-ddev-jira.md"]
+
+[[rules]]
+title = "Browser tests"
+source = "source/adapters/cursor/rules/browser-tests.md"
+canonical = ["source/procedures/browser-and-shell.md"]
+
+[[rules]]
+title = "Shell agents"
+source = "source/adapters/cursor/rules/shell-agents.md"
+canonical = ["source/procedures/browser-and-shell.md"]
+
+[[rules]]
+title = "Formatting"
+source = "source/adapters/cursor/rules/formatting.md"
+canonical = ["source/preferences/formatting.md"]
+
+[[rules]]
+title = "Socket"
+source = "source/adapters/cursor/rules/socket.md"
+canonical = ["source/procedures/dependency-selection.md"]
+
+[[rules]]
+title = "User context"
+source = "source/adapters/cursor/rules/user-context.md"
+canonical = ["source/facts/profile.toml", "source/facts/work-context.md"]
+
+# `gitlab-workflow` is intentionally absent. The local Cursor prompt identifies
+# it as a plugin-provided agent-requestable workspace rule, not a cloud User Rule.
