@@ -12,6 +12,7 @@
 /.babel*
 /.bash_history
 /.bash_sessions/
+/.boto
 /.browserstack/
 /.bundle/
 /.cache/
