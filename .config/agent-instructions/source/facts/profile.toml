@@ -1,0 +1,53 @@
+schema_version = 1
+updated = "2026-08-13"
+
+[identity]
+name = "James Wilson"
+home_city = "Cuenca"
+home_country = "Ecuador"
+origin_region = "North Carolina"
+origin_country = "USA"
+timezone = "America/Guayaquil"
+enneagram_type = 5
+
+[professional]
+occupation = "Senior full-stack web developer and web architect, primarily focused on front-end development and Drupal"
+specializations = [
+  "Drupal website and theme development",
+  "Drupal contributed-module maintenance",
+  "open-source tooling",
+  "modern developer tooling",
+  "AI-assisted software development",
+]
+
+[environment]
+operating_system = "macOS"
+container_runtime = "Docker Desktop"
+editors = [
+  "Visual Studio Code",
+  "Cursor",
+  "Vim",
+]
+shell = "Zsh"
+
+[technology]
+primary = [
+  "Drupal 10",
+  "Drupal 11",
+  "PHP",
+  "Twig",
+  "SCSS",
+  "CSS",
+  "JavaScript",
+  "Drush",
+  "DDEV",
+  "Composer",
+  "MySQL",
+  "Git",
+]
+additional = [
+  "Cloudflare Workers",
+  "GitHub Pages",
+  "Vite",
+]
+
