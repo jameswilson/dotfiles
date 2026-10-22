@@ -5,13 +5,6 @@ if [[ ! -o login ]]; then
   source "$HOME/.profile"
 fi
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -22,7 +15,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# The standalone Gitstatus prompt is loaded below.
+ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -95,7 +89,19 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#767676'
 ZSH_ALIAS_FINDER_AUTOMATIC=true
 
 # Requires `brew install nvm` and `brew install node` (see ~/.local/bin/brew.sh)
+zstyle ':omz:plugins:nvm' lazy yes
 zstyle ':omz:plugins:nvm' autoload yes
+
+# Add completion search paths before Oh My Zsh initializes completion.
+if [[ -d /opt/homebrew/share/zsh/site-functions ]]; then
+  fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
+elif [[ -d /usr/local/share/zsh/site-functions ]]; then
+  fpath=(/usr/local/share/zsh/site-functions $fpath)
+fi
+
+if [ -d ~/.zsh/completions ]; then
+  fpath=(~/.zsh/completions $fpath)
+fi
 
 source $ZSH/oh-my-zsh.sh
 
@@ -133,16 +139,6 @@ source ~/.git-prompt.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Disable Powerlevel10k when Cursor Agent runs
-# See https://docs.cursor.com/en/agent/terminal#disable-heavy-prompts-for-agent-sessions
-if [[ -n "$CURSOR_AGENT" ]]; then
-  # Skip theme initialization for better compatibility
-  POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
-else
-  # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-  [[ -r ~/.p10k.zsh ]] && source ~/.p10k.zsh
-fi
-
 ### Fixes slowness of pastes with zsh-syntax-highlighting.zsh
 pasteinit() {
   OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
@@ -156,27 +152,8 @@ zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
 ### Fixes slowness of pastes
 
-# Requires `brew install zsh-syntax-highlighting` (see ~/.local/bin/brew.sh)
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Requires `brew install direnv` (see ~/.local/bin/brew.sh)
 eval "$(direnv hook zsh)"
-
-# Homebrew
-if type brew &>/dev/null
-then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
-  autoload -Uz compinit
-  compinit
-fi
-
-# Custom CLI completions
-if [ -d ~/.zsh/completions ]; then
-  fpath=(~/.zsh/completions $fpath)
-  autoload -Uz compinit
-  compinit
-fi
 
 # Customize the window title using directory and vcs info.
 source ~/.oh-my-zsh/custom/themes/powerlevel10k/gitstatus/gitstatus.prompt.zsh
@@ -198,4 +175,3 @@ function set-title {
 add-zsh-hook precmd set-title
 ZSH_THEME_TERM_TAB_TITLE_IDLE="%~"
 ZSH_THEME_TERM_TITLE_IDLE="%~"
-

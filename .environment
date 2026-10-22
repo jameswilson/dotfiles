@@ -11,26 +11,31 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # Homebrew
-export HOMEBREW_HOME=$(brew --cellar)
-pathmunge /usr/local/bin
-pathmunge /usr/local/sbin
+if [ -x /opt/homebrew/bin/brew ]; then
+  export HOMEBREW_PREFIX=/opt/homebrew
+else
+  export HOMEBREW_PREFIX=/usr/local
+fi
+export HOMEBREW_HOME="$HOMEBREW_PREFIX/Cellar"
+pathmunge "$HOMEBREW_PREFIX/bin"
+pathmunge "$HOMEBREW_PREFIX/sbin"
 
 # Python
-pathmunge $(brew --prefix python)/bin
-pathmunge $(brew --prefix python)/libexec/bin
+pathmunge "$HOMEBREW_PREFIX/opt/python/bin"
+pathmunge "$HOMEBREW_PREFIX/opt/python/libexec/bin"
 
 # Ruby config for running Jekyll locally
 # Following https://jekyllrb.com/docs/installation/macos/
 # See also ~/.local/bin/brew.sh
-source $(brew --prefix chruby)/share/chruby/chruby.sh
-source $(brew --prefix chruby)/share/chruby/auto.sh
+source "$HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh"
+source "$HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh"
 chruby ruby-3.4.1
 
 # Replace some macOs utils with GNU utils.
 # Note: this requires `brew install coreutils findutils`.
 # @see brew.sh
-pathmunge $(brew --prefix coreutils)/libexec/gnubin
-pathmunge $(brew --prefix findutils)/libexec/gnubin
+pathmunge "$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin"
+pathmunge "$HOMEBREW_PREFIX/opt/findutils/libexec/gnubin"
 
 # Custom scripts.
 pathmunge $HOME/.local/bin
@@ -49,7 +54,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Go Lang
 export GOPATH=$HOME/.go
-export GOROOT=$(brew --prefix golang)/libexec
+export GOROOT="$HOMEBREW_PREFIX/opt/go/libexec"
 pathmunge $GOPATH/bin
 
 # Obsidian CLI
