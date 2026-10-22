@@ -1,177 +1,6 @@
 {
   "version": 3,
   "skills": {
-    "drupal-at-your-fingertips": {
-      "source": "grasmash/drupal-claude-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/grasmash/drupal-claude-skills.git",
-      "skillPath": ".claude/skills/drupal-at-your-fingertips/SKILL.md",
-      "skillFolderHash": "b43fce384bb8b3f14030bc94977351bbb24c827e",
-      "installedAt": "2026-01-26T20:45:59.922Z",
-      "updatedAt": "2026-01-26T20:45:59.922Z"
-    },
-    "drupal-config-mgmt": {
-      "source": "grasmash/drupal-claude-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/grasmash/drupal-claude-skills.git",
-      "skillPath": ".claude/skills/drupal-config-mgmt/SKILL.md",
-      "skillFolderHash": "9e6c2b5989026b7e5023c718ce1ea7007349d9be",
-      "installedAt": "2026-01-26T20:46:00.021Z",
-      "updatedAt": "2026-01-26T20:46:00.021Z"
-    },
-    "drupal-contrib-mgmt": {
-      "source": "grasmash/drupal-claude-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/grasmash/drupal-claude-skills.git",
-      "skillPath": ".claude/skills/drupal-contrib-mgmt/SKILL.md",
-      "skillFolderHash": "c722ebfd6323e839e10bb91d9af9f463f7149c34",
-      "installedAt": "2026-01-26T20:46:00.122Z",
-      "updatedAt": "2026-01-26T20:46:00.122Z"
-    },
-    "drupal-ddev": {
-      "source": "grasmash/drupal-claude-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/grasmash/drupal-claude-skills.git",
-      "skillPath": ".claude/skills/drupal-ddev/SKILL.md",
-      "skillFolderHash": "ea12dd506e68759743969d9b57b520180b08b486",
-      "installedAt": "2026-01-26T20:46:00.222Z",
-      "updatedAt": "2026-01-26T20:46:00.222Z"
-    },
-    "ivangrynenko-cursorrules-drupal": {
-      "source": "grasmash/drupal-claude-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/grasmash/drupal-claude-skills.git",
-      "skillPath": ".claude/skills/ivangrynenko-cursorrules-drupal/SKILL.md",
-      "skillFolderHash": "8261d5fdd04d3e24243d29c4a62d644edd43ec36",
-      "installedAt": "2026-01-26T20:46:00.367Z",
-      "updatedAt": "2026-01-26T20:46:00.367Z"
-    },
-    "drupal-backend": {
-      "source": "Omedia/drupal-skill",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/Omedia/drupal-skill.git",
-      "skillPath": "drupal-backend/SKILL.md",
-      "skillFolderHash": "5c50aa3a59c56628d887600d2cf29533c90a1970",
-      "installedAt": "2026-01-26T20:49:19.479Z",
-      "updatedAt": "2026-01-26T20:49:19.479Z"
-    },
-    "drupal-frontend": {
-      "source": "Omedia/drupal-skill",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/Omedia/drupal-skill.git",
-      "skillPath": "drupal-frontend/SKILL.md",
-      "skillFolderHash": "f2b1a05bde38236abdaf48ba2fb06b58b66ccc28",
-      "installedAt": "2026-01-26T20:49:19.576Z",
-      "updatedAt": "2026-01-26T20:49:19.576Z"
-    },
-    "drupal-tooling": {
-      "source": "Omedia/drupal-skill",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/Omedia/drupal-skill.git",
-      "skillPath": "drupal-tooling/SKILL.md",
-      "skillFolderHash": "cdd0c972f637e50b5bff96cbb5b3c65b1314a21d",
-      "installedAt": "2026-01-26T20:49:19.696Z",
-      "updatedAt": "2026-01-26T20:49:19.696Z"
-    },
-    "ddev-expert": {
-      "source": "madsnorgaard/agent-resources",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/madsnorgaard/agent-resources.git",
-      "skillPath": ".claude/skills/ddev-expert/SKILL.md",
-      "skillFolderHash": "7892c7b7c01cbbc582c9efe04120c8c3d1588b79",
-      "installedAt": "2026-01-26T20:50:33.228Z",
-      "updatedAt": "2026-01-26T20:50:33.228Z"
-    },
-    "drupal-expert": {
-      "source": "madsnorgaard/agent-resources",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/madsnorgaard/agent-resources.git",
-      "skillPath": ".claude/skills/drupal-expert/SKILL.md",
-      "skillFolderHash": "c52c46a8d362dd0fe2750ec668dbe8097862cf87",
-      "installedAt": "2026-01-26T20:50:33.326Z",
-      "updatedAt": "2026-01-26T20:50:33.326Z"
-    },
-    "drupal-migration": {
-      "source": "madsnorgaard/agent-resources",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/madsnorgaard/agent-resources.git",
-      "skillPath": ".claude/skills/drupal-migration/SKILL.md",
-      "skillFolderHash": "122bb8d1aafbc352550ccd0994bc04912992238b",
-      "installedAt": "2026-01-26T20:50:33.422Z",
-      "updatedAt": "2026-01-26T20:50:33.422Z"
-    },
-    "drupal-security": {
-      "source": "madsnorgaard/agent-resources",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/madsnorgaard/agent-resources.git",
-      "skillPath": ".claude/skills/drupal-security/SKILL.md",
-      "skillFolderHash": "b1c3a2f5e676ebffdb7b1f19440fddf029a0c878",
-      "installedAt": "2026-01-26T20:50:33.518Z",
-      "updatedAt": "2026-01-26T20:50:33.518Z"
-    },
-    "drupal-cache-contexts": {
-      "source": "sparkfabrik/sf-awesome-copilot",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
-      "skillPath": "skills/drupal/cache/drupal-cache-contexts/SKILL.md",
-      "skillFolderHash": "d5b838c773acfcee33d3bb05e227347acaf959ef",
-      "installedAt": "2026-01-26T20:52:30.392Z",
-      "updatedAt": "2026-01-26T20:52:30.392Z"
-    },
-    "drupal-cache-debugging": {
-      "source": "sparkfabrik/sf-awesome-copilot",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
-      "skillPath": "skills/drupal/cache/drupal-cache-debugging/SKILL.md",
-      "skillFolderHash": "b75edea394a2735d46811fd9d235c30b10a589a0",
-      "installedAt": "2026-01-26T20:52:30.492Z",
-      "updatedAt": "2026-01-26T20:52:30.492Z"
-    },
-    "drupal-cache-maxage": {
-      "source": "sparkfabrik/sf-awesome-copilot",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
-      "skillPath": "skills/drupal/cache/drupal-cache-maxage/SKILL.md",
-      "skillFolderHash": "33a5fd4af098eedffef4da7cd4dcc341c03199cc",
-      "installedAt": "2026-01-26T20:52:30.585Z",
-      "updatedAt": "2026-01-26T20:52:30.585Z"
-    },
-    "drupal-cache-tags": {
-      "source": "sparkfabrik/sf-awesome-copilot",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
-      "skillPath": "skills/drupal/cache/drupal-cache-tags/SKILL.md",
-      "skillFolderHash": "2147ac1c66439a3218e72c7dac8e4bdea72da9cd",
-      "installedAt": "2026-01-26T20:52:30.678Z",
-      "updatedAt": "2026-01-26T20:52:30.678Z"
-    },
-    "drupal-dynamic-cache": {
-      "source": "sparkfabrik/sf-awesome-copilot",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
-      "skillPath": "skills/drupal/cache/drupal-dynamic-cache/SKILL.md",
-      "skillFolderHash": "c3423cf4e602cef396a7e7fbfb413976a2c6984e",
-      "installedAt": "2026-01-26T20:52:30.776Z",
-      "updatedAt": "2026-01-26T20:52:30.776Z"
-    },
-    "drupal-lazy-builders": {
-      "source": "sparkfabrik/sf-awesome-copilot",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
-      "skillPath": "skills/drupal/cache/drupal-lazy-builders/SKILL.md",
-      "skillFolderHash": "86f8a4eacd402134c32ee74f4226faaf12f2d1af",
-      "installedAt": "2026-01-26T20:52:30.868Z",
-      "updatedAt": "2026-01-26T20:52:30.868Z"
-    },
-    "http-cache-tools": {
-      "source": "sparkfabrik/sf-awesome-copilot",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
-      "skillPath": "skills/drupal/cache/http-cache-tools/SKILL.md",
-      "skillFolderHash": "6d5c43f57128cbfe073fa7696792ad70dc10e1be",
-      "installedAt": "2026-01-26T20:52:30.964Z",
-      "updatedAt": "2026-01-26T20:52:30.964Z"
-    },
     "accessibility-checker": {
       "source": "kanopi/cms-cultivator",
       "sourceType": "github",
@@ -180,384 +9,6 @@
       "skillFolderHash": "5d2d2497ca4de29971fd9b6549ece93d44a97f9e",
       "installedAt": "2026-01-26T20:56:19.507Z",
       "updatedAt": "2026-01-26T20:56:19.507Z"
-    },
-    "code-standards-checker": {
-      "source": "kanopi/cms-cultivator",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
-      "skillPath": "skills/code-standards-checker/SKILL.md",
-      "skillFolderHash": "0f4e81ae1ad99b7f2940517e7564f837284b3c33",
-      "installedAt": "2026-01-26T20:56:19.607Z",
-      "updatedAt": "2026-01-26T20:56:19.607Z"
-    },
-    "commit-message-generator": {
-      "source": "kanopi/cms-cultivator",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
-      "skillPath": "skills/commit-message-generator/SKILL.md",
-      "skillFolderHash": "cf6b89c3f67e2f493b8a9d73e2941d3efd22f39f",
-      "installedAt": "2026-01-26T20:56:19.701Z",
-      "updatedAt": "2026-01-26T20:56:19.701Z"
-    },
-    "coverage-analyzer": {
-      "source": "kanopi/cms-cultivator",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
-      "skillPath": "skills/coverage-analyzer/SKILL.md",
-      "skillFolderHash": "952273729286bfaaa28814f4a4f17f33500343dd",
-      "installedAt": "2026-01-26T20:56:19.840Z",
-      "updatedAt": "2026-01-26T20:56:19.840Z"
-    },
-    "design-analyzer": {
-      "source": "kanopi/cms-cultivator",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
-      "skillPath": "skills/design-analyzer/SKILL.md",
-      "skillFolderHash": "08715d53f9432070e9a34ba810b7bad11a50c089",
-      "installedAt": "2026-01-26T20:56:19.938Z",
-      "updatedAt": "2026-01-26T20:56:19.938Z"
-    },
-    "documentation-generator": {
-      "source": "kanopi/cms-cultivator",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
-      "skillPath": "skills/documentation-generator/SKILL.md",
-      "skillFolderHash": "c527ea77aae6f494ea193811fa1d0e6099a84186",
-      "installedAt": "2026-01-26T20:56:20.029Z",
-      "updatedAt": "2026-01-26T20:56:20.029Z"
-    },
-    "drupalorg-contribution-helper": {
-      "source": "kanopi/cms-cultivator",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
-      "skillPath": "skills/drupalorg-contribution-helper/SKILL.md",
-      "skillFolderHash": "b34c4bcc6aa0b016ecd711ace2a80365800c107a",
-      "installedAt": "2026-01-26T20:56:20.120Z",
-      "updatedAt": "2026-01-26T20:56:20.120Z"
-    },
-    "drupalorg-issue-helper": {
-      "source": "kanopi/cms-cultivator",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
-      "skillPath": "skills/drupalorg-issue-helper/SKILL.md",
-      "skillFolderHash": "eb44a01b4b20b211abc3a268765547da70efdfc8",
-      "installedAt": "2026-01-26T20:56:20.212Z",
-      "updatedAt": "2026-01-26T20:56:20.212Z"
-    },
-    "performance-analyzer": {
-      "source": "kanopi/cms-cultivator",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
-      "skillPath": "skills/performance-analyzer/SKILL.md",
-      "skillFolderHash": "22270154bea7c94be0570236f102a8dd8950975e",
-      "installedAt": "2026-01-26T20:56:20.328Z",
-      "updatedAt": "2026-01-26T20:56:20.328Z"
-    },
-    "responsive-styling": {
-      "source": "kanopi/cms-cultivator",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
-      "skillPath": "skills/responsive-styling/SKILL.md",
-      "skillFolderHash": "2982d16124cf09425f5a1518ef40355ed08400b5",
-      "installedAt": "2026-01-26T20:56:20.420Z",
-      "updatedAt": "2026-01-26T20:56:20.420Z"
-    },
-    "security-scanner": {
-      "source": "kanopi/cms-cultivator",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
-      "skillPath": "skills/security-scanner/SKILL.md",
-      "skillFolderHash": "f773d5fbe644817528bea26cc126325fca063de7",
-      "installedAt": "2026-01-26T20:56:20.520Z",
-      "updatedAt": "2026-01-26T20:56:20.520Z"
-    },
-    "test-plan-generator": {
-      "source": "kanopi/cms-cultivator",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
-      "skillPath": "skills/test-plan-generator/SKILL.md",
-      "skillFolderHash": "aa1deabeb327038cb698cd2d66a9b8a291402d92",
-      "installedAt": "2026-01-26T20:56:20.618Z",
-      "updatedAt": "2026-01-26T20:56:20.618Z"
-    },
-    "test-scaffolding": {
-      "source": "kanopi/cms-cultivator",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
-      "skillPath": "skills/test-scaffolding/SKILL.md",
-      "skillFolderHash": "0b27d58fabd974bd08fdd5f5cd3dd6139d86ca44",
-      "installedAt": "2026-01-26T20:56:20.724Z",
-      "updatedAt": "2026-01-26T20:56:20.724Z"
-    },
-    "drupal-development": {
-      "source": "Mindrally/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/Mindrally/skills.git",
-      "skillPath": "drupal-development/SKILL.md",
-      "skillFolderHash": "6de06b6accbe7dc0f5da57c8141f7e746db2a140",
-      "installedAt": "2026-01-26T21:02:48.779Z",
-      "updatedAt": "2026-02-12T22:50:38.224Z"
-    },
-    "figma-integration": {
-      "source": "Mindrally/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/Mindrally/skills.git",
-      "skillPath": "figma-integration/SKILL.md",
-      "skillFolderHash": "0b294b7b60a91aa7132eb0f64afd3c7a528f7fa2",
-      "installedAt": "2026-01-26T21:02:48.884Z",
-      "updatedAt": "2026-02-12T22:50:38.371Z"
-    },
-    "htmx": {
-      "source": "Mindrally/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/Mindrally/skills.git",
-      "skillPath": "htmx/SKILL.md",
-      "skillFolderHash": "c2e40b71da494a1b59e4bcaa30a3d599e651423b",
-      "installedAt": "2026-01-26T21:02:48.980Z",
-      "updatedAt": "2026-02-12T22:50:38.552Z"
-    },
-    "html": {
-      "source": "Mindrally/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/Mindrally/skills.git",
-      "skillPath": "html/SKILL.md",
-      "skillFolderHash": "20bbc5de4e2fe0ffb30616f0c49baec6e31b557d",
-      "installedAt": "2026-01-26T21:02:49.078Z",
-      "updatedAt": "2026-02-12T22:50:38.462Z"
-    },
-    "sass-best-practices": {
-      "source": "Mindrally/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/Mindrally/skills.git",
-      "skillPath": "sass-best-practices/SKILL.md",
-      "skillFolderHash": "8945a0227cc10d9d59a95518de767bc5738d7403",
-      "installedAt": "2026-01-26T21:02:49.211Z",
-      "updatedAt": "2026-02-12T22:50:38.669Z"
-    },
-    "find-skills": {
-      "source": "vercel-labs/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/vercel-labs/skills.git",
-      "skillPath": "skills/find-skills/SKILL.md",
-      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
-      "installedAt": "2026-01-26T23:06:01.293Z",
-      "updatedAt": "2026-01-26T23:16:50.431Z"
-    },
-    "drupal-contribute-fix": {
-      "source": "scottfalconer/drupal-contribute-fix",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/scottfalconer/drupal-contribute-fix.git",
-      "skillPath": "SKILL.md",
-      "skillFolderHash": "820a2efb62f99688a3a0775407d1d2d028e072c9",
-      "installedAt": "2026-01-28T03:18:34.184Z",
-      "updatedAt": "2026-03-16T14:03:44.926Z"
-    },
-    "drupal-intent-testing": {
-      "source": "scottfalconer/drupal-intent-testing",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/scottfalconer/drupal-intent-testing.git",
-      "skillPath": "SKILL.md",
-      "skillFolderHash": "f5f3cb1662689f17fd0d9b855b7653b9b95401d6",
-      "installedAt": "2026-02-03T12:50:46.245Z",
-      "updatedAt": "2026-02-03T12:50:46.245Z"
-    },
-    "drupal-issue-queue": {
-      "source": "scottfalconer/drupal-issue-queue",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/scottfalconer/drupal-issue-queue.git",
-      "skillPath": "SKILL.md",
-      "skillFolderHash": "7be7938d85ca71a1581d913d19cba0aa67c7f2c0",
-      "installedAt": "2026-02-03T12:51:10.727Z",
-      "updatedAt": "2026-02-06T04:57:10.857Z"
-    },
-    "playwright-cli": {
-      "source": "microsoft/playwright-cli",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/microsoft/playwright-cli.git",
-      "skillPath": "skills/playwright-cli/SKILL.md",
-      "skillFolderHash": "a078ad3cf6f97ab53bf1462d85e3a7d85c3b3140",
-      "installedAt": "2026-02-05T20:48:11.900Z",
-      "updatedAt": "2026-02-05T20:48:11.900Z"
-    },
-    "brainstorming": {
-      "source": "obra/superpowers",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/obra/superpowers.git",
-      "skillPath": "skills/brainstorming/SKILL.md",
-      "skillFolderHash": "d28aa4ed67fe5a3f1336f0fcccb1e548c67dc864",
-      "installedAt": "2026-02-12T23:04:43.004Z",
-      "updatedAt": "2026-02-12T23:04:43.004Z"
-    },
-    "executing-plans": {
-      "source": "obra/superpowers",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/obra/superpowers.git",
-      "skillPath": "skills/executing-plans/SKILL.md",
-      "skillFolderHash": "75248b138170840e3e82680cfde7ca615414a548",
-      "installedAt": "2026-02-12T23:04:43.098Z",
-      "updatedAt": "2026-02-12T23:04:43.098Z"
-    },
-    "finishing-a-development-branch": {
-      "source": "obra/superpowers",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/obra/superpowers.git",
-      "skillPath": "skills/finishing-a-development-branch/SKILL.md",
-      "skillFolderHash": "7656b8ebe0c9659ea548ba2981b078b333d1846e",
-      "installedAt": "2026-02-12T23:04:43.190Z",
-      "updatedAt": "2026-02-12T23:04:43.190Z"
-    },
-    "receiving-code-review": {
-      "source": "obra/superpowers",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/obra/superpowers.git",
-      "skillPath": "skills/receiving-code-review/SKILL.md",
-      "skillFolderHash": "7750c56fddb8b2f1cbdb1550a6e3e40d2eeac5f1",
-      "installedAt": "2026-02-12T23:04:43.293Z",
-      "updatedAt": "2026-02-12T23:04:43.293Z"
-    },
-    "requesting-code-review": {
-      "source": "obra/superpowers",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/obra/superpowers.git",
-      "skillPath": "skills/requesting-code-review/SKILL.md",
-      "skillFolderHash": "dbe9c65c5af4fa294ec9d60c1732d806e664530c",
-      "installedAt": "2026-02-12T23:04:43.384Z",
-      "updatedAt": "2026-02-12T23:04:43.384Z"
-    },
-    "systematic-debugging": {
-      "source": "obra/superpowers",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/obra/superpowers.git",
-      "skillPath": "skills/systematic-debugging/SKILL.md",
-      "skillFolderHash": "828c239ac986cc1fc7edd10292f66e4a3640e9c0",
-      "installedAt": "2026-02-12T23:04:43.558Z",
-      "updatedAt": "2026-02-12T23:04:43.558Z"
-    },
-    "writing-plans": {
-      "source": "obra/superpowers",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/obra/superpowers.git",
-      "skillPath": "skills/writing-plans/SKILL.md",
-      "skillFolderHash": "cf6f5c8813cf0445276129a5f2b443927b50f645",
-      "installedAt": "2026-02-12T23:04:43.651Z",
-      "updatedAt": "2026-02-12T23:04:43.651Z"
-    },
-    "daily-meeting-update": {
-      "source": "softaworks/agent-toolkit",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/softaworks/agent-toolkit.git",
-      "skillPath": "skills/daily-meeting-update/SKILL.md",
-      "skillFolderHash": "3760aa83431c441e02b0126bb013e2bfaa6b5441",
-      "installedAt": "2026-02-12T23:10:05.471Z",
-      "updatedAt": "2026-02-12T23:10:05.471Z"
-    },
-    "jira": {
-      "source": "softaworks/agent-toolkit",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/softaworks/agent-toolkit.git",
-      "skillPath": "skills/jira/SKILL.md",
-      "skillFolderHash": "c727e041f8c55d018d6dd97a871b8ff2572dafe5",
-      "installedAt": "2026-02-12T23:10:05.573Z",
-      "updatedAt": "2026-02-12T23:10:05.573Z"
-    },
-    "mermaid-diagrams": {
-      "source": "softaworks/agent-toolkit",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/softaworks/agent-toolkit.git",
-      "skillPath": "skills/mermaid-diagrams/SKILL.md",
-      "skillFolderHash": "1b7a962715838d762fe4b34701d797d1d57496cd",
-      "installedAt": "2026-02-12T23:10:05.782Z",
-      "updatedAt": "2026-02-12T23:10:05.782Z"
-    },
-    "professional-communication": {
-      "source": "softaworks/agent-toolkit",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/softaworks/agent-toolkit.git",
-      "skillPath": "skills/professional-communication/SKILL.md",
-      "skillFolderHash": "a131460b559752fae7756380394d7e21f7c0db6a",
-      "installedAt": "2026-02-12T23:10:05.885Z",
-      "updatedAt": "2026-02-12T23:10:05.885Z"
-    },
-    "requirements-clarity": {
-      "source": "softaworks/agent-toolkit",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/softaworks/agent-toolkit.git",
-      "skillPath": "skills/requirements-clarity/SKILL.md",
-      "skillFolderHash": "88157583b20b296c8eaa3808af3dd3d669d73ce0",
-      "installedAt": "2026-02-12T23:10:05.982Z",
-      "updatedAt": "2026-02-12T23:10:05.982Z"
-    },
-    "web-to-markdown": {
-      "source": "softaworks/agent-toolkit",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/softaworks/agent-toolkit.git",
-      "skillPath": "skills/web-to-markdown/SKILL.md",
-      "skillFolderHash": "8c1f61f08e68d42f3fd365174195c1461eb9d125",
-      "installedAt": "2026-02-12T23:10:06.084Z",
-      "updatedAt": "2026-02-12T23:10:06.084Z"
-    },
-    "lesson-learned": {
-      "source": "softaworks/agent-toolkit",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/softaworks/agent-toolkit.git",
-      "skillPath": "skills/lesson-learned/SKILL.md",
-      "skillFolderHash": "6ab6847ffef7f50b70aa1d637c75a167387b6c7f",
-      "installedAt": "2026-02-12T23:10:06.186Z",
-      "updatedAt": "2026-02-12T23:10:06.186Z"
-    },
-    "humanizer": {
-      "source": "softaworks/agent-toolkit",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/softaworks/agent-toolkit.git",
-      "skillPath": "skills/humanizer/SKILL.md",
-      "skillFolderHash": "004c1998fffe4d5cd4535123d65cf9fb1a107b64",
-      "installedAt": "2026-02-12T23:10:06.285Z",
-      "updatedAt": "2026-02-12T23:10:06.285Z"
-    },
-    "pdf": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/anthropics/skills.git",
-      "skillPath": "skills/pdf/SKILL.md",
-      "skillFolderHash": "6369f4649de69bd6857c9bc3b058a77206009238",
-      "installedAt": "2026-02-12T23:11:53.735Z",
-      "updatedAt": "2026-02-12T23:11:53.735Z"
-    },
-    "algorithmic-art": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/anthropics/skills.git",
-      "skillPath": "skills/algorithmic-art/SKILL.md",
-      "skillFolderHash": "22db2d12091c56340987a877047435ba84a1cdb2",
-      "installedAt": "2026-02-12T23:14:48.751Z",
-      "updatedAt": "2026-02-12T23:14:48.751Z"
-    },
-    "webapp-testing": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/anthropics/skills.git",
-      "skillPath": "skills/webapp-testing/SKILL.md",
-      "skillFolderHash": "74cb751576f9e9af2aedff47e67861ef26db2dc4",
-      "installedAt": "2026-02-12T23:14:48.843Z",
-      "updatedAt": "2026-02-12T23:14:48.843Z"
-    },
-    "frontend-design": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/anthropics/skills.git",
-      "skillPath": "skills/frontend-design/SKILL.md",
-      "skillFolderHash": "928950704df8a8b885c03de5da626331e6f29cf8",
-      "installedAt": "2026-02-12T23:14:48.973Z",
-      "updatedAt": "2026-02-12T23:14:48.973Z"
-    },
-    "drupal-coding-standards": {
-      "source": "ronaldtebrake/drupal-coding-standards-skill",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/ronaldtebrake/drupal-coding-standards-skill.git",
-      "skillPath": ".claude/skills/drupal-coding-standards/SKILL.md",
-      "skillFolderHash": "9d1850bc415fe6a5f0a1278f48ed41adfc217153",
-      "installedAt": "2026-02-12T23:17:09.458Z",
-      "updatedAt": "2026-02-12T23:17:09.458Z"
     },
     "ai-seo": {
       "source": "coreyhaines31/marketingskills",
@@ -568,6 +19,15 @@
       "installedAt": "2026-05-22T19:54:22.923Z",
       "updatedAt": "2026-05-22T19:54:22.923Z"
     },
+    "algorithmic-art": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/algorithmic-art/SKILL.md",
+      "skillFolderHash": "22db2d12091c56340987a877047435ba84a1cdb2",
+      "installedAt": "2026-02-12T23:14:48.751Z",
+      "updatedAt": "2026-02-12T23:14:48.751Z"
+    },
     "analytics": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
@@ -577,114 +37,6 @@
       "installedAt": "2026-05-22T19:54:23.021Z",
       "updatedAt": "2026-05-22T19:54:23.021Z"
     },
-    "competitor-profiling": {
-      "source": "coreyhaines31/marketingskills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
-      "skillPath": "skills/competitor-profiling/SKILL.md",
-      "skillFolderHash": "e1f363224ac4e36685e8f16c6fb40867fe3595b4",
-      "installedAt": "2026-05-22T19:54:23.117Z",
-      "updatedAt": "2026-05-22T19:54:23.117Z"
-    },
-    "competitors": {
-      "source": "coreyhaines31/marketingskills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
-      "skillPath": "skills/competitors/SKILL.md",
-      "skillFolderHash": "28b1ff203ffa89d63364fefc16117a1da8a2b78b",
-      "installedAt": "2026-05-22T19:54:23.214Z",
-      "updatedAt": "2026-05-22T19:54:23.214Z"
-    },
-    "content-strategy": {
-      "source": "coreyhaines31/marketingskills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
-      "skillPath": "skills/content-strategy/SKILL.md",
-      "skillFolderHash": "8a2387b41d046b1b5a72a346103120b3c28e8bf5",
-      "installedAt": "2026-05-22T19:54:23.315Z",
-      "updatedAt": "2026-05-22T19:54:23.315Z"
-    },
-    "copy-editing": {
-      "source": "coreyhaines31/marketingskills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
-      "skillPath": "skills/copy-editing/SKILL.md",
-      "skillFolderHash": "4d29a5bcbbf92f159f713c17db9d3d0bf6217b48",
-      "installedAt": "2026-05-22T19:54:23.414Z",
-      "updatedAt": "2026-05-22T19:54:23.414Z"
-    },
-    "copywriting": {
-      "source": "coreyhaines31/marketingskills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
-      "skillPath": "skills/copywriting/SKILL.md",
-      "skillFolderHash": "dec39a2d87a7cc4c7e50e4efee937a9df7d81a05",
-      "installedAt": "2026-05-22T19:54:23.509Z",
-      "updatedAt": "2026-05-22T19:54:23.509Z"
-    },
-    "image": {
-      "source": "coreyhaines31/marketingskills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
-      "skillPath": "skills/image/SKILL.md",
-      "skillFolderHash": "03c0c80ec888685403cd5f9b17e90f6ae6ed9d25",
-      "installedAt": "2026-05-22T19:54:23.608Z",
-      "updatedAt": "2026-05-22T19:54:23.608Z"
-    },
-    "seo-audit": {
-      "source": "coreyhaines31/marketingskills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
-      "skillPath": "skills/seo-audit/SKILL.md",
-      "skillFolderHash": "0f1f5e31ce921513828ac8f440f358df6fa0751a",
-      "installedAt": "2026-05-22T19:54:23.709Z",
-      "updatedAt": "2026-05-22T19:54:23.709Z"
-    },
-    "site-architecture": {
-      "source": "coreyhaines31/marketingskills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
-      "skillPath": "skills/site-architecture/SKILL.md",
-      "skillFolderHash": "35e29642aec1bc03c33f560a315d325e0e61ec7e",
-      "installedAt": "2026-05-22T19:54:23.804Z",
-      "updatedAt": "2026-05-22T19:54:23.804Z"
-    },
-    "defuddle": {
-      "source": "kepano/obsidian-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/kepano/obsidian-skills.git",
-      "skillPath": "skills/defuddle/SKILL.md",
-      "skillFolderHash": "db0b775af7e7d603f59fa2b67bdef615baf1a48f",
-      "installedAt": "2026-05-22T20:12:16.498Z",
-      "updatedAt": "2026-05-22T20:12:16.498Z"
-    },
-    "obsidian-cli": {
-      "source": "kepano/obsidian-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/kepano/obsidian-skills.git",
-      "skillPath": "skills/obsidian-cli/SKILL.md",
-      "skillFolderHash": "96254a554e480359de7b685571876f2e7f9ba57d",
-      "installedAt": "2026-05-22T20:12:16.597Z",
-      "updatedAt": "2026-05-22T20:12:16.597Z"
-    },
-    "obsidian-markdown": {
-      "source": "kepano/obsidian-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/kepano/obsidian-skills.git",
-      "skillPath": "skills/obsidian-markdown/SKILL.md",
-      "skillFolderHash": "5caf5d9e7de204f3904216857545f2aa36bcfcac",
-      "installedAt": "2026-05-22T20:12:16.690Z",
-      "updatedAt": "2026-05-22T20:12:16.690Z"
-    },
-    "last30days": {
-      "source": "mvanhorn/last30days-skill",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/mvanhorn/last30days-skill.git",
-      "skillPath": "skills/last30days/SKILL.md",
-      "skillFolderHash": "63ee58e42ad33abd1e5b114f8f28f367681cb8ff",
-      "installedAt": "2026-06-15T23:39:54.241Z",
-      "updatedAt": "2026-06-15T23:39:54.241Z"
-    },
     "api-and-interface-design": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
@@ -693,6 +45,15 @@
       "skillFolderHash": "79410f2b6928b5ecb760e34e4c58c68de71f7fd8",
       "installedAt": "2026-06-18T14:48:06.634Z",
       "updatedAt": "2026-06-18T14:48:06.634Z"
+    },
+    "brainstorming": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/brainstorming/SKILL.md",
+      "skillFolderHash": "d28aa4ed67fe5a3f1336f0fcccb1e548c67dc864",
+      "installedAt": "2026-02-12T23:04:43.004Z",
+      "updatedAt": "2026-02-12T23:04:43.004Z"
     },
     "browser-testing-with-devtools": {
       "source": "addyosmani/agent-skills",
@@ -730,6 +91,51 @@
       "installedAt": "2026-06-18T14:48:07.058Z",
       "updatedAt": "2026-06-18T14:48:07.058Z"
     },
+    "code-standards-checker": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/code-standards-checker/SKILL.md",
+      "skillFolderHash": "0f4e81ae1ad99b7f2940517e7564f837284b3c33",
+      "installedAt": "2026-01-26T20:56:19.607Z",
+      "updatedAt": "2026-01-26T20:56:19.607Z"
+    },
+    "commit-message-generator": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/commit-message-generator/SKILL.md",
+      "skillFolderHash": "cf6b89c3f67e2f493b8a9d73e2941d3efd22f39f",
+      "installedAt": "2026-01-26T20:56:19.701Z",
+      "updatedAt": "2026-01-26T20:56:19.701Z"
+    },
+    "competitor-profiling": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/competitor-profiling/SKILL.md",
+      "skillFolderHash": "e1f363224ac4e36685e8f16c6fb40867fe3595b4",
+      "installedAt": "2026-05-22T19:54:23.117Z",
+      "updatedAt": "2026-05-22T19:54:23.117Z"
+    },
+    "competitors": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/competitors/SKILL.md",
+      "skillFolderHash": "28b1ff203ffa89d63364fefc16117a1da8a2b78b",
+      "installedAt": "2026-05-22T19:54:23.214Z",
+      "updatedAt": "2026-05-22T19:54:23.214Z"
+    },
+    "content-strategy": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/content-strategy/SKILL.md",
+      "skillFolderHash": "8a2387b41d046b1b5a72a346103120b3c28e8bf5",
+      "installedAt": "2026-05-22T19:54:23.315Z",
+      "updatedAt": "2026-05-22T19:54:23.315Z"
+    },
     "context-engineering": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
@@ -738,6 +144,51 @@
       "skillFolderHash": "453c3e8d973ddb10402b7c4e6b0d7fce295a43a8",
       "installedAt": "2026-06-18T14:48:07.158Z",
       "updatedAt": "2026-06-18T14:48:07.158Z"
+    },
+    "copy-editing": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/copy-editing/SKILL.md",
+      "skillFolderHash": "4d29a5bcbbf92f159f713c17db9d3d0bf6217b48",
+      "installedAt": "2026-05-22T19:54:23.414Z",
+      "updatedAt": "2026-05-22T19:54:23.414Z"
+    },
+    "copywriting": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/copywriting/SKILL.md",
+      "skillFolderHash": "dec39a2d87a7cc4c7e50e4efee937a9df7d81a05",
+      "installedAt": "2026-05-22T19:54:23.509Z",
+      "updatedAt": "2026-05-22T19:54:23.509Z"
+    },
+    "coverage-analyzer": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/coverage-analyzer/SKILL.md",
+      "skillFolderHash": "952273729286bfaaa28814f4a4f17f33500343dd",
+      "installedAt": "2026-01-26T20:56:19.840Z",
+      "updatedAt": "2026-01-26T20:56:19.840Z"
+    },
+    "daily-meeting-update": {
+      "source": "softaworks/agent-toolkit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/softaworks/agent-toolkit.git",
+      "skillPath": "skills/daily-meeting-update/SKILL.md",
+      "skillFolderHash": "3760aa83431c441e02b0126bb013e2bfaa6b5441",
+      "installedAt": "2026-02-12T23:10:05.471Z",
+      "updatedAt": "2026-02-12T23:10:05.471Z"
+    },
+    "ddev-expert": {
+      "source": "madsnorgaard/agent-resources",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/madsnorgaard/agent-resources.git",
+      "skillPath": ".claude/skills/ddev-expert/SKILL.md",
+      "skillFolderHash": "7892c7b7c01cbbc582c9efe04120c8c3d1588b79",
+      "installedAt": "2026-01-26T20:50:33.228Z",
+      "updatedAt": "2026-01-26T20:50:33.228Z"
     },
     "debugging-and-error-recovery": {
       "source": "addyosmani/agent-skills",
@@ -748,6 +199,15 @@
       "installedAt": "2026-06-18T14:48:07.259Z",
       "updatedAt": "2026-06-18T14:48:07.259Z"
     },
+    "defuddle": {
+      "source": "kepano/obsidian-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kepano/obsidian-skills.git",
+      "skillPath": "skills/defuddle/SKILL.md",
+      "skillFolderHash": "db0b775af7e7d603f59fa2b67bdef615baf1a48f",
+      "installedAt": "2026-05-22T20:12:16.498Z",
+      "updatedAt": "2026-05-22T20:12:16.498Z"
+    },
     "deprecation-and-migration": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
@@ -756,6 +216,15 @@
       "skillFolderHash": "d80eaf65b255911ece940e91f9aa6008240fd2bb",
       "installedAt": "2026-06-18T14:48:07.359Z",
       "updatedAt": "2026-06-18T14:48:07.359Z"
+    },
+    "design-analyzer": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/design-analyzer/SKILL.md",
+      "skillFolderHash": "08715d53f9432070e9a34ba810b7bad11a50c089",
+      "installedAt": "2026-01-26T20:56:19.938Z",
+      "updatedAt": "2026-01-26T20:56:19.938Z"
     },
     "documentation-and-adrs": {
       "source": "addyosmani/agent-skills",
@@ -766,6 +235,15 @@
       "installedAt": "2026-06-18T14:48:07.458Z",
       "updatedAt": "2026-06-18T14:48:07.458Z"
     },
+    "documentation-generator": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/documentation-generator/SKILL.md",
+      "skillFolderHash": "c527ea77aae6f494ea193811fa1d0e6099a84186",
+      "installedAt": "2026-01-26T20:56:20.029Z",
+      "updatedAt": "2026-01-26T20:56:20.029Z"
+    },
     "doubt-driven-development": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
@@ -774,6 +252,258 @@
       "skillFolderHash": "65fe0595fb161817e8073be1671a65eb4341fa55",
       "installedAt": "2026-06-18T14:48:07.559Z",
       "updatedAt": "2026-06-18T14:48:07.559Z"
+    },
+    "drupal-at-your-fingertips": {
+      "source": "grasmash/drupal-claude-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/grasmash/drupal-claude-skills.git",
+      "skillPath": ".claude/skills/drupal-at-your-fingertips/SKILL.md",
+      "skillFolderHash": "b43fce384bb8b3f14030bc94977351bbb24c827e",
+      "installedAt": "2026-01-26T20:45:59.922Z",
+      "updatedAt": "2026-01-26T20:45:59.922Z"
+    },
+    "drupal-backend": {
+      "source": "Omedia/drupal-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/Omedia/drupal-skill.git",
+      "skillPath": "drupal-backend/SKILL.md",
+      "skillFolderHash": "5c50aa3a59c56628d887600d2cf29533c90a1970",
+      "installedAt": "2026-01-26T20:49:19.479Z",
+      "updatedAt": "2026-01-26T20:49:19.479Z"
+    },
+    "drupal-cache-contexts": {
+      "source": "sparkfabrik/sf-awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
+      "skillPath": "skills/drupal/cache/drupal-cache-contexts/SKILL.md",
+      "skillFolderHash": "d5b838c773acfcee33d3bb05e227347acaf959ef",
+      "installedAt": "2026-01-26T20:52:30.392Z",
+      "updatedAt": "2026-01-26T20:52:30.392Z"
+    },
+    "drupal-cache-debugging": {
+      "source": "sparkfabrik/sf-awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
+      "skillPath": "skills/drupal/cache/drupal-cache-debugging/SKILL.md",
+      "skillFolderHash": "b75edea394a2735d46811fd9d235c30b10a589a0",
+      "installedAt": "2026-01-26T20:52:30.492Z",
+      "updatedAt": "2026-01-26T20:52:30.492Z"
+    },
+    "drupal-cache-maxage": {
+      "source": "sparkfabrik/sf-awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
+      "skillPath": "skills/drupal/cache/drupal-cache-maxage/SKILL.md",
+      "skillFolderHash": "33a5fd4af098eedffef4da7cd4dcc341c03199cc",
+      "installedAt": "2026-01-26T20:52:30.585Z",
+      "updatedAt": "2026-01-26T20:52:30.585Z"
+    },
+    "drupal-cache-tags": {
+      "source": "sparkfabrik/sf-awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
+      "skillPath": "skills/drupal/cache/drupal-cache-tags/SKILL.md",
+      "skillFolderHash": "2147ac1c66439a3218e72c7dac8e4bdea72da9cd",
+      "installedAt": "2026-01-26T20:52:30.678Z",
+      "updatedAt": "2026-01-26T20:52:30.678Z"
+    },
+    "drupal-coding-standards": {
+      "source": "ronaldtebrake/drupal-coding-standards-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ronaldtebrake/drupal-coding-standards-skill.git",
+      "skillPath": ".claude/skills/drupal-coding-standards/SKILL.md",
+      "skillFolderHash": "9d1850bc415fe6a5f0a1278f48ed41adfc217153",
+      "installedAt": "2026-02-12T23:17:09.458Z",
+      "updatedAt": "2026-02-12T23:17:09.458Z"
+    },
+    "drupal-config-mgmt": {
+      "source": "grasmash/drupal-claude-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/grasmash/drupal-claude-skills.git",
+      "skillPath": ".claude/skills/drupal-config-mgmt/SKILL.md",
+      "skillFolderHash": "9e6c2b5989026b7e5023c718ce1ea7007349d9be",
+      "installedAt": "2026-01-26T20:46:00.021Z",
+      "updatedAt": "2026-01-26T20:46:00.021Z"
+    },
+    "drupal-contrib-mgmt": {
+      "source": "grasmash/drupal-claude-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/grasmash/drupal-claude-skills.git",
+      "skillPath": ".claude/skills/drupal-contrib-mgmt/SKILL.md",
+      "skillFolderHash": "c722ebfd6323e839e10bb91d9af9f463f7149c34",
+      "installedAt": "2026-01-26T20:46:00.122Z",
+      "updatedAt": "2026-01-26T20:46:00.122Z"
+    },
+    "drupal-contribute-fix": {
+      "source": "scottfalconer/drupal-contribute-fix",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/scottfalconer/drupal-contribute-fix.git",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "820a2efb62f99688a3a0775407d1d2d028e072c9",
+      "installedAt": "2026-01-28T03:18:34.184Z",
+      "updatedAt": "2026-03-16T14:03:44.926Z"
+    },
+    "drupal-ddev": {
+      "source": "grasmash/drupal-claude-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/grasmash/drupal-claude-skills.git",
+      "skillPath": ".claude/skills/drupal-ddev/SKILL.md",
+      "skillFolderHash": "ea12dd506e68759743969d9b57b520180b08b486",
+      "installedAt": "2026-01-26T20:46:00.222Z",
+      "updatedAt": "2026-01-26T20:46:00.222Z"
+    },
+    "drupal-development": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/Mindrally/skills.git",
+      "skillPath": "drupal-development/SKILL.md",
+      "skillFolderHash": "6de06b6accbe7dc0f5da57c8141f7e746db2a140",
+      "installedAt": "2026-01-26T21:02:48.779Z",
+      "updatedAt": "2026-02-12T22:50:38.224Z"
+    },
+    "drupal-dynamic-cache": {
+      "source": "sparkfabrik/sf-awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
+      "skillPath": "skills/drupal/cache/drupal-dynamic-cache/SKILL.md",
+      "skillFolderHash": "c3423cf4e602cef396a7e7fbfb413976a2c6984e",
+      "installedAt": "2026-01-26T20:52:30.776Z",
+      "updatedAt": "2026-01-26T20:52:30.776Z"
+    },
+    "drupal-expert": {
+      "source": "madsnorgaard/agent-resources",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/madsnorgaard/agent-resources.git",
+      "skillPath": ".claude/skills/drupal-expert/SKILL.md",
+      "skillFolderHash": "c52c46a8d362dd0fe2750ec668dbe8097862cf87",
+      "installedAt": "2026-01-26T20:50:33.326Z",
+      "updatedAt": "2026-01-26T20:50:33.326Z"
+    },
+    "drupal-frontend": {
+      "source": "Omedia/drupal-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/Omedia/drupal-skill.git",
+      "skillPath": "drupal-frontend/SKILL.md",
+      "skillFolderHash": "f2b1a05bde38236abdaf48ba2fb06b58b66ccc28",
+      "installedAt": "2026-01-26T20:49:19.576Z",
+      "updatedAt": "2026-01-26T20:49:19.576Z"
+    },
+    "drupal-intent-testing": {
+      "source": "scottfalconer/drupal-intent-testing",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/scottfalconer/drupal-intent-testing.git",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "f5f3cb1662689f17fd0d9b855b7653b9b95401d6",
+      "installedAt": "2026-02-03T12:50:46.245Z",
+      "updatedAt": "2026-02-03T12:50:46.245Z"
+    },
+    "drupal-issue-queue": {
+      "source": "scottfalconer/drupal-issue-queue",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/scottfalconer/drupal-issue-queue.git",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "7be7938d85ca71a1581d913d19cba0aa67c7f2c0",
+      "installedAt": "2026-02-03T12:51:10.727Z",
+      "updatedAt": "2026-02-06T04:57:10.857Z"
+    },
+    "drupal-lazy-builders": {
+      "source": "sparkfabrik/sf-awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
+      "skillPath": "skills/drupal/cache/drupal-lazy-builders/SKILL.md",
+      "skillFolderHash": "86f8a4eacd402134c32ee74f4226faaf12f2d1af",
+      "installedAt": "2026-01-26T20:52:30.868Z",
+      "updatedAt": "2026-01-26T20:52:30.868Z"
+    },
+    "drupal-migration": {
+      "source": "madsnorgaard/agent-resources",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/madsnorgaard/agent-resources.git",
+      "skillPath": ".claude/skills/drupal-migration/SKILL.md",
+      "skillFolderHash": "122bb8d1aafbc352550ccd0994bc04912992238b",
+      "installedAt": "2026-01-26T20:50:33.422Z",
+      "updatedAt": "2026-01-26T20:50:33.422Z"
+    },
+    "drupal-security": {
+      "source": "madsnorgaard/agent-resources",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/madsnorgaard/agent-resources.git",
+      "skillPath": ".claude/skills/drupal-security/SKILL.md",
+      "skillFolderHash": "b1c3a2f5e676ebffdb7b1f19440fddf029a0c878",
+      "installedAt": "2026-01-26T20:50:33.518Z",
+      "updatedAt": "2026-01-26T20:50:33.518Z"
+    },
+    "drupal-tooling": {
+      "source": "Omedia/drupal-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/Omedia/drupal-skill.git",
+      "skillPath": "drupal-tooling/SKILL.md",
+      "skillFolderHash": "cdd0c972f637e50b5bff96cbb5b3c65b1314a21d",
+      "installedAt": "2026-01-26T20:49:19.696Z",
+      "updatedAt": "2026-01-26T20:49:19.696Z"
+    },
+    "drupalorg-contribution-helper": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/drupalorg-contribution-helper/SKILL.md",
+      "skillFolderHash": "b34c4bcc6aa0b016ecd711ace2a80365800c107a",
+      "installedAt": "2026-01-26T20:56:20.120Z",
+      "updatedAt": "2026-01-26T20:56:20.120Z"
+    },
+    "drupalorg-issue-helper": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/drupalorg-issue-helper/SKILL.md",
+      "skillFolderHash": "eb44a01b4b20b211abc3a268765547da70efdfc8",
+      "installedAt": "2026-01-26T20:56:20.212Z",
+      "updatedAt": "2026-01-26T20:56:20.212Z"
+    },
+    "executing-plans": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/executing-plans/SKILL.md",
+      "skillFolderHash": "75248b138170840e3e82680cfde7ca615414a548",
+      "installedAt": "2026-02-12T23:04:43.098Z",
+      "updatedAt": "2026-02-12T23:04:43.098Z"
+    },
+    "figma-integration": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/Mindrally/skills.git",
+      "skillPath": "figma-integration/SKILL.md",
+      "skillFolderHash": "0b294b7b60a91aa7132eb0f64afd3c7a528f7fa2",
+      "installedAt": "2026-01-26T21:02:48.884Z",
+      "updatedAt": "2026-02-12T22:50:38.371Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
+      "installedAt": "2026-01-26T23:06:01.293Z",
+      "updatedAt": "2026-01-26T23:16:50.431Z"
+    },
+    "finishing-a-development-branch": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/finishing-a-development-branch/SKILL.md",
+      "skillFolderHash": "7656b8ebe0c9659ea548ba2981b078b333d1846e",
+      "installedAt": "2026-02-12T23:04:43.190Z",
+      "updatedAt": "2026-02-12T23:04:43.190Z"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "skillFolderHash": "928950704df8a8b885c03de5da626331e6f29cf8",
+      "installedAt": "2026-02-12T23:14:48.973Z",
+      "updatedAt": "2026-02-12T23:14:48.973Z"
     },
     "frontend-ui-engineering": {
       "source": "addyosmani/agent-skills",
@@ -793,6 +523,42 @@
       "installedAt": "2026-06-18T14:48:07.757Z",
       "updatedAt": "2026-06-18T14:48:07.757Z"
     },
+    "html": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/Mindrally/skills.git",
+      "skillPath": "html/SKILL.md",
+      "skillFolderHash": "20bbc5de4e2fe0ffb30616f0c49baec6e31b557d",
+      "installedAt": "2026-01-26T21:02:49.078Z",
+      "updatedAt": "2026-02-12T22:50:38.462Z"
+    },
+    "htmx": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/Mindrally/skills.git",
+      "skillPath": "htmx/SKILL.md",
+      "skillFolderHash": "c2e40b71da494a1b59e4bcaa30a3d599e651423b",
+      "installedAt": "2026-01-26T21:02:48.980Z",
+      "updatedAt": "2026-02-12T22:50:38.552Z"
+    },
+    "http-cache-tools": {
+      "source": "sparkfabrik/sf-awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sparkfabrik/sf-awesome-copilot.git",
+      "skillPath": "skills/drupal/cache/http-cache-tools/SKILL.md",
+      "skillFolderHash": "6d5c43f57128cbfe073fa7696792ad70dc10e1be",
+      "installedAt": "2026-01-26T20:52:30.964Z",
+      "updatedAt": "2026-01-26T20:52:30.964Z"
+    },
+    "humanizer": {
+      "source": "softaworks/agent-toolkit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/softaworks/agent-toolkit.git",
+      "skillPath": "skills/humanizer/SKILL.md",
+      "skillFolderHash": "004c1998fffe4d5cd4535123d65cf9fb1a107b64",
+      "installedAt": "2026-02-12T23:10:06.285Z",
+      "updatedAt": "2026-02-12T23:10:06.285Z"
+    },
     "idea-refine": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
@@ -801,6 +567,15 @@
       "skillFolderHash": "b03c3dd70f49a564888b33a363d04e07edda8f4c",
       "installedAt": "2026-06-18T14:48:07.854Z",
       "updatedAt": "2026-06-18T14:48:07.854Z"
+    },
+    "image": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/image/SKILL.md",
+      "skillFolderHash": "03c0c80ec888685403cd5f9b17e90f6ae6ed9d25",
+      "installedAt": "2026-05-22T19:54:23.608Z",
+      "updatedAt": "2026-05-22T19:54:23.608Z"
     },
     "incremental-implementation": {
       "source": "addyosmani/agent-skills",
@@ -820,6 +595,51 @@
       "installedAt": "2026-06-18T14:48:08.055Z",
       "updatedAt": "2026-06-18T14:48:08.055Z"
     },
+    "ivangrynenko-cursorrules-drupal": {
+      "source": "grasmash/drupal-claude-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/grasmash/drupal-claude-skills.git",
+      "skillPath": ".claude/skills/ivangrynenko-cursorrules-drupal/SKILL.md",
+      "skillFolderHash": "8261d5fdd04d3e24243d29c4a62d644edd43ec36",
+      "installedAt": "2026-01-26T20:46:00.367Z",
+      "updatedAt": "2026-01-26T20:46:00.367Z"
+    },
+    "jira": {
+      "source": "softaworks/agent-toolkit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/softaworks/agent-toolkit.git",
+      "skillPath": "skills/jira/SKILL.md",
+      "skillFolderHash": "c727e041f8c55d018d6dd97a871b8ff2572dafe5",
+      "installedAt": "2026-02-12T23:10:05.573Z",
+      "updatedAt": "2026-02-12T23:10:05.573Z"
+    },
+    "last30days": {
+      "source": "mvanhorn/last30days-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mvanhorn/last30days-skill.git",
+      "skillPath": "skills/last30days/SKILL.md",
+      "skillFolderHash": "63ee58e42ad33abd1e5b114f8f28f367681cb8ff",
+      "installedAt": "2026-06-15T23:39:54.241Z",
+      "updatedAt": "2026-06-15T23:39:54.241Z"
+    },
+    "lesson-learned": {
+      "source": "softaworks/agent-toolkit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/softaworks/agent-toolkit.git",
+      "skillPath": "skills/lesson-learned/SKILL.md",
+      "skillFolderHash": "6ab6847ffef7f50b70aa1d637c75a167387b6c7f",
+      "installedAt": "2026-02-12T23:10:06.186Z",
+      "updatedAt": "2026-02-12T23:10:06.186Z"
+    },
+    "mermaid-diagrams": {
+      "source": "softaworks/agent-toolkit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/softaworks/agent-toolkit.git",
+      "skillPath": "skills/mermaid-diagrams/SKILL.md",
+      "skillFolderHash": "1b7a962715838d762fe4b34701d797d1d57496cd",
+      "installedAt": "2026-02-12T23:10:05.782Z",
+      "updatedAt": "2026-02-12T23:10:05.782Z"
+    },
     "observability-and-instrumentation": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
@@ -828,6 +648,42 @@
       "skillFolderHash": "d8045c8cc4a5b30e5a4670100ade6da9bb0760fc",
       "installedAt": "2026-06-18T14:48:08.156Z",
       "updatedAt": "2026-06-18T14:48:08.156Z"
+    },
+    "obsidian-cli": {
+      "source": "kepano/obsidian-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kepano/obsidian-skills.git",
+      "skillPath": "skills/obsidian-cli/SKILL.md",
+      "skillFolderHash": "96254a554e480359de7b685571876f2e7f9ba57d",
+      "installedAt": "2026-05-22T20:12:16.597Z",
+      "updatedAt": "2026-05-22T20:12:16.597Z"
+    },
+    "obsidian-markdown": {
+      "source": "kepano/obsidian-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kepano/obsidian-skills.git",
+      "skillPath": "skills/obsidian-markdown/SKILL.md",
+      "skillFolderHash": "5caf5d9e7de204f3904216857545f2aa36bcfcac",
+      "installedAt": "2026-05-22T20:12:16.690Z",
+      "updatedAt": "2026-05-22T20:12:16.690Z"
+    },
+    "pdf": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/pdf/SKILL.md",
+      "skillFolderHash": "6369f4649de69bd6857c9bc3b058a77206009238",
+      "installedAt": "2026-02-12T23:11:53.735Z",
+      "updatedAt": "2026-02-12T23:11:53.735Z"
+    },
+    "performance-analyzer": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/performance-analyzer/SKILL.md",
+      "skillFolderHash": "22270154bea7c94be0570236f102a8dd8950975e",
+      "installedAt": "2026-01-26T20:56:20.328Z",
+      "updatedAt": "2026-01-26T20:56:20.328Z"
     },
     "performance-optimization": {
       "source": "addyosmani/agent-skills",
@@ -847,6 +703,69 @@
       "installedAt": "2026-06-18T14:48:08.350Z",
       "updatedAt": "2026-06-18T14:48:08.350Z"
     },
+    "playwright-cli": {
+      "source": "microsoft/playwright-cli",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/microsoft/playwright-cli.git",
+      "skillPath": "skills/playwright-cli/SKILL.md",
+      "skillFolderHash": "a078ad3cf6f97ab53bf1462d85e3a7d85c3b3140",
+      "installedAt": "2026-02-05T20:48:11.900Z",
+      "updatedAt": "2026-02-05T20:48:11.900Z"
+    },
+    "professional-communication": {
+      "source": "softaworks/agent-toolkit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/softaworks/agent-toolkit.git",
+      "skillPath": "skills/professional-communication/SKILL.md",
+      "skillFolderHash": "a131460b559752fae7756380394d7e21f7c0db6a",
+      "installedAt": "2026-02-12T23:10:05.885Z",
+      "updatedAt": "2026-02-12T23:10:05.885Z"
+    },
+    "receiving-code-review": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/receiving-code-review/SKILL.md",
+      "skillFolderHash": "7750c56fddb8b2f1cbdb1550a6e3e40d2eeac5f1",
+      "installedAt": "2026-02-12T23:04:43.293Z",
+      "updatedAt": "2026-02-12T23:04:43.293Z"
+    },
+    "requesting-code-review": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/requesting-code-review/SKILL.md",
+      "skillFolderHash": "dbe9c65c5af4fa294ec9d60c1732d806e664530c",
+      "installedAt": "2026-02-12T23:04:43.384Z",
+      "updatedAt": "2026-02-12T23:04:43.384Z"
+    },
+    "requirements-clarity": {
+      "source": "softaworks/agent-toolkit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/softaworks/agent-toolkit.git",
+      "skillPath": "skills/requirements-clarity/SKILL.md",
+      "skillFolderHash": "88157583b20b296c8eaa3808af3dd3d669d73ce0",
+      "installedAt": "2026-02-12T23:10:05.982Z",
+      "updatedAt": "2026-02-12T23:10:05.982Z"
+    },
+    "responsive-styling": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/responsive-styling/SKILL.md",
+      "skillFolderHash": "2982d16124cf09425f5a1518ef40355ed08400b5",
+      "installedAt": "2026-01-26T20:56:20.420Z",
+      "updatedAt": "2026-01-26T20:56:20.420Z"
+    },
+    "sass-best-practices": {
+      "source": "Mindrally/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/Mindrally/skills.git",
+      "skillPath": "sass-best-practices/SKILL.md",
+      "skillFolderHash": "8945a0227cc10d9d59a95518de767bc5738d7403",
+      "installedAt": "2026-01-26T21:02:49.211Z",
+      "updatedAt": "2026-02-12T22:50:38.669Z"
+    },
     "security-and-hardening": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
@@ -856,6 +775,24 @@
       "installedAt": "2026-06-18T14:48:08.448Z",
       "updatedAt": "2026-06-18T14:48:08.448Z"
     },
+    "security-scanner": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/security-scanner/SKILL.md",
+      "skillFolderHash": "f773d5fbe644817528bea26cc126325fca063de7",
+      "installedAt": "2026-01-26T20:56:20.520Z",
+      "updatedAt": "2026-01-26T20:56:20.520Z"
+    },
+    "seo-audit": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/seo-audit/SKILL.md",
+      "skillFolderHash": "0f1f5e31ce921513828ac8f440f358df6fa0751a",
+      "installedAt": "2026-05-22T19:54:23.709Z",
+      "updatedAt": "2026-05-22T19:54:23.709Z"
+    },
     "shipping-and-launch": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
@@ -864,6 +801,15 @@
       "skillFolderHash": "5fdf87bd28e41a9ed3cf82be0e86e249e6a117e0",
       "installedAt": "2026-06-18T14:48:08.546Z",
       "updatedAt": "2026-06-18T14:48:08.546Z"
+    },
+    "site-architecture": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/site-architecture/SKILL.md",
+      "skillFolderHash": "35e29642aec1bc03c33f560a315d325e0e61ec7e",
+      "installedAt": "2026-05-22T19:54:23.804Z",
+      "updatedAt": "2026-05-22T19:54:23.804Z"
     },
     "source-driven-development": {
       "source": "addyosmani/agent-skills",
@@ -883,6 +829,15 @@
       "installedAt": "2026-06-18T14:48:08.742Z",
       "updatedAt": "2026-06-18T14:48:08.742Z"
     },
+    "systematic-debugging": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/systematic-debugging/SKILL.md",
+      "skillFolderHash": "828c239ac986cc1fc7edd10292f66e4a3640e9c0",
+      "installedAt": "2026-02-12T23:04:43.558Z",
+      "updatedAt": "2026-02-12T23:04:43.558Z"
+    },
     "test-driven-development": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
@@ -892,6 +847,24 @@
       "installedAt": "2026-06-18T14:48:08.839Z",
       "updatedAt": "2026-06-18T14:48:08.839Z"
     },
+    "test-plan-generator": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/test-plan-generator/SKILL.md",
+      "skillFolderHash": "aa1deabeb327038cb698cd2d66a9b8a291402d92",
+      "installedAt": "2026-01-26T20:56:20.618Z",
+      "updatedAt": "2026-01-26T20:56:20.618Z"
+    },
+    "test-scaffolding": {
+      "source": "kanopi/cms-cultivator",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kanopi/cms-cultivator.git",
+      "skillPath": "skills/test-scaffolding/SKILL.md",
+      "skillFolderHash": "0b27d58fabd974bd08fdd5f5cd3dd6139d86ca44",
+      "installedAt": "2026-01-26T20:56:20.724Z",
+      "updatedAt": "2026-01-26T20:56:20.724Z"
+    },
     "using-agent-skills": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
@@ -900,6 +873,33 @@
       "skillFolderHash": "c4d585a3a6fe1317c27945a4de8092fbac3259a9",
       "installedAt": "2026-06-18T14:48:08.937Z",
       "updatedAt": "2026-06-18T14:48:08.937Z"
+    },
+    "web-to-markdown": {
+      "source": "softaworks/agent-toolkit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/softaworks/agent-toolkit.git",
+      "skillPath": "skills/web-to-markdown/SKILL.md",
+      "skillFolderHash": "8c1f61f08e68d42f3fd365174195c1461eb9d125",
+      "installedAt": "2026-02-12T23:10:06.084Z",
+      "updatedAt": "2026-02-12T23:10:06.084Z"
+    },
+    "webapp-testing": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/webapp-testing/SKILL.md",
+      "skillFolderHash": "74cb751576f9e9af2aedff47e67861ef26db2dc4",
+      "installedAt": "2026-02-12T23:14:48.843Z",
+      "updatedAt": "2026-02-12T23:14:48.843Z"
+    },
+    "writing-plans": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/writing-plans/SKILL.md",
+      "skillFolderHash": "cf6f5c8813cf0445276129a5f2b443927b50f645",
+      "installedAt": "2026-02-12T23:04:43.651Z",
+      "updatedAt": "2026-02-12T23:04:43.651Z"
     }
   },
   "dismissed": {
