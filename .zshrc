@@ -107,7 +107,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-source ~/.environment
 source ~/.aliases
 source ~/.git-safe-force-push.sh
 source ~/.git-prompt.sh

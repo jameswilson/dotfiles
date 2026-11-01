@@ -3,22 +3,33 @@
 # to be used instead of .bash_environment or .zshenv
 # echo ~/.environment
 
+# Loaded by ~/.profile after shared variables and pathmunge are defined.
+
+# Configure standard Homebrew installations without invoking brew at startup.
+if [ -x /opt/homebrew/bin/brew ]; then
+  export HOMEBREW_PREFIX=/opt/homebrew
+else
+  export HOMEBREW_PREFIX=/usr/local
+fi
+
+export HOMEBREW_CELLAR="$HOMEBREW_PREFIX/Cellar"
+export HOMEBREW_HOME="$HOMEBREW_CELLAR"
+
+if [ "$HOMEBREW_PREFIX" = /opt/homebrew ]; then
+  export HOMEBREW_REPOSITORY="$HOMEBREW_PREFIX"
+else
+  export HOMEBREW_REPOSITORY="$HOMEBREW_PREFIX/Homebrew"
+fi
+
+pathmunge "$HOMEBREW_PREFIX/sbin"
+pathmunge "$HOMEBREW_PREFIX/bin"
+
 # Default Editor
 export EDITOR="vim"
 
 # Language, locale, and character encoding.
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-
-# Homebrew
-if [ -x /opt/homebrew/bin/brew ]; then
-  export HOMEBREW_PREFIX=/opt/homebrew
-else
-  export HOMEBREW_PREFIX=/usr/local
-fi
-export HOMEBREW_HOME="$HOMEBREW_PREFIX/Cellar"
-pathmunge "$HOMEBREW_PREFIX/bin"
-pathmunge "$HOMEBREW_PREFIX/sbin"
 
 # Python
 pathmunge "$HOMEBREW_PREFIX/opt/python/bin"

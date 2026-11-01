@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 #echo ~/.profile
+
 # Add XDG Base Directory Specification to MacOs
 export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$(getconf DARWIN_USER_CACHE_DIR)}"
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
@@ -28,3 +29,6 @@ function pathmunge() {
       fi
   esac
 }
+
+# Load tool configuration after defining shared variables and pathmunge.
+source "$HOME/.environment"
