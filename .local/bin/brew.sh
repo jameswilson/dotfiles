@@ -20,6 +20,9 @@ then
   brew install iterm2
 fi
 
+# Install disk usage visualization.
+brew install --cask grandperspective
+
 # Install GNU core utilities (those that come with macOS are outdated).
 # This requires `$(brew --prefix coreutils)/libexec/gnubin` in $PATH.
 # @see ~/.environment
