@@ -35,13 +35,6 @@ export LC_ALL=en_US.UTF-8
 pathmunge "$HOMEBREW_PREFIX/opt/python/bin"
 pathmunge "$HOMEBREW_PREFIX/opt/python/libexec/bin"
 
-# Ruby config for running Jekyll locally
-# Following https://jekyllrb.com/docs/installation/macos/
-# See also ~/.local/bin/brew.sh
-source "$HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh"
-source "$HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh"
-chruby ruby-3.4.1
-
 # Replace some macOs utils with GNU utils.
 # Note: this requires `brew install coreutils findutils`.
 # @see brew.sh
