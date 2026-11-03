@@ -112,6 +112,29 @@
 # Homebrew
   alias brew_update="brew -v update; brew upgrade --force-bottle; brew cleanup; brew prune; brew doctor;"
 
+# SSH
+# Kitty advertises TERM=xterm-kitty, but plain SSH does not copy Kitty's
+# terminfo entry to older hosts. For direct local Kitty sessions, use the SSH
+# kitten so the remote shell receives the correct terminal capabilities.
+# Preserve standard OpenSSH everywhere else, including nested SSH sessions.
+ssh() {
+  local kitten_bin="/Applications/kitty.app/Contents/MacOS/kitten"
+
+  if [ -z "${SSH_CONNECTION:-}" ] && {
+    [ "${TERM:-}" = "xterm-kitty" ] || [ -n "${KITTY_WINDOW_ID:-}" ]
+  }; then
+    if command -v kitten >/dev/null 2>&1; then
+      command kitten ssh "$@"
+      return
+    elif [ -x "$kitten_bin" ]; then
+      command "$kitten_bin" ssh "$@"
+      return
+    fi
+  fi
+
+  command ssh "$@"
+}
+
 # Photoshop & Illustrator
   alias psp='open -b com.adobe.Photoshop'
   alias ai='open -b com.adobe.Illustrator'
