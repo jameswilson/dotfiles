@@ -1,7 +1,3 @@
 #!/bin/sh
 
-cd ~/App/jira-worklog-import/ || exit 1
-php jira-worklog-import.php "$@"
-import_exit_code=$?
-cd -
-exit "$import_exit_code"
+exec $HOME/App/jira-worklog-import/bin/logtime "$@"
