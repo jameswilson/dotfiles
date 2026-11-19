@@ -41,6 +41,7 @@ brew install grep
 brew install screen
 brew install vim
 brew install git
+brew install git-delta
 
 # Install programming language packs.
 brew install php
