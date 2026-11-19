@@ -80,6 +80,7 @@ brew install ddev/ddev/ddev
 brew install upsun/tap/upsun-cli
 brew install pantheon-systems/external/terminus
 brew install jq
+brew install rg
 brew install tig
 brew install --cask sublime-merge
 
