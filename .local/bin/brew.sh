@@ -82,7 +82,6 @@ brew install pantheon-systems/external/terminus
 brew install jq
 brew install rg
 brew install tig
-brew install --cask sublime-merge
 
 # Install API integrations
 brew install ankitpokhrel/jira-cli/jira-cli
