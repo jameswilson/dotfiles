@@ -60,6 +60,7 @@ brew install awscli
 brew install gnupg
 brew install gh
 brew install glab
+brew install openssh
 
 # Install macOs Quick Look plugins.
 # Try also `brew search --desc "Quick Look plugin"`
@@ -76,6 +77,7 @@ brew install syntax-highlight
 # Install developer tools.
 brew install ddev/ddev/ddev
 brew install upsun/tap/upsun-cli
+brew install pantheon-systems/external/terminus
 brew install jq
 brew install tig
 brew install --cask sublime-merge
