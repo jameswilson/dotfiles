@@ -75,6 +75,7 @@ brew install syntax-highlight
 
 # Install developer tools.
 brew install ddev/ddev/ddev
+brew install upsun/tap/upsun-cli
 brew install jq
 brew install tig
 brew install --cask sublime-merge
