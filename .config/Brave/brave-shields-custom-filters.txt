@@ -1,0 +1,10 @@
+www.youtube.com##.yt-lockup-view-model--horizontal > .yt-lockup-view-model__content-image
+www.youtube.com##.ytLockupViewModelHorizontal > .ytLockupViewModelContentImage
+www.youtube.com##.ytLockupViewModelContentImage
+bluespark.atlassian.net##._zulp1b66._4cvr1h6o._1e0cglyw._181n1txw > div._1e0c1txw._vchhusvi._4cvr1h6o
+bluespark.atlassian.net##._ymio1r31._ypr0glyw._zcxs1o36._mizu194a._1ah3dkaa._ra3xnqa1._128mdkaa._1cvmnqa1._4davt94y._19itglyw._vchhusvi._r06hglyw._80omtlke._2rkofajl._11c8fhey._v5649dqc._189eidpf._1rjc12x7._1e0c116y._1bsbviql._p12f1osq._kqswh2mm._4cvr1q9y._1bah1h6o._gy1p1b66._1o9zidpf._4t3iviql._k48p1wq8._y4tize3t._bozgze3t._y3gn1h6o._s7n4nkob._14mj1kw7._9v7aze3t._1tv3nqa1._39yqe4h9._11fnglyw._18postnw._bfhk1w7a._syazazsu._8l3m1l7x._aetrb3bt._1053azsu._f8pjazsu._30l3azsu._9h8hazsu._irr31dpa._1di6fcek._4bfu18uv._1hmsglyw._ajmmnqa1._1a3b18uv._4fprglyw._5goinqa1._9oik18uv._1bnxglyw._jf4cnqa1._1nrm18uv._c2waglyw._1iohnqa1
+bluespark.atlassian.net###share-trigger-btn
+www.startpage.com##.extension-and-app-middle-promo.css-eo1opw
+www.startpage.com##.startpage-hero-tagline.css-u001n6
+www.startpage.com##.css-6m4if9
+www.startpage.com##.hero-promo-text.css-1o0aekb
