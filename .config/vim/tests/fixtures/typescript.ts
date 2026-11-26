@@ -4,3 +4,7 @@ type Result<T> = {value: T; enabled: boolean};
 export function label(entity: EntityReference, prefix?: string): Result<string> {
   return {value: `${prefix ?? 'Drupal'}: ${entity.label}`, enabled: true};
 }
+
+function repeatLabel(entity: EntityReference): string {
+  return label(entity, 'Drupal').value;
+}

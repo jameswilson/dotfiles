@@ -4,12 +4,28 @@
 "colorscheme solarized
 let g:monokai_term_italic = 1
 let g:monokai_gui_italic = 1
-colorscheme one-monokai
+let g:airline_theme = 'baby_panda'
+colorscheme baby-panda
 
 " Required for the CSApprox plugin to work from Mac Terminal.app
 set t_Co=256
 let g:rehash256 = 1
 set termguicolors
+
+" Keep bracket accents where they do not replace contextual syntax regions.
+let g:rainbow_conf = {
+      \ 'guifgs': ['#ff75b5', '#b084eb', '#19f9d8', '#ffcc95'],
+      \ 'ctermfgs': ['211', '140', '50', '222'],
+      \ 'separately': {
+      \   'html': 0, 'xhtml': 0, 'xml': 0, 'twig': 0, 'vue': 0, 'php': 0,
+      \   'typescript': 0, 'typescriptreact': 0, 'scss': 0, 'sass': 0, 'less': 0,
+      \ },
+      \ }
+
+" Use the bundled Go parser's declaration and call groups.
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_types = 1
 
 " Check spelling on demand with :setlocal spell, not across source code.
 set nospell

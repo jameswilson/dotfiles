@@ -1,4 +1,7 @@
 let s:root = fnamemodify(expand('<sfile>:p'), ':h')
+if !empty($VIM_SYNTAX_THEME)
+  execute 'colorscheme ' . $VIM_SYNTAX_THEME
+endif
 let s:cases = json_decode(join(readfile(s:root . '/manifest.json'), "\n"))
 for s:extra in json_decode($VIM_SYNTAX_EXTRA)
   call add(s:cases, {'file': s:extra, 'filetypes': ['json'], 'plain': 0})
@@ -27,7 +30,8 @@ for s:case in s:cases
   endtry
 endfor
 " Reloading the theme must not reintroduce spelling backgrounds.
-colorscheme one-monokai
+execute 'colorscheme ' . s:report.theme
+let s:report.reloaded_theme = get(g:, 'colors_name', '')
 for s:group in ['SpellBad', 'SpellCap', 'SpellRare', 'SpellLocal']
   let s:id = hlID(s:group)
   let s:report.spell_groups[s:group] = {'gui_fg': synIDattr(s:id, 'fg#', 'gui'),

@@ -6,3 +6,7 @@ final class Greeting {
     return ['#markup' => "Hello {$name}", '#cache' => ['max-age' => 3600]];
   }
 }
+
+$query = <<<'SQL'
+SELECT id FROM node_field_data WHERE status = 1
+SQL;

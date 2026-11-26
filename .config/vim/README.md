@@ -91,9 +91,13 @@ for every fixture simultaneously. Reports go to `~/.local/state/vim/syntax-check
 
 ## Theme comparison
 
-The restored Vim theme is One Monokai. VS Code's configured theme is Baby Panda.
-See [the comparison and Vim port](docs/themes.md). Kitty's palette was unchanged;
-the red blocks came from Vim's spelling overlay.
+Vim and Airline now use the fresh Baby Panda port, based on the Baby Panda theme
+configured in VS Code. See [the port's mappings and verification](docs/baby-panda.md)
+and [the comparison](docs/themes.md). One Monokai remains available as a fallback.
+Kitty's palette is unchanged; the old red blocks came from Vim's spelling overlay.
+
+Run `python3 ~/.config/vim/tests/check-baby-panda.py` for exact color, theme-switching,
+and fallback checks. The general syntax checker also accepts `--theme baby-panda`.
 
 SPF13's license is included as `LICENSE.spf13.txt`. Copied Drupal dictionaries
 include their upstream license in `cspell/dictionaries/LICENSE.txt`.

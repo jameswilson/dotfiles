@@ -17,7 +17,9 @@ it should be tested against the fixture gallery before replacing the current
 scheme. Other older ports also exist, but no exact maintained Baby Panda port
 was verified.
 
-The active Vim theme remains the recovered One Monokai. If adopting a Panda
-port later, put its colors file in `~/.config/vim/colors/`, keep truecolor enabled,
-and verify `SpellBad`, `SpellCap`, `SpellRare`, and `SpellLocal` have no foreground
-or background override. Then rerun the syntax gallery and CSpell UI checks.
+A fresh local Baby Panda port is now implemented and activated, rather than
+adopting the older generated Panda theme. It includes a matching Airline palette,
+explicit language mappings, 256-color fallbacks, and background-free spelling
+marks. See [the port's source, mappings, and verification](baby-panda.md).
+
+One Monokai remains available as a fallback. Kitty's configured palette is unchanged.

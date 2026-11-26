@@ -28,7 +28,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "one_monokai"
+let g:colors_name = 'one-monokai'
 
 function! s:h(group, style)
   let s:ctermformat = "NONE"
@@ -368,6 +368,10 @@ call s:IgnoreFiletypeIfNotSet('notes')
 call s:IgnoreFiletypeIfNotSet('jinja')
 
 fun! s:HighlightOperators()
+  " This theme's callback must not repaint operators after a theme switch.
+  if get(g:, 'colors_name', '') !=# 'one-monokai'
+    return
+  endif
   if get( g:ophigh_filetypes_to_ignore, &filetype, 0 )
     return
   endif

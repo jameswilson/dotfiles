@@ -53,6 +53,7 @@ def run_vim(script, env, binary='vim', automatic=False, theme=''):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--vim', default='vim')
+    parser.add_argument('--theme', default='', help='Colorscheme to test; defaults to your configured theme')
     parser.add_argument('--file', action='append', default=[], help='Additional JSON file to inspect read-only')
     args = parser.parse_args()
     root = Path(__file__).resolve().parent
@@ -61,6 +62,7 @@ def main():
     report_path = state / 'latest.json'
     status, output = run_vim(root / 'check-syntax.vim', {
         'VIM_SYNTAX_REPORT': str(report_path),
+        'VIM_SYNTAX_THEME': args.theme,
         'VIM_SYNTAX_EXTRA': json.dumps([str(Path(p).expanduser().resolve()) for p in args.file]),
     }, args.vim)
     (state / 'terminal.log').write_bytes(output)
@@ -86,7 +88,7 @@ def main():
     for group, colors in report['spell_groups'].items():
         if any(colors[key] for key in ['gui_fg', 'gui_bg', 'cterm_fg', 'cterm_bg']) or colors['undercurl'] != '1':
             failures.append((group, ['spelling marks override syntax colors or lack an underline']))
-    if status or not report['truecolor'] or 'Error detected' in report['messages']:
+    if status or not report['truecolor'] or report['reloaded_theme'] != report['theme'] or 'Error detected' in report['messages']:
         failures.append(('startup', [report['messages']]))
     print(f"{len(report['files']) - len([f for f in failures if f[0] not in report['spell_groups']])}/{len(report['files'])} files passed. Report: {report_path}")
     if failures:
