@@ -1,0 +1,23 @@
+" XDG entry point for the Vim setup recovered from Madera.local.
+" Apple Vim 9.1 loads this file directly; /usr/bin/vi uses the same binary.
+set nocompatible
+let $VIM_XDG_CONFIG_HOME = fnamemodify(expand('<sfile>:p'), ':h')
+let $VIM_XDG_DATA_HOME = (empty($XDG_DATA_HOME) ? expand('~/.local/share') : $XDG_DATA_HOME) . '/vim'
+let $VIM_XDG_STATE_HOME = (empty($XDG_STATE_HOME) ? expand('~/.local/state') : $XDG_STATE_HOME) . '/vim'
+let $VIM_XDG_CACHE_HOME = (empty($XDG_CACHE_HOME) ? expand('~/.cache') : $XDG_CACHE_HOME) . '/vim'
+
+for s:dir in [$VIM_XDG_DATA_HOME, $VIM_XDG_STATE_HOME, $VIM_XDG_CACHE_HOME]
+    call mkdir(s:dir, 'p', 0700)
+endfor
+unlet s:dir
+
+" Keep editor and plugin state out of the home directory.
+let &viminfofile = $VIM_XDG_STATE_HOME . '/viminfo'
+let g:netrw_home = $VIM_XDG_STATE_HOME
+let g:ctrlp_cache_dir = $VIM_XDG_CACHE_HOME . '/ctrlp'
+let g:neocomplete#data_directory = $VIM_XDG_CACHE_HOME . '/neocomplete'
+let g:neosnippet#data_directory = $VIM_XDG_CACHE_HOME . '/neosnippet'
+
+execute 'set runtimepath^=' . escape($VIM_XDG_DATA_HOME, ' ,\')
+let &packpath = &runtimepath
+execute 'source ' . fnameescape($VIM_XDG_CONFIG_HOME . '/spf13.vim')

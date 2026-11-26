@@ -1,0 +1,14 @@
+" Default Bundles {
+
+    " Use before config if available {
+        if filereadable(expand("$VIM_XDG_CONFIG_HOME/vimrc.before"))
+            source $VIM_XDG_CONFIG_HOME/vimrc.before
+        endif
+    " }
+
+    " Use bundles config {
+        if filereadable(expand("$VIM_XDG_CONFIG_HOME/vimrc.bundles"))
+            source $VIM_XDG_CONFIG_HOME/vimrc.bundles
+        endif
+    " }
+" }

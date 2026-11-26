@@ -27,6 +27,7 @@
 !/.config/
 /.config/*
 !/.config/agent-instructions/
+!/.config/vim/
 /.console/
 /.cordova/
 /.cups/
