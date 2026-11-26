@@ -1,8 +1,13 @@
 """Exercise automatic open/save checks and CSpell commands in real Vim."""
 from pathlib import Path
+import argparse
 import json
 import tempfile
 from check import run_vim
+
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--theme', default='')
+args = parser.parse_args()
 
 with tempfile.TemporaryDirectory(prefix='vim-cspell-ui-') as directory:
     root = Path(directory)
@@ -12,7 +17,7 @@ with tempfile.TemporaryDirectory(prefix='vim-cspell-ui-') as directory:
     report = root / 'report.json'
     status, output = run_vim(Path(__file__).with_name('cspell-ui.vim'), {
         'VIM_CSPELL_TEST_ROOT': str(root), 'VIM_CSPELL_TEST_REPORT': str(report),
-    }, automatic=True)
+    }, automatic=True, theme=args.theme)
     if not report.exists():
         raise RuntimeError(output.decode(errors='replace'))
     result = json.loads(report.read_text())

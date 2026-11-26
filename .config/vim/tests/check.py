@@ -13,12 +13,14 @@ import fcntl
 import time
 
 
-def run_vim(script, env, binary='vim', automatic=False):
+def run_vim(script, env, binary='vim', automatic=False, theme=''):
     master, slave = pty.openpty()
     fcntl.ioctl(slave, termios.TIOCSWINSZ, struct.pack('HHHH', 40, 140, 0, 0))
     command = [shutil.which(binary) or binary, '-i', 'NONE', '-n']
     if not automatic:
         command += ['--cmd', 'let g:cspell_auto_enabled=0']
+    if theme:
+        command += ['-c', 'colorscheme ' + theme]
     command += ['-S', str(script)]
     process = subprocess.Popen(command, stdin=slave, stdout=slave, stderr=slave,
                                env={**os.environ, 'TERM': 'xterm-256color', **env})
