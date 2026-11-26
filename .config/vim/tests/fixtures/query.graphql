@@ -1,0 +1,8 @@
+# GraphQL operations, variables, fields, and arguments.
+query EntityReference($id: ID!) {
+  node(id: $id) {
+    id
+    title
+    ... on Article { fieldReference { id } }
+  }
+}

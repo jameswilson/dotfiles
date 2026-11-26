@@ -188,6 +188,12 @@ call s:h("Underlined",    { "fg": s:green })
 call s:h("Ignore",        {})
 call s:h("Error",         { "fg": s:red, "bg": s:darkred })
 
+" Spelling marks must preserve the syntax foreground and background.
+call s:h("SpellBad",      { "sp": s:pink,   "format": "undercurl" })
+call s:h("SpellCap",      { "sp": s:yellow, "format": "undercurl" })
+call s:h("SpellRare",     { "sp": s:purple, "format": "undercurl" })
+call s:h("SpellLocal",    { "sp": s:aqua,   "format": "undercurl" })
+
 " NerdTree
 " --------
 

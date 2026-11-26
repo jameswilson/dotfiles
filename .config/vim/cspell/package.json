@@ -1,0 +1,9 @@
+{
+  "name": "vim-cspell-runtime",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Isolated spelling engine for the XDG Vim configuration",
+  "dependencies": {
+    "cspell": "10.5.2"
+  }
+}

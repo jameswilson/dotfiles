@@ -1,0 +1,6 @@
+<?php
+/** Add a sample field during a Drupal update. */
+function syntax_review_update_11001(&$sandbox) {
+  $sandbox['#finished'] = 1;
+  return 'Updated entity_reference_revisions settings.';
+}

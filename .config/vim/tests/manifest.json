@@ -1,0 +1,292 @@
+[
+  {
+    "file": "php.php",
+    "filetypes": [
+      "php"
+    ],
+    "plain": false
+  },
+  {
+    "file": "drupal.module",
+    "filetypes": [
+      "php"
+    ],
+    "plain": false
+  },
+  {
+    "file": "drupal.install",
+    "filetypes": [
+      "php"
+    ],
+    "plain": false
+  },
+  {
+    "file": "drupal.theme",
+    "filetypes": [
+      "php"
+    ],
+    "plain": false
+  },
+  {
+    "file": "legacy.inc",
+    "filetypes": [
+      "php"
+    ],
+    "plain": false
+  },
+  {
+    "file": "composer.json",
+    "filetypes": [
+      "json"
+    ],
+    "plain": false
+  },
+  {
+    "file": "drupal.yml",
+    "filetypes": [
+      "yaml"
+    ],
+    "plain": false
+  },
+  {
+    "file": "drupal.yaml",
+    "filetypes": [
+      "yaml"
+    ],
+    "plain": false
+  },
+  {
+    "file": "javascript.js",
+    "filetypes": [
+      "javascript"
+    ],
+    "plain": false
+  },
+  {
+    "file": "react.jsx",
+    "filetypes": [
+      "javascriptreact",
+      "javascript.jsx"
+    ],
+    "plain": false
+  },
+  {
+    "file": "typescript.ts",
+    "filetypes": [
+      "typescript"
+    ],
+    "plain": false
+  },
+  {
+    "file": "react.tsx",
+    "filetypes": [
+      "typescriptreact",
+      "typescript.tsx"
+    ],
+    "plain": false
+  },
+  {
+    "file": "html.html",
+    "filetypes": [
+      "html"
+    ],
+    "plain": false
+  },
+  {
+    "file": "xml.xml",
+    "filetypes": [
+      "xml"
+    ],
+    "plain": false
+  },
+  {
+    "file": "template.twig",
+    "filetypes": [
+      "twig"
+    ],
+    "plain": false
+  },
+  {
+    "file": "page.html.twig",
+    "filetypes": [
+      "html.twig"
+    ],
+    "plain": false
+  },
+  {
+    "file": "styles.css",
+    "filetypes": [
+      "css"
+    ],
+    "plain": false
+  },
+  {
+    "file": "styles.scss",
+    "filetypes": [
+      "scss"
+    ],
+    "plain": false
+  },
+  {
+    "file": "styles.less",
+    "filetypes": [
+      "less"
+    ],
+    "plain": false
+  },
+  {
+    "file": "markdown.md",
+    "filetypes": [
+      "markdown"
+    ],
+    "plain": false
+  },
+  {
+    "file": "notes.txt",
+    "filetypes": [
+      "",
+      "text"
+    ],
+    "plain": true
+  },
+  {
+    "file": "script.sh",
+    "filetypes": [
+      "sh"
+    ],
+    "plain": false
+  },
+  {
+    "file": "script.bash",
+    "filetypes": [
+      "sh"
+    ],
+    "plain": false
+  },
+  {
+    "file": "script.zsh",
+    "filetypes": [
+      "zsh"
+    ],
+    "plain": false
+  },
+  {
+    "file": "python.py",
+    "filetypes": [
+      "python"
+    ],
+    "plain": false
+  },
+  {
+    "file": "ruby.rb",
+    "filetypes": [
+      "ruby"
+    ],
+    "plain": false
+  },
+  {
+    "file": "go.go",
+    "filetypes": [
+      "go"
+    ],
+    "plain": false
+  },
+  {
+    "file": "rust.rs",
+    "filetypes": [
+      "rust"
+    ],
+    "plain": false
+  },
+  {
+    "file": "c.c",
+    "filetypes": [
+      "c"
+    ],
+    "plain": false
+  },
+  {
+    "file": "cpp.cpp",
+    "filetypes": [
+      "cpp"
+    ],
+    "plain": false
+  },
+  {
+    "file": "Example.java",
+    "filetypes": [
+      "java"
+    ],
+    "plain": false
+  },
+  {
+    "file": "config.toml",
+    "filetypes": [
+      "toml"
+    ],
+    "plain": false
+  },
+  {
+    "file": "settings.ini",
+    "filetypes": [
+      "dosini"
+    ],
+    "plain": false
+  },
+  {
+    "file": "Dockerfile",
+    "filetypes": [
+      "dockerfile"
+    ],
+    "plain": false
+  },
+  {
+    "file": "Makefile",
+    "filetypes": [
+      "make"
+    ],
+    "plain": false
+  },
+  {
+    "file": ".gitignore",
+    "filetypes": [
+      "gitignore"
+    ],
+    "plain": false
+  },
+  {
+    "file": "query.sql",
+    "filetypes": [
+      "sql"
+    ],
+    "plain": false
+  },
+  {
+    "file": "query.graphql",
+    "filetypes": [
+      "graphql"
+    ],
+    "plain": false
+  },
+  {
+    "file": "changes.diff",
+    "filetypes": [
+      "diff"
+    ],
+    "plain": false
+  },
+  {
+    "file": "Example.vue",
+    "filetypes": [
+      "vue"
+    ],
+    "plain": false
+  },
+  {
+    "file": "config.vim",
+    "filetypes": [
+      "vim"
+    ],
+    "plain": false
+  }
+]

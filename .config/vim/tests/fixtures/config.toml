@@ -1,0 +1,6 @@
+# TOML tables, arrays, strings, and dates.
+[project]
+name = "Drupal syntax review"
+enabled = true
+modules = ["fieldblock", "external_auth"]
+created = 2026-11-26

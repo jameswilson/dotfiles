@@ -1,0 +1,4 @@
+Plain text intentionally has no programming-language syntax.
+Normal text must remain readable without colored background blocks.
+Drupal fieldblock entity_reference_revisions wrdzzcheck
+Unicode: café, mañana, naïve, Ελληνικά, 日本語.

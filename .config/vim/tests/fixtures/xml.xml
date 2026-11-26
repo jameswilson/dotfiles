@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XML elements, namespaces, attributes, and CDATA. -->
+<project xmlns="https://example.invalid/schema" enabled="true">
+  <name>Drupal &amp; Twig</name>
+  <description><![CDATA[entity_reference_revisions < example]]></description>
+</project>

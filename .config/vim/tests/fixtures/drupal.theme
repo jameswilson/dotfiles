@@ -1,0 +1,5 @@
+<?php
+/** Implements hook_preprocess_page(). */
+function syntax_review_preprocess_page(array &$variables): void {
+  $variables['#attached']['library'][] = 'syntax_review/global';
+}

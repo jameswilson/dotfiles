@@ -1,0 +1,8 @@
+# Drupal routes and service identifiers are not English prose.
+syntax_review.example:
+  path: '/syntax-review/{entity}'
+  defaults:
+    _controller: '\Drupal\syntax_review\Controller\Example::build'
+    _title: 'Entity reference'
+  requirements:
+    _permission: 'access content'

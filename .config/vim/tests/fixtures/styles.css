@@ -1,0 +1,4 @@
+/* Colors, custom properties, selectors, and media queries. */
+:root { --accent: #e06c75; }
+.entity-reference:hover { color: var(--accent); padding: 1.5rem; }
+@media (min-width: 48rem) { .entity-reference { display: grid; } }

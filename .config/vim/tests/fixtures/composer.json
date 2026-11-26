@@ -1,0 +1,11 @@
+{
+  "name": "example/syntax-review",
+  "require": {
+    "drupal/entity_pager": "^2.0@alpha",
+    "drupal/entity_reference_revisions": "^1.14",
+    "drupal/external_auth": "^2.0.15",
+    "drupal/fieldblock": "^2.4.0",
+    "drupal/iu_paragraphs": "^2.2.7"
+  },
+  "extra": {"enabled": true, "count": 42, "optional": null}
+}

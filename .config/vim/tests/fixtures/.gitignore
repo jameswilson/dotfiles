@@ -1,0 +1,5 @@
+# Gitignore negation, directory patterns, and wildcards.
+/node_modules/
+*.log
+!example.log
+/web/sites/*/files/

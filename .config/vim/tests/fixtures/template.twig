@@ -1,0 +1,6 @@
+{# Twig variables, filters, tests, loops, and whitespace control. #}
+{% if entity is defined and enabled %}
+  {% for item in entity.field_reference %}
+    {{- item.label|default('Drupal')|escape -}}
+  {% endfor %}
+{% endif %}

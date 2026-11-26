@@ -1,0 +1,7 @@
+# Alternate YAML extension, anchors, strings, and booleans.
+defaults: &defaults
+  enabled: true
+  timeout: 30
+drupal:
+  <<: *defaults
+  modules: [fieldblock, external_auth, entity_reference_revisions]

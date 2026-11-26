@@ -1,0 +1,5 @@
+{# Drupal HTML and Twig should both be highlighted. #}
+<article{{ attributes.addClass('entity-reference') }}>
+  {% if title %}<h2>{{ title|escape }}</h2>{% endif %}
+  <div class="content">{{ content.field_reference }}</div>
+</article>

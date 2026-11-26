@@ -11,6 +11,11 @@ set t_Co=256
 let g:rehash256 = 1
 set termguicolors
 
+" Check spelling on demand with :setlocal spell, not across source code.
+set nospell
+" Save cursor positions and folds without restoring stale local options.
+set viewoptions-=options
+
 " Use F2 to paste without auto-indentation.
 set pastetoggle=<F2>
 

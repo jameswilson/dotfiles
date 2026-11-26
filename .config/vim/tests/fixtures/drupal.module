@@ -1,0 +1,8 @@
+<?php
+/** Implements hook_help(). */
+function syntax_review_help($route_name) {
+  if ($route_name === 'help.page.syntax_review') {
+    return ['#markup' => t('Drupal entity reference and fieldblock settings.')];
+  }
+  return NULL;
+}

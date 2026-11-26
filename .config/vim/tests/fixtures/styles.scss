@@ -1,0 +1,7 @@
+$accent: #e06c75;
+// SCSS variables, interpolation, mixins, and nesting.
+@mixin space($size) { padding: $size; }
+.entity-reference {
+  @include space(1rem);
+  &:hover { color: $accent; }
+}
